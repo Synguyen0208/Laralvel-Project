@@ -9,15 +9,22 @@ class About extends Component {
 
     render() {
         return (
-            <div style={{width:"100%"}}>
-            <section id="about" class="about">
-                <div class="container">
+            <section id="about">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>ABOUT US</h2>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12">
+          <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-                            <img src="https://scontent-xsp1-1.xx.fbcdn.net/v/t1.15752-9/198781496_1223852418089661_1813782119207824632_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=QeeeKi2-S18AX-zRYAJ&_nc_ht=scontent-xsp1-1.xx&oh=e129c60dbc53b08d6b54e4e6f16807d7&oe=60C8DCDB" style={{ marginTop: "100px" }} class="img-fluid" alt="" />
+                            <img src="https://scontent-xsp1-1.xx.fbcdn.net/v/t1.15752-9/198781496_1223852418089661_1813782119207824632_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=QeeeKi2-S18AX-zRYAJ&_nc_ht=scontent-xsp1-1.xx&oh=e129c60dbc53b08d6b54e4e6f16807d7&oe=60C8DCDB" style={{ marginTop: "35px" }} class="img-fluid" alt="" />
                         </div>
                         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                            <h1 class="title">About Us</h1>
                             <h3>Our mission</h3>
                             <p>
                                 Passerelles numériques is a non-profit organization under French law, created in 2005, operating in three Asian countries: Cambodia, the Philippines and Vietnam.<br /><br />
@@ -33,37 +40,24 @@ class About extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="container" style={{marginTop:"3rem"}}>
+                <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+                        <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
                             <h3>Our values</h3>
                             <ul>
-                                <li><h4 style={{color:"#ff9933"}}><i class="bi bi-check-circle"></i>Trust</h4></li>
-                                <li><h4 style={{color:"#22bbea"}}><i class="bi bi-check-circle"></i>Responsibility</h4></li>
-                                <li><h4 style={{color:"#ff9933"}}><i class="bi bi-check-circle"></i>Solidarity</h4></li>
-                                <li><h4 style={{color:"#22bbea"}}><i class="bi bi-check-circle"></i>Respect</h4></li>
-                                <li><h4 style={{color:"#ff9933"}}><i class="bi bi-check-circle"></i>Demanding approach</h4></li>
+                                <li><h4 style={{color:"#ff9933"}}>Trust</h4></li>
+                                <li><h4 style={{color:"#22bbea"}}>Responsibility</h4></li>
+                                <li><h4 style={{color:"#ff9933"}}>Solidarity</h4></li>
+                                <li><h4 style={{color:"#22bbea"}}>Respect</h4></li>
+                                <li><h4 style={{color:"#ff9933"}}>Demanding approach</h4></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-                            <h3>Key Dates</h3>
-                            <ul>
-                                <li><i class="bi bi-check-circle"></i>2016: Creation of the legal entity « PN SEA » (South East Asia) in Singapore with an objective of fundraising & awareness to Passerelles numériques’ actions</li>
-                                <li><i class="bi bi-check-circle"></i>2015: Passerelles numériques celebrates its 10 years! Since the beginning, more than 1,500 underprivileged students came through PN’s training program and can now live the life they have chosen.</li>
-                                <li><i class="bi bi-check-circle"></i>2013: Creation of Passerelles numériques Hong Kong Limited, a charity, run by a team of volunteers, which aims to raise awareness and collect funds to support PN’s actions.</li>
-                                <li><i class="bi bi-check-circle"></i>2012: 1st graduation of 24 students in PN Philippines and 27 students in PN Vietnam</li>
-                                <li><i class="bi bi-check-circle"></i>2010: Creation of PN Vietnam: new program launched in Danang with an initial intake of 30 students.</li>
-                                <li><i class="bi bi-check-circle"></i>2009: Creation of PN Philippines: new program launched in Cebu city with an initial intake of 25 students.</li>
-                                <li><i class="bi bi-check-circle"></i>2007: 20 students graduated in Cambodia (System & Network Administration training program).</li>
-                                <li><i class="bi bi-check-circle"></i>2006: Creation of the legal structure Passerelles numériques, a French non-profit organisation.</li>
-                                <li><i class="bi bi-check-circle"></i>2005: Opening of the Centre for Information Systems Training (CIST), former name of PN Cambodia, the 1st first training centre based in Phnom Penh, Cambodia with Accenture and Enfants du Mékong (initial intake of 25 students).</li>
-                            </ul>
-                    </div>
                 </div>
-            </section>
-            
-            </div>
+          </div>
+        </div>
+      </div>
+    </section>
         );
     }
 }

@@ -8,10 +8,12 @@ class Hero extends Component {
     }
     render() {
         return (
-            <section id="hero" class="d-flex align-items-center">
-                <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-                    <h1>Welcome to <br/>Passerellesnumeriques Viet Nam</h1>
-                    <a href="#about" class="btn-get-started scrollto">Launched in 2010 in Danang, Passerelles numériques Vietnam (PNV) offers full scholarships to our 3-year, high-quality IT training program in: Web Development, Mobile Development & Automated Testing. Each of these specializations is taught holistically, including both technical and soft skills alongside a robust personal development program.</a>
+            <section id="hero">
+                <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+                    <h1 class="mb-4 pb-0">Welcome to <br/>Passerellesnumeriques Viet Nam</h1>
+                   
+                    <a href="https://youtu.be/wEK-CzwXa4A" class="glightbox play-btn mb-4"></a>
+                    <a href="#about" class="about-btn scrollto">About Us</a>
                 </div>
             </section>
         );

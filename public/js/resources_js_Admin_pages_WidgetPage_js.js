@@ -1,9 +1,9 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_pages_WidgetPage_js"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Admin_pages_WidgetPage_js"],{
 
-/***/ "./resources/js/components/Page.js":
-/*!*****************************************!*\
-  !*** ./resources/js/components/Page.js ***!
-  \*****************************************/
+/***/ "./resources/js/Admin/components/Page.js":
+/*!***********************************************!*\
+  !*** ./resources/js/Admin/components/Page.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12,11 +12,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/utils/propTypes.js");
-/* harmony import */ var _utils_bemnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/bemnames */ "./resources/js/utils/bemnames.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
+/* harmony import */ var _utils_bemnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/bemnames */ "./resources/js/Admin/utils/bemnames.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Breadcrumb.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/BreadcrumbItem.js");
-/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Typography */ "./resources/js/components/Typography.js");
+/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Typography */ "./resources/js/Admin/components/Typography.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["title", "breadcrumbs", "tag", "className", "children"];
 
@@ -92,10 +92,10 @@ Page.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Typography.js":
-/*!***********************************************!*\
-  !*** ./resources/js/components/Typography.js ***!
-  \***********************************************/
+/***/ "./resources/js/Admin/components/Typography.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/Admin/components/Typography.js ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["tag", "className", "type"];
 
@@ -175,10 +175,10 @@ Typography.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Widget/IconWidget.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/Widget/IconWidget.js ***!
-  \******************************************************/
+/***/ "./resources/js/Admin/components/Widget/IconWidget.js":
+/*!************************************************************!*\
+  !*** ./resources/js/Admin/components/Widget/IconWidget.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -187,7 +187,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
@@ -261,10 +261,10 @@ IconWidget.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Widget/NumberWidget.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/Widget/NumberWidget.js ***!
-  \********************************************************/
+/***/ "./resources/js/Admin/components/Widget/NumberWidget.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/Admin/components/Widget/NumberWidget.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -273,16 +273,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardText.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardTitle.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Progress.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/ListGroupItem.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Badge.js");
-/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Typography */ "./resources/js/components/Typography.js");
+/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Typography */ "./resources/js/Admin/components/Typography.js");
 /* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-icons/md */ "./node_modules/react-icons/md/index.esm.js");
-/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/colors */ "./resources/js/utils/colors.js");
+/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/colors */ "./resources/js/Admin/utils/colors.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["title", "subtitle", "number", "color", "isIncrease", "progress"];
 
@@ -391,10 +391,10 @@ NumberWidget.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Widget/index.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/Widget/index.js ***!
-  \*************************************************/
+/***/ "./resources/js/Admin/components/Widget/index.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/Admin/components/Widget/index.js ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -403,17 +403,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "NumberWidget": () => (/* reexport safe */ _NumberWidget__WEBPACK_IMPORTED_MODULE_0__.default),
 /* harmony export */   "IconWidget": () => (/* reexport safe */ _IconWidget__WEBPACK_IMPORTED_MODULE_1__.default)
 /* harmony export */ });
-/* harmony import */ var _NumberWidget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NumberWidget */ "./resources/js/components/Widget/NumberWidget.js");
-/* harmony import */ var _IconWidget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IconWidget */ "./resources/js/components/Widget/IconWidget.js");
+/* harmony import */ var _NumberWidget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NumberWidget */ "./resources/js/Admin/components/Widget/NumberWidget.js");
+/* harmony import */ var _IconWidget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IconWidget */ "./resources/js/Admin/components/Widget/IconWidget.js");
 
 
 
 /***/ }),
 
-/***/ "./resources/js/demos/widgetPage.js":
-/*!******************************************!*\
-  !*** ./resources/js/demos/widgetPage.js ***!
-  \******************************************/
+/***/ "./resources/js/Admin/demos/widgetPage.js":
+/*!************************************************!*\
+  !*** ./resources/js/Admin/demos/widgetPage.js ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -486,10 +486,10 @@ var numberWidgetsData = [{
 
 /***/ }),
 
-/***/ "./resources/js/pages/WidgetPage.js":
-/*!******************************************!*\
-  !*** ./resources/js/pages/WidgetPage.js ***!
-  \******************************************/
+/***/ "./resources/js/Admin/pages/WidgetPage.js":
+/*!************************************************!*\
+  !*** ./resources/js/Admin/pages/WidgetPage.js ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -500,9 +500,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Row.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Col.js");
-/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Page */ "./resources/js/components/Page.js");
-/* harmony import */ var _components_Widget__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Widget */ "./resources/js/components/Widget/index.js");
-/* harmony import */ var _demos_widgetPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../demos/widgetPage */ "./resources/js/demos/widgetPage.js");
+/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Page */ "./resources/js/Admin/components/Page.js");
+/* harmony import */ var _components_Widget__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Widget */ "./resources/js/Admin/components/Widget/index.js");
+/* harmony import */ var _demos_widgetPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../demos/widgetPage */ "./resources/js/Admin/demos/widgetPage.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["bgColor", "icon", "title", "subtitle"];
 
@@ -583,10 +583,10 @@ var WidgetPage = function WidgetPage() {
 
 /***/ }),
 
-/***/ "./resources/js/utils/colors.js":
-/*!**************************************!*\
-  !*** ./resources/js/utils/colors.js ***!
-  \**************************************/
+/***/ "./resources/js/Admin/utils/colors.js":
+/*!********************************************!*\
+  !*** ./resources/js/Admin/utils/colors.js ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";

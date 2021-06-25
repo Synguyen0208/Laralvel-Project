@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from '../../utils/propTypes';
 
-import { Card, CardText, CardTitle, Progress } from 'reactstrap';
+import { Card, CardText, CardTitle, Progress,Badge,ListGroupItem } from 'reactstrap';
 import Typography from '../Typography';
-
+import {MdShowChart} from 'react-icons/md';
+import { getColor } from '../../utils/colors';
 const NumberWidget = ({
   title,
   subtitle,
   number,
   color,
-  progress: { value, label },
+  isIncrease,
+  progress: { value, label, persen },
   ...restProps
 }) => {
+  const primaryColor = getColor('primary');
   return (
     <Card body {...restProps}>
       <div className="d-flex justify-content-between">
@@ -24,12 +27,19 @@ const NumberWidget = ({
         <CardTitle className={`text-${color}`}>{number}</CardTitle>
       </div>
       <Progress value={value} color={color} style={{ height: '8px' }} />
+      {isIncrease==true&&
+      <ListGroupItem>
+      <MdShowChart size={25} color={primaryColor} /> Increase{' '}
+      <Badge color="secondary">{persen}%</Badge>
+    </ListGroupItem>
+      }
+      
       <CardText tag="div" className="d-flex justify-content-between">
         <Typography tag="span" className="text-left text-muted small">
           {label}
         </Typography>
         <Typography tag="span" className="text-right text-muted small">
-          {value}%
+          {/* {value} */}
         </Typography>
       </CardText>
     </Card>

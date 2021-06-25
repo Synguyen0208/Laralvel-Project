@@ -1,9 +1,9 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_pages_DashboardPage_js"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Admin_pages_DashboardPage_js"],{
 
-/***/ "./resources/js/components/HorizontalAvatarList.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/components/HorizontalAvatarList.js ***!
-  \*********************************************************/
+/***/ "./resources/js/Admin/components/HorizontalAvatarList.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/Admin/components/HorizontalAvatarList.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -11,10 +11,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_Avatar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Avatar */ "./resources/js/components/Avatar.js");
+/* harmony import */ var _components_Avatar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Avatar */ "./resources/js/Admin/components/Avatar.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/UncontrolledTooltip.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["tag", "avatars", "avatarProps", "reversed"];
 
@@ -99,10 +99,10 @@ HorizontalAvatarList.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/MapWithBubbles.js":
-/*!***************************************************!*\
-  !*** ./resources/js/components/MapWithBubbles.js ***!
-  \***************************************************/
+/***/ "./resources/js/Admin/components/MapWithBubbles.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/Admin/components/MapWithBubbles.js ***!
+  \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -110,12 +110,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _assets_geo_data_world_50m_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/geo-data/world-50m.json */ "./resources/js/assets/geo-data/world-50m.json");
-/* harmony import */ var _assets_geo_data_world_most_populous_cities_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/geo-data/world-most-populous-cities.json */ "./resources/js/assets/geo-data/world-most-populous-cities.json");
+/* harmony import */ var _assets_geo_data_world_50m_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/geo-data/world-50m.json */ "./resources/js/Admin/assets/geo-data/world-50m.json");
+/* harmony import */ var _assets_geo_data_world_most_populous_cities_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/geo-data/world-most-populous-cities.json */ "./resources/js/Admin/assets/geo-data/world-most-populous-cities.json");
 /* harmony import */ var d3_scale__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3-scale */ "./node_modules/d3-scale/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_simple_maps__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-simple-maps */ "./node_modules/react-simple-maps/lib/index.js");
-/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/utils/colors.js");
+/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/Admin/utils/colors.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -250,10 +250,10 @@ var BubbleMap = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Page.js":
-/*!*****************************************!*\
-  !*** ./resources/js/components/Page.js ***!
-  \*****************************************/
+/***/ "./resources/js/Admin/components/Page.js":
+/*!***********************************************!*\
+  !*** ./resources/js/Admin/components/Page.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -262,11 +262,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/utils/propTypes.js");
-/* harmony import */ var _utils_bemnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/bemnames */ "./resources/js/utils/bemnames.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
+/* harmony import */ var _utils_bemnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/bemnames */ "./resources/js/Admin/utils/bemnames.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Breadcrumb.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/BreadcrumbItem.js");
-/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Typography */ "./resources/js/components/Typography.js");
+/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Typography */ "./resources/js/Admin/components/Typography.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["title", "breadcrumbs", "tag", "className", "children"];
 
@@ -342,10 +342,10 @@ Page.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/ProductMedia.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/ProductMedia.js ***!
-  \*************************************************/
+/***/ "./resources/js/Admin/components/ProductMedia.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/Admin/components/ProductMedia.js ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -354,9 +354,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Media.js");
-/* harmony import */ var _components_Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Typography */ "./resources/js/components/Typography.js");
+/* harmony import */ var _components_Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Typography */ "./resources/js/Admin/components/Typography.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["image", "title", "description", "right"];
 
@@ -429,10 +429,10 @@ ProductMedia.propTypes = {
 
 /***/ }),
 
-/***/ "./resources/js/components/SupportTicket.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/SupportTicket.js ***!
-  \**************************************************/
+/***/ "./resources/js/Admin/components/SupportTicket.js":
+/*!********************************************************!*\
+  !*** ./resources/js/Admin/components/SupportTicket.js ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -441,10 +441,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Media.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Button.js");
-/* harmony import */ var _Avatar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Avatar */ "./resources/js/components/Avatar.js");
+/* harmony import */ var _Avatar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Avatar */ "./resources/js/Admin/components/Avatar.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["avatar", "name", "date", "text", "status", "onClick"];
 
@@ -539,10 +539,10 @@ SupportTicket.defualtProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Typography.js":
-/*!***********************************************!*\
-  !*** ./resources/js/components/Typography.js ***!
-  \***********************************************/
+/***/ "./resources/js/Admin/components/Typography.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/Admin/components/Typography.js ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -553,7 +553,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["tag", "className", "type"];
 
@@ -622,10 +622,10 @@ Typography.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/UserProgressTable.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/UserProgressTable.js ***!
-  \******************************************************/
+/***/ "./resources/js/Admin/components/UserProgressTable.js":
+/*!************************************************************!*\
+  !*** ./resources/js/Admin/components/UserProgressTable.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -634,11 +634,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Table.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Progress.js");
-/* harmony import */ var _components_Avatar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Avatar */ "./resources/js/components/Avatar.js");
-/* harmony import */ var _hocs_withBadge__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hocs/withBadge */ "./resources/js/hocs/withBadge.js");
+/* harmony import */ var _components_Avatar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Avatar */ "./resources/js/Admin/components/Avatar.js");
+/* harmony import */ var _hocs_withBadge__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hocs/withBadge */ "./resources/js/Admin/hocs/withBadge.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["headers", "usersData"];
 
@@ -734,10 +734,10 @@ UserProgressTable.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Widget/IconWidget.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/Widget/IconWidget.js ***!
-  \******************************************************/
+/***/ "./resources/js/Admin/components/Widget/IconWidget.js":
+/*!************************************************************!*\
+  !*** ./resources/js/Admin/components/Widget/IconWidget.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -746,7 +746,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
@@ -820,10 +820,10 @@ IconWidget.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Widget/NumberWidget.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/Widget/NumberWidget.js ***!
-  \********************************************************/
+/***/ "./resources/js/Admin/components/Widget/NumberWidget.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/Admin/components/Widget/NumberWidget.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -832,16 +832,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/propTypes */ "./resources/js/utils/propTypes.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/propTypes */ "./resources/js/Admin/utils/propTypes.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardText.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardTitle.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Progress.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/ListGroupItem.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Badge.js");
-/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Typography */ "./resources/js/components/Typography.js");
+/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Typography */ "./resources/js/Admin/components/Typography.js");
 /* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-icons/md */ "./node_modules/react-icons/md/index.esm.js");
-/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/colors */ "./resources/js/utils/colors.js");
+/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/colors */ "./resources/js/Admin/utils/colors.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["title", "subtitle", "number", "color", "isIncrease", "progress"];
 
@@ -950,10 +950,10 @@ NumberWidget.defaultProps = {
 
 /***/ }),
 
-/***/ "./resources/js/components/Widget/index.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/Widget/index.js ***!
-  \*************************************************/
+/***/ "./resources/js/Admin/components/Widget/index.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/Admin/components/Widget/index.js ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -962,17 +962,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "NumberWidget": () => (/* reexport safe */ _NumberWidget__WEBPACK_IMPORTED_MODULE_0__.default),
 /* harmony export */   "IconWidget": () => (/* reexport safe */ _IconWidget__WEBPACK_IMPORTED_MODULE_1__.default)
 /* harmony export */ });
-/* harmony import */ var _NumberWidget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NumberWidget */ "./resources/js/components/Widget/NumberWidget.js");
-/* harmony import */ var _IconWidget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IconWidget */ "./resources/js/components/Widget/IconWidget.js");
+/* harmony import */ var _NumberWidget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NumberWidget */ "./resources/js/Admin/components/Widget/NumberWidget.js");
+/* harmony import */ var _IconWidget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IconWidget */ "./resources/js/Admin/components/Widget/IconWidget.js");
 
 
 
 /***/ }),
 
-/***/ "./resources/js/demos/chartjs.js":
-/*!***************************************!*\
-  !*** ./resources/js/demos/chartjs.js ***!
-  \***************************************/
+/***/ "./resources/js/Admin/demos/chartjs.js":
+/*!*********************************************!*\
+  !*** ./resources/js/Admin/demos/chartjs.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -983,7 +983,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/src/chart.js");
 /* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/utils/colors.js");
+/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/Admin/utils/colors.js");
 
 
 var getStackLineChart = function getStackLineChart(_ref) {
@@ -1033,10 +1033,10 @@ var stackLineChartOptions = {
 
 /***/ }),
 
-/***/ "./resources/js/demos/dashboardPage.js":
-/*!*********************************************!*\
-  !*** ./resources/js/demos/dashboardPage.js ***!
-  \*********************************************/
+/***/ "./resources/js/Admin/demos/dashboardPage.js":
+/*!***************************************************!*\
+  !*** ./resources/js/Admin/demos/dashboardPage.js ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1049,26 +1049,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "todosData": () => (/* binding */ todosData),
 /* harmony export */   "chartjs": () => (/* binding */ chartjs)
 /* harmony export */ });
-/* harmony import */ var _assets_img_products_product_640_1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/img/products/product_640-1.jpg */ "./resources/js/assets/img/products/product_640-1.jpg");
-/* harmony import */ var _assets_img_products_product_640_2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/img/products/product_640-2.jpg */ "./resources/js/assets/img/products/product_640-2.jpg");
-/* harmony import */ var _assets_img_products_product_640_3_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/img/products/product_640-3.jpg */ "./resources/js/assets/img/products/product_640-3.jpg");
-/* harmony import */ var _assets_img_products_product_640_4_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/img/products/product_640-4.jpg */ "./resources/js/assets/img/products/product_640-4.jpg");
-/* harmony import */ var _assets_img_products_product_640_5_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/img/products/product_640-5.jpg */ "./resources/js/assets/img/products/product_640-5.jpg");
-/* harmony import */ var _assets_img_products_product_640_6_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/img/products/product_640-6.jpg */ "./resources/js/assets/img/products/product_640-6.jpg");
-/* harmony import */ var _assets_img_users_100_1_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/img/users/100_1.jpg */ "./resources/js/assets/img/users/100_1.jpg");
-/* harmony import */ var _assets_img_users_100_2_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/img/users/100_2.jpg */ "./resources/js/assets/img/users/100_2.jpg");
-/* harmony import */ var _assets_img_users_100_3_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/img/users/100_3.jpg */ "./resources/js/assets/img/users/100_3.jpg");
-/* harmony import */ var _assets_img_users_100_4_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/img/users/100_4.jpg */ "./resources/js/assets/img/users/100_4.jpg");
-/* harmony import */ var _assets_img_users_100_5_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/img/users/100_5.jpg */ "./resources/js/assets/img/users/100_5.jpg");
-/* harmony import */ var _assets_img_users_100_6_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/img/users/100_6.jpg */ "./resources/js/assets/img/users/100_6.jpg");
-/* harmony import */ var _assets_img_users_100_7_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/img/users/100_7.jpg */ "./resources/js/assets/img/users/100_7.jpg");
-/* harmony import */ var _assets_img_users_100_8_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../assets/img/users/100_8.jpg */ "./resources/js/assets/img/users/100_8.jpg");
-/* harmony import */ var _assets_img_users_100_9_jpg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../assets/img/users/100_9.jpg */ "./resources/js/assets/img/users/100_9.jpg");
-/* harmony import */ var _assets_img_users_100_10_jpg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../assets/img/users/100_10.jpg */ "./resources/js/assets/img/users/100_10.jpg");
-/* harmony import */ var _assets_img_users_100_11_jpg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../assets/img/users/100_11.jpg */ "./resources/js/assets/img/users/100_11.jpg");
-/* harmony import */ var _assets_img_users_100_12_jpg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../assets/img/users/100_12.jpg */ "./resources/js/assets/img/users/100_12.jpg");
-/* harmony import */ var _assets_img_users_100_13_jpg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../assets/img/users/100_13.jpg */ "./resources/js/assets/img/users/100_13.jpg");
-/* harmony import */ var _assets_img_users_100_14_jpg__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../assets/img/users/100_14.jpg */ "./resources/js/assets/img/users/100_14.jpg");
+/* harmony import */ var _assets_img_products_product_640_1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/img/products/product_640-1.jpg */ "./resources/js/Admin/assets/img/products/product_640-1.jpg");
+/* harmony import */ var _assets_img_products_product_640_2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/img/products/product_640-2.jpg */ "./resources/js/Admin/assets/img/products/product_640-2.jpg");
+/* harmony import */ var _assets_img_products_product_640_3_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/img/products/product_640-3.jpg */ "./resources/js/Admin/assets/img/products/product_640-3.jpg");
+/* harmony import */ var _assets_img_products_product_640_4_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/img/products/product_640-4.jpg */ "./resources/js/Admin/assets/img/products/product_640-4.jpg");
+/* harmony import */ var _assets_img_products_product_640_5_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/img/products/product_640-5.jpg */ "./resources/js/Admin/assets/img/products/product_640-5.jpg");
+/* harmony import */ var _assets_img_products_product_640_6_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/img/products/product_640-6.jpg */ "./resources/js/Admin/assets/img/products/product_640-6.jpg");
+/* harmony import */ var _assets_img_users_100_1_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/img/users/100_1.jpg */ "./resources/js/Admin/assets/img/users/100_1.jpg");
+/* harmony import */ var _assets_img_users_100_2_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/img/users/100_2.jpg */ "./resources/js/Admin/assets/img/users/100_2.jpg");
+/* harmony import */ var _assets_img_users_100_3_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/img/users/100_3.jpg */ "./resources/js/Admin/assets/img/users/100_3.jpg");
+/* harmony import */ var _assets_img_users_100_4_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/img/users/100_4.jpg */ "./resources/js/Admin/assets/img/users/100_4.jpg");
+/* harmony import */ var _assets_img_users_100_5_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/img/users/100_5.jpg */ "./resources/js/Admin/assets/img/users/100_5.jpg");
+/* harmony import */ var _assets_img_users_100_6_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/img/users/100_6.jpg */ "./resources/js/Admin/assets/img/users/100_6.jpg");
+/* harmony import */ var _assets_img_users_100_7_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/img/users/100_7.jpg */ "./resources/js/Admin/assets/img/users/100_7.jpg");
+/* harmony import */ var _assets_img_users_100_8_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../assets/img/users/100_8.jpg */ "./resources/js/Admin/assets/img/users/100_8.jpg");
+/* harmony import */ var _assets_img_users_100_9_jpg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../assets/img/users/100_9.jpg */ "./resources/js/Admin/assets/img/users/100_9.jpg");
+/* harmony import */ var _assets_img_users_100_10_jpg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../assets/img/users/100_10.jpg */ "./resources/js/Admin/assets/img/users/100_10.jpg");
+/* harmony import */ var _assets_img_users_100_11_jpg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../assets/img/users/100_11.jpg */ "./resources/js/Admin/assets/img/users/100_11.jpg");
+/* harmony import */ var _assets_img_users_100_12_jpg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../assets/img/users/100_12.jpg */ "./resources/js/Admin/assets/img/users/100_12.jpg");
+/* harmony import */ var _assets_img_users_100_13_jpg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../assets/img/users/100_13.jpg */ "./resources/js/Admin/assets/img/users/100_13.jpg");
+/* harmony import */ var _assets_img_users_100_14_jpg__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../assets/img/users/100_14.jpg */ "./resources/js/Admin/assets/img/users/100_14.jpg");
 
 
 
@@ -1380,10 +1380,10 @@ var chartjs = {
 
 /***/ }),
 
-/***/ "./resources/js/pages/DashboardPage.js":
-/*!*********************************************!*\
-  !*** ./resources/js/pages/DashboardPage.js ***!
-  \*********************************************/
+/***/ "./resources/js/Admin/pages/DashboardPage.js":
+/*!***************************************************!*\
+  !*** ./resources/js/Admin/pages/DashboardPage.js ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1393,17 +1393,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Card */ "./resources/js/components/Card/index.js");
-/* harmony import */ var _components_HorizontalAvatarList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HorizontalAvatarList */ "./resources/js/components/HorizontalAvatarList.js");
-/* harmony import */ var _components_MapWithBubbles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MapWithBubbles */ "./resources/js/components/MapWithBubbles.js");
-/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Page */ "./resources/js/components/Page.js");
-/* harmony import */ var _components_ProductMedia__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ProductMedia */ "./resources/js/components/ProductMedia.js");
-/* harmony import */ var _components_SupportTicket__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/SupportTicket */ "./resources/js/components/SupportTicket.js");
-/* harmony import */ var _components_UserProgressTable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/UserProgressTable */ "./resources/js/components/UserProgressTable.js");
-/* harmony import */ var _components_Widget__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Widget */ "./resources/js/components/Widget/index.js");
-/* harmony import */ var _demos_chartjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../demos/chartjs */ "./resources/js/demos/chartjs.js");
-/* harmony import */ var _components_API_API__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/API/API */ "./resources/js/components/API/API.js");
-/* harmony import */ var _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../demos/dashboardPage */ "./resources/js/demos/dashboardPage.js");
+/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Card */ "./resources/js/Admin/components/Card/index.js");
+/* harmony import */ var _components_HorizontalAvatarList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HorizontalAvatarList */ "./resources/js/Admin/components/HorizontalAvatarList.js");
+/* harmony import */ var _components_MapWithBubbles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MapWithBubbles */ "./resources/js/Admin/components/MapWithBubbles.js");
+/* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Page */ "./resources/js/Admin/components/Page.js");
+/* harmony import */ var _components_ProductMedia__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ProductMedia */ "./resources/js/Admin/components/ProductMedia.js");
+/* harmony import */ var _components_SupportTicket__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/SupportTicket */ "./resources/js/Admin/components/SupportTicket.js");
+/* harmony import */ var _components_UserProgressTable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/UserProgressTable */ "./resources/js/Admin/components/UserProgressTable.js");
+/* harmony import */ var _components_Widget__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Widget */ "./resources/js/Admin/components/Widget/index.js");
+/* harmony import */ var _demos_chartjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../demos/chartjs */ "./resources/js/Admin/demos/chartjs.js");
+/* harmony import */ var _components_API_API__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/API/API */ "./resources/js/Admin/components/API/API.js");
+/* harmony import */ var _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../demos/dashboardPage */ "./resources/js/Admin/demos/dashboardPage.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-chartjs-2 */ "./node_modules/react-chartjs-2/es/index.js");
 /* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! react-icons/md */ "./node_modules/react-icons/md/index.esm.js");
@@ -1420,7 +1420,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardTitle.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardDeck.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Button.js");
-/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/utils/colors.js");
+/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/Admin/utils/colors.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1976,10 +1976,10 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./resources/js/utils/colors.js":
-/*!**************************************!*\
-  !*** ./resources/js/utils/colors.js ***!
-  \**************************************/
+/***/ "./resources/js/Admin/utils/colors.js":
+/*!********************************************!*\
+  !*** ./resources/js/Admin/utils/colors.js ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34409,10 +34409,10 @@ module.exports = startOfYear
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/products/product_640-1.jpg":
-/*!************************************************************!*\
-  !*** ./resources/js/assets/img/products/product_640-1.jpg ***!
-  \************************************************************/
+/***/ "./resources/js/Admin/assets/img/products/product_640-1.jpg":
+/*!******************************************************************!*\
+  !*** ./resources/js/Admin/assets/img/products/product_640-1.jpg ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34424,10 +34424,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/products/product_640-2.jpg":
-/*!************************************************************!*\
-  !*** ./resources/js/assets/img/products/product_640-2.jpg ***!
-  \************************************************************/
+/***/ "./resources/js/Admin/assets/img/products/product_640-2.jpg":
+/*!******************************************************************!*\
+  !*** ./resources/js/Admin/assets/img/products/product_640-2.jpg ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34439,10 +34439,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/products/product_640-3.jpg":
-/*!************************************************************!*\
-  !*** ./resources/js/assets/img/products/product_640-3.jpg ***!
-  \************************************************************/
+/***/ "./resources/js/Admin/assets/img/products/product_640-3.jpg":
+/*!******************************************************************!*\
+  !*** ./resources/js/Admin/assets/img/products/product_640-3.jpg ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34454,10 +34454,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/products/product_640-4.jpg":
-/*!************************************************************!*\
-  !*** ./resources/js/assets/img/products/product_640-4.jpg ***!
-  \************************************************************/
+/***/ "./resources/js/Admin/assets/img/products/product_640-4.jpg":
+/*!******************************************************************!*\
+  !*** ./resources/js/Admin/assets/img/products/product_640-4.jpg ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34469,10 +34469,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/products/product_640-5.jpg":
-/*!************************************************************!*\
-  !*** ./resources/js/assets/img/products/product_640-5.jpg ***!
-  \************************************************************/
+/***/ "./resources/js/Admin/assets/img/products/product_640-5.jpg":
+/*!******************************************************************!*\
+  !*** ./resources/js/Admin/assets/img/products/product_640-5.jpg ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34484,10 +34484,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/products/product_640-6.jpg":
-/*!************************************************************!*\
-  !*** ./resources/js/assets/img/products/product_640-6.jpg ***!
-  \************************************************************/
+/***/ "./resources/js/Admin/assets/img/products/product_640-6.jpg":
+/*!******************************************************************!*\
+  !*** ./resources/js/Admin/assets/img/products/product_640-6.jpg ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34499,10 +34499,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_10.jpg":
-/*!**************************************************!*\
-  !*** ./resources/js/assets/img/users/100_10.jpg ***!
-  \**************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_10.jpg":
+/*!********************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_10.jpg ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34514,10 +34514,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_11.jpg":
-/*!**************************************************!*\
-  !*** ./resources/js/assets/img/users/100_11.jpg ***!
-  \**************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_11.jpg":
+/*!********************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_11.jpg ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34529,10 +34529,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_12.jpg":
-/*!**************************************************!*\
-  !*** ./resources/js/assets/img/users/100_12.jpg ***!
-  \**************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_12.jpg":
+/*!********************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_12.jpg ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34544,10 +34544,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_13.jpg":
-/*!**************************************************!*\
-  !*** ./resources/js/assets/img/users/100_13.jpg ***!
-  \**************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_13.jpg":
+/*!********************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_13.jpg ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34559,10 +34559,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_14.jpg":
-/*!**************************************************!*\
-  !*** ./resources/js/assets/img/users/100_14.jpg ***!
-  \**************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_14.jpg":
+/*!********************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_14.jpg ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34574,10 +34574,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_6.jpg":
-/*!*************************************************!*\
-  !*** ./resources/js/assets/img/users/100_6.jpg ***!
-  \*************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_6.jpg":
+/*!*******************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_6.jpg ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34589,10 +34589,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_7.jpg":
-/*!*************************************************!*\
-  !*** ./resources/js/assets/img/users/100_7.jpg ***!
-  \*************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_7.jpg":
+/*!*******************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_7.jpg ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34604,10 +34604,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_8.jpg":
-/*!*************************************************!*\
-  !*** ./resources/js/assets/img/users/100_8.jpg ***!
-  \*************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_8.jpg":
+/*!*******************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_8.jpg ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34619,10 +34619,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/assets/img/users/100_9.jpg":
-/*!*************************************************!*\
-  !*** ./resources/js/assets/img/users/100_9.jpg ***!
-  \*************************************************/
+/***/ "./resources/js/Admin/assets/img/users/100_9.jpg":
+/*!*******************************************************!*\
+  !*** ./resources/js/Admin/assets/img/users/100_9.jpg ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -74797,10 +74797,10 @@ module.exports = warning;
 
 /***/ }),
 
-/***/ "./resources/js/assets/geo-data/world-50m.json":
-/*!*****************************************************!*\
-  !*** ./resources/js/assets/geo-data/world-50m.json ***!
-  \*****************************************************/
+/***/ "./resources/js/Admin/assets/geo-data/world-50m.json":
+/*!***********************************************************!*\
+  !*** ./resources/js/Admin/assets/geo-data/world-50m.json ***!
+  \***********************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -74808,10 +74808,10 @@ module.exports = JSON.parse('{"arcs":[[[7080,7327],[-5,4],[-10,-10],[5,-6]],[[70
 
 /***/ }),
 
-/***/ "./resources/js/assets/geo-data/world-most-populous-cities.json":
-/*!**********************************************************************!*\
-  !*** ./resources/js/assets/geo-data/world-most-populous-cities.json ***!
-  \**********************************************************************/
+/***/ "./resources/js/Admin/assets/geo-data/world-most-populous-cities.json":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Admin/assets/geo-data/world-most-populous-cities.json ***!
+  \****************************************************************************/
 /***/ ((module) => {
 
 "use strict";

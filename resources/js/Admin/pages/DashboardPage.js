@@ -7,6 +7,7 @@ import SupportTicket from '../components/SupportTicket';
 import UserProgressTable from '../components/UserProgressTable';
 import { IconWidget, NumberWidget } from '../components/Widget';
 import { getStackLineChart, stackLineChartOptions } from '../demos/chartjs';
+import API from '../components/API/API'
 import {
   avatarsData,
   chartjs,
@@ -52,15 +53,36 @@ const lastWeek = new Date(
 );
 
 class DashboardPage extends React.Component {
-  componentDidMount() {
-    // this is needed, because InfiniteCalendar forces window scroll
+  state={
+    data:{
+      'pageViews':0,
+      'visitors':0
+    },
+    lastMonth:{
+      'pageViews':1,
+      'visitors':1
+    }
+  }
+  call=new API();
+  async componentDidMount() {
+    let data = await this.call.callAPI('view', 'get', '').then((response) => { 
+      console.log(response.data);
+      this.setState({data:response.data.month[0]});
+      if(response.data.lastMonth.length>0){
+        this.setState({
+          data:response.data.lastMonth[0]
+        });
+      }
+
+    });
     window.scrollTo(0, 0);
   }
-
+  
   render() {
     const primaryColor = getColor('primary');
     const secondaryColor = getColor('secondary');
-
+    let persenView=(this.state.data.pageViews-this.state.lastMonth.pageViews)/this.state.lastMonth.pageViews*100;
+    let persenVisitor=(this.state.data.visitors-this.state.lastMonth.visitors)/this.state.lastMonth.visitors*100;
     return (
       <Page
         className="DashboardPage"
@@ -70,13 +92,14 @@ class DashboardPage extends React.Component {
         <Row>
           <Col lg={3} md={6} sm={6} xs={12}>
             <NumberWidget
-              title="Total Profit"
+              title="Page views"
               subtitle="This month"
-              number="9.8k"
+              isIncrease={true}
+              number={this.state.data.pageViews}
               color="secondary"
               progress={{
-                value: 75,
-                label: 'Last month',
+                value: 100,
+                persen:persenView
               }}
             />
           </Col>
@@ -85,11 +108,12 @@ class DashboardPage extends React.Component {
             <NumberWidget
               title="Monthly Visitors"
               subtitle="This month"
-              number="5,400"
+              number={this.state.data.visitors}
+              isIncrease={true}
               color="secondary"
               progress={{
-                value: 45,
-                label: 'Last month',
+                value: 100,
+                persen:persenVisitor
               }}
             />
           </Col>
@@ -99,10 +123,10 @@ class DashboardPage extends React.Component {
               title="New Users"
               subtitle="This month"
               number="3,400"
+              isIncrease={false}
               color="secondary"
               progress={{
                 value: 90,
-                label: 'Last month',
               }}
             />
           </Col>
@@ -112,10 +136,10 @@ class DashboardPage extends React.Component {
               title="Bounce Rate"
               subtitle="This month"
               number="38%"
+              isIncrease={false}
               color="secondary"
               progress={{
                 value: 60,
-                label: 'Last month',
               }}
             />
           </Col>

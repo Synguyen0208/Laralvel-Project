@@ -1,4 +1,4 @@
-import logo200Image from '../assets/img/logo/logo_200.png';
+import logo from '../assets/img/logo/logo.png';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Button, Form, FormGroup, Input, Label, Alert } from 'reactstrap';
@@ -39,7 +39,7 @@ class AuthForm extends React.Component {
     let data = await this.call.callAPI('login', 'post', form).then((response) => { return response.data });
     if (data.err == 0) {
       document.cookie = 'admin=eyJpdiI6IkxYclNDUzgzKzd6NmR4eG55Uzh2ekE9PSIsInZhbHVlIjoiR0xiRzltcWhYS252Z0Q1cGR1NW83ZGJpY2FtSXVSYysxVGRmSGVmSExHUXUydnl3RmhuRmF5RzYxRTkyMkxCYU9kS0w2MHpPMWI5ZklBVERJYzMzNkxXcmRvZXY3QVQ4T1pwQUtoNGRrSFdhdTJyRGgxSm52VXlDYXNscVRZaTkiLCJtYWMiOiI3Mzc3MTEwOTkxMjlkNmYxYThlMzMxOTA0YjQ2N2Q3NjgxNjY2ZDA4NDY3NDE4MzQ5MjI0NjVmY2VlNmYxOTdlIn0%3D      ';
-      history.push('/');
+      history.push('/admin');
       window.location.reload();
     }
     this.setState({ errors: data })
@@ -89,11 +89,10 @@ class AuthForm extends React.Component {
         {showLogo && (
           <div className="text-center pb-4">
             <img
-              src={logo200Image}
+              src='https://www.passerellesnumeriques.org/misc/logo-fr.png'
               className="rounded"
-              style={{ width: 60, height: 60, cursor: 'pointer' }}
+              style={{ width: 300, height: 100, cursor: 'pointer' }}
               alt="logo"
-              onClick={onLogoClick}
             />
           </div>
         )}

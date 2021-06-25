@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('/login', ['as' => 'Login', 'uses' => 'App\Http\Controllers\PageController@login']);
 Route::post('/send','App\Http\Controllers\PageController@send');
+Route::get('/view','App\Http\Controllers\PageController@analytic');

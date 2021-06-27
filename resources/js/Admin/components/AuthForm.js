@@ -38,7 +38,7 @@ class AuthForm extends React.Component {
     form.append('password', this.state.password);
     let data = await this.call.callAPI('login', 'post', form).then((response) => { return response.data });
     if (data.err == 0) {
-      document.cookie = 'admin=eyJpdiI6IkxYclNDUzgzKzd6NmR4eG55Uzh2ekE9PSIsInZhbHVlIjoiR0xiRzltcWhYS252Z0Q1cGR1NW83ZGJpY2FtSXVSYysxVGRmSGVmSExHUXUydnl3RmhuRmF5RzYxRTkyMkxCYU9kS0w2MHpPMWI5ZklBVERJYzMzNkxXcmRvZXY3QVQ4T1pwQUtoNGRrSFdhdTJyRGgxSm52VXlDYXNscVRZaTkiLCJtYWMiOiI3Mzc3MTEwOTkxMjlkNmYxYThlMzMxOTA0YjQ2N2Q3NjgxNjY2ZDA4NDY3NDE4MzQ5MjI0NjVmY2VlNmYxOTdlIn0%3D      ';
+      document.cookie = "admin=eyJpdiI6IkxYclNDUzgzKzd6NmR4eG55Uzh2ekE9PSIsInZhbHVlIjoiR0xiRzltcWhYS252Z0Q1cGR1NW83ZGJpY2FtSXVSYysxVGRmSGVmSExHUXUydnl3RmhuRmF5RzYxRTkyMkxCYU9kS0w2MHpPMWI5ZklBVERJYzMzNkxXcmRvZXY3QVQ4T1pwQUtoNGRrSFdhdTJyRGgxSm52VXlDYXNscVRZaTkiLCJtYWMiOiI3Mzc3MTEwOTkxMjlkNmYxYThlMzMxOTA0YjQ2N2Q3NjgxNjY2ZDA4NDY3NDE4MzQ5MjI0NjVmY2VlNmYxOTdlIn0%3D      ";
       history.push('/admin');
       window.location.reload();
     }

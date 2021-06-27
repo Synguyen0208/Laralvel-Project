@@ -50,15 +50,32 @@ class PageController extends Controller
     }
     public function get()
     {
-        $a=Analytics::performQuery(
-            Period::days(7),
+        Artisan::call('config:clear');
+        Artisan::call('cache:clear');
+        Artisan::call('config:cache');
+        $data=[];
+        $currentMonth = date('m');
+        for ($i=$currentMonth-1; $i >=0 ; $i--) { 
+            $start = new Carbon("first day of $i month ago");
+            $end = new Carbon("last day of $i month ago");
+            $dataMonth=Analytics::performQuery(
+            Period::create($start, $end),
             'ga:sessions',
             [
-                'metrics' => 'ga:sessions, ga:pageviews, ga:newusers',
+                'metrics' => 'ga:sessions, ga:pageviews, ga:newusers, ga:users, ga:bouncerate, ga:avgsessionduration, ga:CPC',
                 'dimensions' => 'ga:yearMonth'
-            ]
-        );
-        dd($a);
+            ]);
+            if($i==0){
+                $data[]=[
+                    'month'=>$dataMonth->totalsForAllResults
+                ];
+            }
+            else
+            $data[]=[
+                'month'.$i=>$dataMonth->totalsForAllResults
+            ];
+        }
+        dd($data);
     }
     public function send()
     {

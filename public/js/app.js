@@ -2245,7 +2245,7 @@ var AuthForm = /*#__PURE__*/function (_React$Component) {
               data = _context.sent;
 
               if (data.err == 0) {
-                document.cookie = 'admin=eyJpdiI6IkxYclNDUzgzKzd6NmR4eG55Uzh2ekE9PSIsInZhbHVlIjoiR0xiRzltcWhYS252Z0Q1cGR1NW83ZGJpY2FtSXVSYysxVGRmSGVmSExHUXUydnl3RmhuRmF5RzYxRTkyMkxCYU9kS0w2MHpPMWI5ZklBVERJYzMzNkxXcmRvZXY3QVQ4T1pwQUtoNGRrSFdhdTJyRGgxSm52VXlDYXNscVRZaTkiLCJtYWMiOiI3Mzc3MTEwOTkxMjlkNmYxYThlMzMxOTA0YjQ2N2Q3NjgxNjY2ZDA4NDY3NDE4MzQ5MjI0NjVmY2VlNmYxOTdlIn0%3D      ';
+                document.cookie = "admin=eyJpdiI6IkxYclNDUzgzKzd6NmR4eG55Uzh2ekE9PSIsInZhbHVlIjoiR0xiRzltcWhYS252Z0Q1cGR1NW83ZGJpY2FtSXVSYysxVGRmSGVmSExHUXUydnl3RmhuRmF5RzYxRTkyMkxCYU9kS0w2MHpPMWI5ZklBVERJYzMzNkxXcmRvZXY3QVQ4T1pwQUtoNGRrSFdhdTJyRGgxSm52VXlDYXNscVRZaTkiLCJtYWMiOiI3Mzc3MTEwOTkxMjlkNmYxYThlMzMxOTA0YjQ2N2Q3NjgxNjY2ZDA4NDY3NDE4MzQ5MjI0NjVmY2VlNmYxOTdlIn0%3D      ";
                 _utils_history__WEBPACK_IMPORTED_MODULE_5__.default.push('/admin');
                 window.location.reload();
               }
@@ -3208,7 +3208,7 @@ var Header = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "logout", function () {
-      document.cookie = 'admin=';
+      document.cookie = "admin=";
       window.location.reload();
     });
 
@@ -6649,7 +6649,7 @@ var ChartPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function ()
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_ChartPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/ChartPage */ "./resources/js/Admin/pages/ChartPage.js"));
 });
 var DashboardPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
-  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_DashboardPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/DashboardPage */ "./resources/js/Admin/pages/DashboardPage.js"));
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_demos_dashboardPage_js-resources_js_Admin_pages_DashboardPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/DashboardPage */ "./resources/js/Admin/pages/DashboardPage.js"));
 });
 var DropdownPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_DropdownPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/DropdownPage */ "./resources/js/Admin/pages/DropdownPage.js"));
@@ -74748,7 +74748,7 @@ function valueEqual(a, b) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_demos_dashboardPage_js-resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

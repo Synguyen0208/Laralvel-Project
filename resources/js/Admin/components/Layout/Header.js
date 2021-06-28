@@ -74,7 +74,7 @@ class Header extends React.Component {
     document.querySelector('.cr-sidebar').classList.toggle('cr-sidebar--open');
   };
   logout=()=>{
-    document.cookie='admin=';
+    document.cookie="admin=";
     window.location.reload()
   }
   render() {

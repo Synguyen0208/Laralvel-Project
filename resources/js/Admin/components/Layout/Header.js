@@ -5,6 +5,7 @@ import SearchInput from '../../components/SearchInput';
 import { notificationsData } from '../../demos/header';
 import withBadge from '../../hocs/withBadge';
 import React from 'react';
+import cookie from 'react-cookies';
 import {
   MdClearAll,
   MdExitToApp,
@@ -28,6 +29,7 @@ import {
   PopoverBody,
 } from 'reactstrap';
 import bn from '../../utils/bemnames';
+import history from '../../utils/history';
 
 const bem = bn.create('header');
 
@@ -66,16 +68,21 @@ class Header extends React.Component {
       isOpenUserCardPopover: !this.state.isOpenUserCardPopover,
     });
   };
-
+  componentWillMount() {
+    if(cookie.load('admin')==undefined){
+        history.push('/admin/login');
+        window.location.reload();
+    }
+  }
   handleSidebarControlButton = event => {
     event.preventDefault();
     event.stopPropagation();
 
     document.querySelector('.cr-sidebar').classList.toggle('cr-sidebar--open');
   };
-  logout=()=>{
-    document.cookie='admin=';
-    window.location.reload()
+  logout=async()=>{
+    await cookie.remove('admin', { path: '/' });
+    window.location.reload();
   }
   render() {
     const { isNotificationConfirmed } = this.state;

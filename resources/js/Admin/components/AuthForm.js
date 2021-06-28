@@ -4,6 +4,8 @@ import React from 'react';
 import { Button, Form, FormGroup, Input, Label, Alert } from 'reactstrap';
 import API from './API/API';
 import history from '../utils/history';
+import cookie from 'react-cookies';
+import Modal from './Modal';
 class AuthForm extends React.Component {
   call = new API();
   state = {
@@ -11,7 +13,10 @@ class AuthForm extends React.Component {
     password: null,
     confirmPassword: null,
     errors: null,
-    message: null
+    error_confirm: null,
+    message: null,
+    action:false,
+    code:null
   };
   get isLogin() {
     return this.props.authState === STATE_LOGIN;
@@ -38,9 +43,9 @@ class AuthForm extends React.Component {
     form.append('password', this.state.password);
     let data = await this.call.callAPI('login', 'post', form).then((response) => { return response.data });
     if (data.err == 0) {
-      document.cookie = 'admin=eyJpdiI6IkxYclNDUzgzKzd6NmR4eG55Uzh2ekE9PSIsInZhbHVlIjoiR0xiRzltcWhYS252Z0Q1cGR1NW83ZGJpY2FtSXVSYysxVGRmSGVmSExHUXUydnl3RmhuRmF5RzYxRTkyMkxCYU9kS0w2MHpPMWI5ZklBVERJYzMzNkxXcmRvZXY3QVQ4T1pwQUtoNGRrSFdhdTJyRGgxSm52VXlDYXNscVRZaTkiLCJtYWMiOiI3Mzc3MTEwOTkxMjlkNmYxYThlMzMxOTA0YjQ2N2Q3NjgxNjY2ZDA4NDY3NDE4MzQ5MjI0NjVmY2VlNmYxOTdlIn0%3D      ';
-      history.push('/admin');
-      window.location.reload();
+      this.setState({
+        action:true
+      })
     }
     this.setState({ errors: data })
   }
@@ -56,7 +61,21 @@ class AuthForm extends React.Component {
     if (button == "Login")
       this.login();
   };
-
+  veryfy= async(event)=>{
+    event.preventDefault();
+    let form=new FormData;
+    form.append('code', this.state.code);
+    let data = await this.call.callAPI('verify', 'post', form).then((response) => { return response.data });
+    if (data.err == 0) {
+      cookie.save('admin', data.user, { path: '/' })
+      history.push('/admin');
+      window.location.reload();
+    }
+    else{
+      this.setState({ error_confirm:data.message });
+    }
+    
+  }
   renderButtonText() {
     const { buttonText } = this.props;
 
@@ -70,7 +89,11 @@ class AuthForm extends React.Component {
 
     return buttonText;
   }
-
+  close = () => {
+    this.setState({
+        action: false,
+    });
+};
   render() {
     const {
       showLogo,
@@ -83,7 +106,10 @@ class AuthForm extends React.Component {
       children,
       onLogoClick,
     } = this.props;
-
+    let body_modal=<FormGroup>
+      <Label>Code</Label>
+      <Input name='code' placeholder="Enter the code" onChange={this.handleChange}></Input>
+      </FormGroup>
     return (
       <Form onSubmit={this.handleSubmit}>
         {showLogo && (
@@ -100,9 +126,9 @@ class AuthForm extends React.Component {
           this.state.message != null &&
           <Alert color="success">
             {this.state.message}
-        </Alert>
+          </Alert>
         }
-
+        <Modal action={this.state.action} submit={this.veryfy} body={body_modal} close={this.close} alert={this.state.error_confirm} title="Account Verification!" />
         <FormGroup>
           <Label for={usernameLabel}>{usernameLabel}</Label>
           <Input onChange={this.handleChange} {...usernameInputProps} required />
@@ -191,7 +217,7 @@ AuthForm.defaultProps = {
   passwordInputProps: {
     type: 'password',
     name: 'password',
-    placeholder: 'your password',
+    placeholder: 'Your password',
   },
   confirmPasswordLabel: 'Confirm Password',
   confirmPasswordInputProps: {

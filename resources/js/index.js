@@ -4,12 +4,15 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-d
 import App from './admin';
 import routes from './Routes/admin'
 import Client from './client';
+import cookie from 'react-cookies'
 import routes1 from './Routes/client';
+import history from './Admin/utils/history';
 class Index extends Component {
     constructor(props) {
         super(props);
 
     }
+    
     render() {
         return (
             <Router>

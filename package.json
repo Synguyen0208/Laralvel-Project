@@ -55,6 +55,7 @@
         "history": "^5.0.0",
         "react-bootstrap": "^1.6.1",
         "react-cookie": "^4.0.3",
+        "react-cookies": "^0.1.1",
         "react-helmet": "^6.1.0",
         "react-router": "^2.8.1",
         "react-router-dom": "^5.2.0",

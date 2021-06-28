@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\SendMail;
+use App\Mail\SendMailCode;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Type_product;
@@ -21,10 +22,10 @@ class PageController extends Controller
 {
     public function show()
     {
-        $cookie=Cookie::get('admin');
-        if($cookie==null)
-        return redirect()->route("Login");
-        else
+        // $cookie=Cookie::get('admin');
+        // if($cookie==null)
+        // return redirect()->route("Login");
+        // else
         return view('pages/admin');
     }
     public function index()
@@ -33,24 +34,44 @@ class PageController extends Controller
     }
     public function analytic()
     {
-        $get=new Functions;
-        $data=$get->getGG();
+        $get = new Functions;
+        $data = $get->getGG();
         return response()->json($data);
     }
     public function login(Request $request)
     {
-        $account=User_Admin::first();
-        $userName=$request->userName;
-        $password=$request->password;
-        if($userName==$account->userName&&$password==$account->password){
-            return response()->json(['message'=>'Login susscess!', 'err'=>0]);
+        $account = User_Admin::first();
+        $userName = $request->userName;
+        $password = $request->password;
+        if ($userName == $account->userName && $password == $account->password) {
+            $code = rand(100000, 999999);
+            $account = User_Admin::first();
+            $account->code = $code;
+            $account->save();
+            $account = User_Admin::first();
+            $details = [
+                'code' => $code
+            ];
+            Mail::to('syn282002@gmail.com')->send(new SendMailCode($details));
+            return response()->json(['message' => '', 'err' => 0]);
+        } else
+            return response()->json(['message' => 'Login information is incorrect!', 'err' => 200]);
+    }
+    public function verify(Request $request){
+        $code=$request->code;
+        $account = User_Admin::first();
+        if($code==$account->code){
+            $account->code = 'null';
+            $account->save();
+            return response()->json(['user' => $account, 'err' => 0]);
         }
-        else
-        return response()->json(['message'=>'Login information is incorrect!', 'err'=>200]);
+        else{
+            return response()->json(['message' => 'Authentication code does not exist!', 'err' => 200]);
+        }
     }
     public function get()
     {
-        $a=Analytics::performQuery(
+        $a = Analytics::performQuery(
             Period::days(7),
             'ga:sessions',
             [
@@ -62,7 +83,7 @@ class PageController extends Controller
     }
     public function send()
     {
-        $account=User_Admin::first();
+        $account = User_Admin::first();
         $details = [
             'password' => $account->password
         ];

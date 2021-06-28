@@ -25,11 +25,14 @@ class AuthPage extends React.Component {
         }}>
         <Col md={6} lg={4}>
           <Card body>
+            {
+            this.props.component=='Auth'&&
             <AuthForm
               authState={this.props.authState}
               onChangeAuthState={this.handleAuthState}
               onLogoClick={this.handleLogoClick}
             />
+            }
           </Card>
         </Col>
       </Row>

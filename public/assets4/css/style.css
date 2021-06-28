@@ -8,6 +8,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+/*Contact Us*/
+
+
+
+/*End Contact Us*/
 body {
   background: #fff;
   color: #2f3138;
@@ -1334,7 +1340,7 @@ li{
   font-size: 48px;
   display: inline-block;
   margin-bottom: 10px;
-  color: #f82249;
+  color: #2ea3f2;
 }
 
 #contact .contact-info address, #contact .contact-info p {
@@ -1355,7 +1361,7 @@ li{
 }
 
 #contact .contact-info a:hover {
-  color: #f82249;
+  color: #2ea3f2;
 }
 
 #contact .contact-address, #contact .contact-phone, #contact .contact-email {
@@ -1424,7 +1430,7 @@ li{
 }
 
 #contact .php-email-form input:focus, #contact .php-email-form textarea:focus {
-  border-color: #f82249;
+  border-color: #2ea3f2;
 }
 
 #contact .php-email-form input {
@@ -1436,7 +1442,7 @@ li{
 }
 
 #contact .php-email-form button[type="submit"] {
-  background: #f82249;
+  background: #2ea3f2;
   border: 0;
   padding: 10px 40px;
   color: #fff;
@@ -1446,7 +1452,7 @@ li{
 }
 
 #contact .php-email-form button[type="submit"]:hover {
-  background: #e0072f;
+  background: #2ea3f2;
 }
 
 @-webkit-keyframes animate-loading {

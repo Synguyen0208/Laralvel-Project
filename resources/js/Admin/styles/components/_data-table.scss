@@ -1,0 +1,17 @@
+.pagination>li {
+    display: inline;
+    padding:0px !important;
+    margin:0px !important;
+    border:none !important;
+    }
+    .modal-backdrop {
+      z-index: -1 !important;
+    }
+    /*
+    Fix to show in full screen demo
+    */
+    iframe
+    {
+        height:700px !important;
+    }
+    

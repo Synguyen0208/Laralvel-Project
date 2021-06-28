@@ -3672,7 +3672,7 @@ var navContents = [{
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdTextFields
 }, {
-  to: '/tables',
+  to: '/admin/tables',
   name: 'tables',
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdBorderAll
@@ -6638,6 +6638,9 @@ var AuthModalPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(functio
 var BadgePage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_BadgePage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/BadgePage */ "./resources/js/Admin/pages/BadgePage.js"));
 });
+var StaffPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_StaffPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/StaffPage */ "./resources/js/Admin/pages/StaffPage.js"));
+});
 var ButtonGroupPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_ButtonGroupPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/ButtonGroupPage */ "./resources/js/Admin/pages/ButtonGroupPage.js"));
 });
@@ -6755,6 +6758,10 @@ var App = /*#__PURE__*/function (_React$Component) {
                   exact: true,
                   path: "/admin/badges",
                   component: BadgePage
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+                  path: "/admin/staff",
+                  component: StaffPage
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
                   exact: true,
                   path: "/admin/button-groups",
@@ -75387,7 +75394,7 @@ function valueEqual(a, b) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_StaffPage_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

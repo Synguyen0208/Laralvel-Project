@@ -5514,84 +5514,174 @@ var About = /*#__PURE__*/function (_Component) {
             "data-aos-delay": "100",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
               "class": "col-lg-12",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                 "class": "col-lg-12",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                   "class": "row",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                     "class": "col-lg-6 order-1 order-lg-2",
                     "data-aos": "fade-left",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-                      src: "https://scontent-xsp1-1.xx.fbcdn.net/v/t1.15752-9/198781496_1223852418089661_1813782119207824632_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=QeeeKi2-S18AX-zRYAJ&_nc_ht=scontent-xsp1-1.xx&oh=e129c60dbc53b08d6b54e4e6f16807d7&oe=60C8DCDB",
-                      style: {
-                        marginTop: "35px"
-                      },
-                      "class": "img-fluid",
-                      alt: ""
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "thumbnail",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                        className: "card-img-top ",
+                        src: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.6435-9/132883663_3138654132901081_8378380018761749167_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=e3f864&_nc_ohc=is-3vvbXLyIAX95xgNm&_nc_ht=scontent-hkt1-1.xx&oh=5f07c3d3a68a6bd53364b7856b81f675&oe=60DE1ACB"
+                      })
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                     "class": "col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content",
                     "data-aos": "fade-right",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-                      children: "Our mission"
+                      children: "T\u1EA7m nh\xECn"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-                      children: ["Passerelles num\xE9riques is a non-profit organization under French law, created in 2005, operating in three Asian countries: Cambodia, the Philippines and Vietnam.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "Our mission is to provide education, technical and professional training in the digital sector to young underprivileged people by leveraging their potential and willpower. We endeavour to truly develop their employability which will allow them and their families to escape poverty in a sustainable way, and contribute to the social and economic development of their countries.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "Our beneficiaries are typically underprivileged or disadvantaged, in extremely precarious situations, according to the criteria PN has defined/specified for each of the countries in which it operates."]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-                      children: "Our objectives"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-                      children: ["PN\u2019s objective is that at least 90% of the students enrolled in our programs can escape poverty, be professionally more successful relatively to the national average, and take advantage of a \u2018Gateway for Life\u2019.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "PN\u2019s additional objective is to reduce inequality between genders. Therefore, PN strives to enrol a ratio of at least 50% girls (or a maximum of two thirds) at each of our centers."]
+                      children: ["Passerelles num\xE9riques Vietnam l\xE0 m\u1ED9t t\u1ED5 ch\u1EE9c phi l\u1EE3i nhu\u1EADn theo lu\u1EADt c\u1EE7a Ph\xE1p, \u0111\u01B0\u1EE3c th\xE0nh l\u1EADp n\u0103m 2005, ho\u1EA1t \u0111\u1ED9ng t\u1EA1i 3 qu\u1ED1c gia ch\xE2u \xC1: Campuchia, Philippines v\xE0 Vi\u1EC7t Nam.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "S\u1EE9 m\u1EC7nh c\u1EE7a ch\xFAng t\xF4i l\xE0 cung c\u1EA5p gi\xE1o d\u1EE5c, \u0111\xE0o t\u1EA1o k\u1EF9 thu\u1EADt v\xE0 chuy\xEAn m\xF4n trong l\u0129nh v\u1EF1c c\xF4ng ngh\u1EC7 th\xF4ng tin cho nh\u1EEFng b\u1EA1n tr\u1EBB k\xE9m may m\u1EAFn b\u1EB1ng c\xE1ch t\u1EADn d\u1EE5ng ti\u1EC1m n\u0103ng v\xE0 \xFD ch\xED c\u1EE7a h\u1ECD. Ch\xFAng t\xF4i n\u1ED7 l\u1EF1c \u0111\u1EC3 th\u1EF1c s\u1EF1 ph\xE1t tri\u1EC3n kh\u1EA3 n\u0103ng tuy\u1EC3n d\u1EE5ng c\u1EE7a h\u1ECD \u0111\u1EC3 gi\xFAp h\u1ECD v\xE0 gia \u0111\xECnh h\u1ECD tho\xE1t ngh\xE8o m\u1ED9t c\xE1ch b\u1EC1n v\u1EEFng v\xE0 \u0111\xF3ng g\xF3p v\xE0o s\u1EF1 ph\xE1t tri\u1EC3n kinh t\u1EBF v\xE0 x\xE3 h\u1ED9i c\u1EE7a \u0111\u1EA5t n\u01B0\u1EDBc."]
                     })]
                   })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                "class": "col-lg-12",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                   "class": "row",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                    "class": "col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content",
+                    "data-aos": "fade-right",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "thumbnail",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                        className: "card-img-top ",
+                        src: "https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-9/31179924_1377220709044441_202678892517916672_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=e3f864&_nc_ohc=nqsjI-0mQF4AX-D9Xdi&_nc_ht=scontent-hkt1-2.xx&oh=38a44e157677a8b375d4771972a9553e&oe=60DEFC58"
+                      })
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                    "class": "col-lg-6 order-1 order-lg-2",
+                    "data-aos": "fade-left",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+                      children: "M\u1EE5c ti\xEAu"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                      children: ["M\u1EE5c ti\xEAu c\u1EE7a PN l\xE0 \xEDt nh\u1EA5t 90% sinh vi\xEAn \u0111\u0103ng k\xFD c\xE1c ch\u01B0\u01A1ng tr\xECnh c\u1EE7a ch\xFAng t\xF4i c\xF3 th\u1EC3 tho\xE1t ngh\xE8o v\xE0 t\u1EADn d\u1EE5ng l\u1EE3i th\u1EBF c\u1EE7a 'C\xE1nh c\u1ED5ng cho cu\u1ED9c s\u1ED1ng'.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), "M\u1EE5c ti\xEAu b\u1ED5 sung c\u1EE7a PN l\xE0 gi\u1EA3m b\u1EA5t b\xECnh \u0111\u1EB3ng gi\u1EDBi t\xEDnh. Do \u0111\xF3, PN ph\u1EA5n \u0111\u1EA5u thu nh\u1EADn t\u1EF7 l\u1EC7 \xEDt nh\u1EA5t 50% l\xE0 tr\u1EBB em g\xE1i (ho\u1EB7c t\u1ED1i \u0111a l\xE0 2/3) t\u1EA1i m\u1ED7i trung t\xE2m c\u1EE7a ch\xFAng t\xF4i."]
+                    })]
+                  })]
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                "class": "col-lg-12",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  "class": "row",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                     "class": "col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content",
                     "data-aos": "fade-right",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-                      children: "Our values"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
-                          style: {
-                            color: "#ff9933"
-                          },
-                          children: "Trust"
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
-                          style: {
-                            color: "#22bbea"
-                          },
-                          children: "Responsibility"
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
-                          style: {
-                            color: "#ff9933"
-                          },
-                          children: "Solidarity"
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
-                          style: {
-                            color: "#22bbea"
-                          },
-                          children: "Respect"
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
-                          style: {
-                            color: "#ff9933"
-                          },
-                          children: "Demanding approach"
-                        })
-                      })]
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+                      children: "Gi\xE1 tr\u1ECB"
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "value-content-one",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                    className: "row",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "col-sm-4 col-xs-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                        className: "value-single text-center",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-img",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                            src: "https://icon-library.com/images/trust-icon-png/trust-icon-png-5.jpg",
+                            alt: "image of service"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-txt",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+                              children: "Tin t\u01B0\u1EDFng"
+                            })
+                          })
+                        })]
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "col-sm-4 col-xs-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                        className: "value-single text-center",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-img",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                            src: "https://pngimage.net/wp-content/uploads/2018/05/corporate-social-responsibility-icon-png-5.png",
+                            alt: "image of service"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-txt",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+                              children: "Tr\xE1ch nhi\u1EC7m"
+                            })
+                          })
+                        })]
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "col-sm-4 col-xs-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                        className: "value-single text-center",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-img",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                            src: "https://library.kissclipart.com/20180829/kxw/kissclipart-teamwork-png-clipart-computer-icons-ec0928fd71ec7dd3.png",
+                            alt: "image of service"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-txt",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+                              children: "\u0110o\xE0n k\u1EBFt"
+                            })
+                          })
+                        })]
+                      })
                     })]
                   })
-                })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "value-content-two",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                    className: "row",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "col-sm-2 col-xs-12"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "col-sm-4 col-xs-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                        className: "value-single text-center",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-img",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                            src: "https://www.successfulculture.com/wp-content/uploads/2017/12/values-icon.png",
+                            alt: "image of service"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-txt",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+                              children: "T\xF4n tr\u1ECDng"
+                            })
+                          })
+                        })]
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "col-sm-4 col-xs-12",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                        className: "value-single text-center",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-img",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                            src: "https://stopbedwetting.ie/wp-content/uploads/2019/06/agile-approach-icon.png",
+                            alt: "image of service"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "value-txt",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+                              children: "Y\xEAu c\u1EA7u cao"
+                            })
+                          })
+                        })]
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "col-sm-2 col-xs-12"
+                    })]
+                  })
+                })]
               })]
             })
           })]

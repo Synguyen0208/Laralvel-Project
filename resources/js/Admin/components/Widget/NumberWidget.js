@@ -30,7 +30,7 @@ const NumberWidget = ({
       {isIncrease==true&&
       <ListGroupItem>
       <MdShowChart size={25} color={primaryColor} /> Increase{' '}
-      <Badge color="secondary">{persen}%</Badge>
+      <Badge color="secondary">{persen}</Badge>
     </ListGroupItem>
       }
       

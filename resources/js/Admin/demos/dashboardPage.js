@@ -19,7 +19,15 @@ import user11Image from '../assets/img/users/100_11.jpg';
 import user12Image from '../assets/img/users/100_12.jpg';
 import user13Image from '../assets/img/users/100_13.jpg';
 import user14Image from '../assets/img/users/100_14.jpg';
-
+import Data_process from '../process/data_process';
+import DashboardPage from '../pages/DashboardPage';
+import API from '../components/API/API';
+const today=new Date();
+const month=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+let label=[];
+for (let index = 0; index <= today.getMonth(); index++) {
+label.push(month[index]);
+};
 export const productsData = [
   {
     id: 1,
@@ -215,10 +223,10 @@ export const todosData = [
   { id: 5, title: 'task -5', done: false },
 ];
 
-export const chartjs = {
+export let chartjs = {
   bar: {
     data: {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: label,
       datasets: [
         {
           label: 'Expense for this year',
@@ -297,21 +305,14 @@ export const chartjs = {
   },
   line: {
     data: {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: month,
       datasets: [
         {
           label: 'Revenue for this year',
           borderColor: '#6a82fb',
           backgroundColor: '#6a82fb',
-          data: [0, 1300, 2200, 3400, 4600, 3500, 3000],
-        },
-
-        {
-          label: 'Revenue for last year',
-          borderColor: '#fc5c7d',
-          backgroundColor: '#fc5c7d',
-          data: [0, 1300, 2200, 3400, 4600, 3500, 3000],
-        },
+          data: [1000, 1000, 1000, 1000, 1000, 1000]
+        }
       ],
     },
     options: {

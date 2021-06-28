@@ -65,7 +65,7 @@ const navComponents = [
 
 const navContents = [
   { to: '/admin/typography', name: 'typography', exact: false, Icon: MdTextFields },
-  { to: '/tables', name: 'tables', exact: false, Icon: MdBorderAll },
+  { to: '/admin/tables', name: 'tables', exact: false, Icon: MdBorderAll },
 ];
 const pageContents = [
   { to: '/admin/login', name: 'login / signup', exact: false, Icon: MdAccountCircle },

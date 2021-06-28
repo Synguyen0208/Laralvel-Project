@@ -3672,7 +3672,7 @@ var navContents = [{
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdTextFields
 }, {
-  to: '/tables',
+  to: '/admin/tables',
   name: 'tables',
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdBorderAll

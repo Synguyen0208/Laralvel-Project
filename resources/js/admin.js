@@ -11,6 +11,7 @@ import './Admin/styles/reduction.scss';
 const AlertPage = React.lazy(() => import('./Admin/pages/AlertPage'));
 const AuthModalPage = React.lazy(() => import('./Admin/pages/AuthModalPage'));
 const BadgePage = React.lazy(() => import('./Admin/pages/BadgePage'));
+const StaffPage = React.lazy(() => import('./Admin/pages/StaffPage'));
 const ButtonGroupPage = React.lazy(() => import('./Admin/pages/ButtonGroupPage'));
 const ButtonPage = React.lazy(() => import('./Admin/pages/ButtonPage'));
 const CardPage = React.lazy(() => import('./Admin/pages/CardPage'));
@@ -63,6 +64,7 @@ class App extends React.Component {
                 <Route exact path="/admin/alerts" component={AlertPage} />
                 <Route exact path="/admin/tables" component={TablePage} />
                 <Route exact path="/admin/badges" component={BadgePage} />
+                <Route exact path="/admin/staff" component={StaffPage} />
                 <Route
                   exact
                   path="/admin/button-groups"

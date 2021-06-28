@@ -664,7 +664,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 li{
   list-style: none;
-  text-align: center;
+  /* text-align: center; */
 }
 #about h3 {
   font-size: 18px;
@@ -1478,7 +1478,7 @@ li{
 }
 
 #footer .footer-top {
-  background: #040919;
+  background: #151515;
   padding: 60px 0 30px 0;
 }
 
@@ -1496,8 +1496,9 @@ li{
 }
 
 #footer .footer-top .footer-info img {
-  height: 40px;
+  width: 100%;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 #footer .footer-top .footer-info p {

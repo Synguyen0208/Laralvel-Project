@@ -24,6 +24,8 @@ import {
   MdViewList,
   MdWeb,
   MdWidgets,
+  MdComputer,
+  MdAccountBox,
 } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import {
@@ -62,6 +64,9 @@ const navComponents = [
   { to: '/admin/progress', name: 'progress', exact: false, Icon: MdBrush },
   { to: '/admin/modals', name: 'modals', exact: false, Icon: MdViewDay },
 ];
+const navManage = [
+  { to: '/admin/staff', name: 'staff', exact: false, Icon: MdAccountBox}
+];
 
 const navContents = [
   { to: '/admin/typography', name: 'typography', exact: false, Icon: MdTextFields },
@@ -88,6 +93,7 @@ const bem = bn.create('sidebar');
 class Sidebar extends React.Component {
   state = {
     isOpenComponents: true,
+    isOpenManage: true,
     isOpenContents: true,
     isOpenPages: true,
   };
@@ -135,6 +141,45 @@ class Sidebar extends React.Component {
                 </BSNavLink>
               </NavItem>
             ))}
+            <NavItem
+              className={bem.e('nav-item')}
+              onClick={this.handleClick('Manage')}
+            >
+              <BSNavLink className={bem.e('nav-item-collapse')}>
+                <div className="d-flex">
+                  <MdComputer className={bem.e('nav-item-icon')} />
+                  <span className=" align-self-start">Manage</span>
+                </div>
+                <MdKeyboardArrowDown
+                  className={bem.e('nav-item-icon')}
+                  style={{
+                    padding: 0,
+                    transform: this.state.isOpenManage
+                      ? 'rotate(0deg)'
+                      : 'rotate(-90deg)',
+                    transitionDuration: '0.3s',
+                    transitionProperty: 'transform',
+                  }}
+                />
+              </BSNavLink>
+            </NavItem>
+            <Collapse isOpen={this.state.isOpenManage}>
+              {navManage.map(({ to, name, exact, Icon }, index) => (
+                <NavItem key={index} className={bem.e('nav-item')}>
+                  <BSNavLink
+                    id={`navItem-${name}-${index}`}
+                    className="text-uppercase"
+                    tag={NavLink}
+                    to={to}
+                    activeClassName="active"
+                    exact={exact}
+                  >
+                    <Icon className={bem.e('nav-item-icon')} />
+                    <span className="">{name}</span>
+                  </BSNavLink>
+                </NavItem>
+              ))}
+            </Collapse>
 
             <NavItem
               className={bem.e('nav-item')}

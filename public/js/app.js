@@ -3666,6 +3666,12 @@ var navComponents = [{
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdViewDay
 }];
+var navManage = [{
+  to: '/admin/staff',
+  name: 'staff',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdAccountBox
+}];
 var navContents = [{
   to: '/admin/typography',
   name: 'typography',
@@ -3729,6 +3735,7 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       isOpenComponents: true,
+      isOpenManage: true,
       isOpenContents: true,
       isOpenPages: true
     });
@@ -3796,6 +3803,54 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
               }, index);
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
               className: bem.e('nav-item'),
+              onClick: this.handleClick('Manage'),
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+                className: bem.e('nav-item-collapse'),
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                  className: "d-flex",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdComputer, {
+                    className: bem.e('nav-item-icon')
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                    className: " align-self-start",
+                    children: "Manage"
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdKeyboardArrowDown, {
+                  className: bem.e('nav-item-icon'),
+                  style: {
+                    padding: 0,
+                    transform: this.state.isOpenManage ? 'rotate(0deg)' : 'rotate(-90deg)',
+                    transitionDuration: '0.3s',
+                    transitionProperty: 'transform'
+                  }
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+              isOpen: this.state.isOpenManage,
+              children: navManage.map(function (_ref3, index) {
+                var to = _ref3.to,
+                    name = _ref3.name,
+                    exact = _ref3.exact,
+                    Icon = _ref3.Icon;
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+                  className: bem.e('nav-item'),
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+                    id: "navItem-".concat(name, "-").concat(index),
+                    className: "text-uppercase",
+                    tag: react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default,
+                    to: to,
+                    activeClassName: "active",
+                    exact: exact,
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Icon, {
+                      className: bem.e('nav-item-icon')
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                      className: "",
+                      children: name
+                    })]
+                  })
+                }, index);
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+              className: bem.e('nav-item'),
               onClick: this.handleClick('Components'),
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
                 className: bem.e('nav-item-collapse'),
@@ -3819,11 +3874,11 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               isOpen: this.state.isOpenComponents,
-              children: navComponents.map(function (_ref3, index) {
-                var to = _ref3.to,
-                    name = _ref3.name,
-                    exact = _ref3.exact,
-                    Icon = _ref3.Icon;
+              children: navComponents.map(function (_ref4, index) {
+                var to = _ref4.to,
+                    name = _ref4.name,
+                    exact = _ref4.exact,
+                    Icon = _ref4.Icon;
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                   className: bem.e('nav-item'),
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
@@ -3867,11 +3922,11 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               isOpen: this.state.isOpenContents,
-              children: navContents.map(function (_ref4, index) {
-                var to = _ref4.to,
-                    name = _ref4.name,
-                    exact = _ref4.exact,
-                    Icon = _ref4.Icon;
+              children: navContents.map(function (_ref5, index) {
+                var to = _ref5.to,
+                    name = _ref5.name,
+                    exact = _ref5.exact,
+                    Icon = _ref5.Icon;
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                   className: bem.e('nav-item'),
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
@@ -3915,11 +3970,11 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               isOpen: this.state.isOpenPages,
-              children: pageContents.map(function (_ref5, index) {
-                var to = _ref5.to,
-                    name = _ref5.name,
-                    exact = _ref5.exact,
-                    Icon = _ref5.Icon;
+              children: pageContents.map(function (_ref6, index) {
+                var to = _ref6.to,
+                    name = _ref6.name,
+                    exact = _ref6.exact,
+                    Icon = _ref6.Icon;
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                   className: bem.e('nav-item'),
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {

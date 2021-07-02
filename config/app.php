@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
+        App\Providers\BroadcastServiceProvider::class,
         /*
          * Package Service Providers...
          */

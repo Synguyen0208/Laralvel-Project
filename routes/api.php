@@ -20,3 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login', ['as' => 'Login', 'uses' => 'App\Http\Controllers\PageController@login']);
 Route::post('/send','App\Http\Controllers\PageController@send');
 Route::get('/view','App\Http\Controllers\PageController@analytic');
+Route::get('/staff','App\Http\Controllers\PageController@getStaff');
+Route::post('/staff','App\Http\Controllers\PageController@addStaff');
+Route::delete('/staff/{id}','App\Http\Controllers\PageController@deleteStaff');
+Route::post('/updateStaff/{id}','App\Http\Controllers\PageController@updateStaff');
+Route::get('/dataForm','App\Http\Controllers\PageController@getDataForm');

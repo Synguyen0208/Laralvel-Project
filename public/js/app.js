@@ -3615,6 +3615,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var sidebarBackground = {
   backgroundImage: "url(\"".concat(_assets_img_sidebar_sidebar_4_jpg__WEBPACK_IMPORTED_MODULE_1__.default, "\")"),
   backgroundSize: 'cover',
@@ -3671,6 +3672,11 @@ var navManage = [{
   name: 'staff',
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdAccountBox
+}, {
+  to: '/admin/partner',
+  name: 'partner',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdGroup
 }];
 var navContents = [{
   to: '/admin/typography',
@@ -6696,6 +6702,9 @@ var BadgePage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function ()
 var StaffPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_StaffPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/StaffPage */ "./resources/js/Admin/pages/StaffPage.js"));
 });
+var PartnerPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_PartnerPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/PartnerPage */ "./resources/js/Admin/pages/PartnerPage.js"));
+});
 var ButtonGroupPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_ButtonGroupPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/ButtonGroupPage */ "./resources/js/Admin/pages/ButtonGroupPage.js"));
 });
@@ -6817,6 +6826,10 @@ var App = /*#__PURE__*/function (_React$Component) {
                   exact: true,
                   path: "/admin/staff",
                   component: StaffPage
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+                  path: "/admin/partner",
+                  component: PartnerPage
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
                   exact: true,
                   path: "/admin/button-groups",
@@ -75449,7 +75462,7 @@ function valueEqual(a, b) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_StaffPage_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_demos_dashboardPage_js-resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_StaffPage_js":1,"resources_js_Admin_pages_PartnerPage_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_demos_dashboardPage_js-resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

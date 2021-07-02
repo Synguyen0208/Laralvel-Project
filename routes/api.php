@@ -25,3 +25,8 @@ Route::post('/staff','App\Http\Controllers\PageController@addStaff');
 Route::delete('/staff/{id}','App\Http\Controllers\PageController@deleteStaff');
 Route::post('/updateStaff/{id}','App\Http\Controllers\PageController@updateStaff');
 Route::get('/dataForm','App\Http\Controllers\PageController@getDataForm');
+
+Route::get('/partner','App\Http\Controllers\PageController@getPartner');
+Route::post('/partner','App\Http\Controllers\PageController@addPartner');
+Route::post('/updatePartner/{id}','App\Http\Controllers\PageController@updatePartner');
+Route::delete('/partner/{id}','App\Http\Controllers\PageController@deletePartner');

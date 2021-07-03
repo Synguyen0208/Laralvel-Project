@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Admin_pages_StaffPage_js"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Admin_pages_PartnerPage_js"],{
 
 /***/ "./resources/js/Admin/components/Form.js":
 /*!***********************************************!*\
@@ -789,10 +789,10 @@ var Table = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/Admin/pages/StaffPage.js":
-/*!***********************************************!*\
-  !*** ./resources/js/Admin/pages/StaffPage.js ***!
-  \***********************************************/
+/***/ "./resources/js/Admin/pages/PartnerPage.js":
+/*!*************************************************!*\
+  !*** ./resources/js/Admin/pages/PartnerPage.js ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -864,15 +864,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var StaffPage = /*#__PURE__*/function (_React$Component) {
-  _inherits(StaffPage, _React$Component);
+var PartnerPage = /*#__PURE__*/function (_React$Component) {
+  _inherits(PartnerPage, _React$Component);
 
-  var _super = _createSuper(StaffPage);
+  var _super = _createSuper(PartnerPage);
 
-  function StaffPage(props) {
+  function PartnerPage(props) {
     var _this;
 
-    _classCallCheck(this, StaffPage);
+    _classCallCheck(this, PartnerPage);
 
     _this = _super.call(this, props);
 
@@ -891,7 +891,7 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
         case 'add':
           {
             body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Form__WEBPACK_IMPORTED_MODULE_6__.default, {
-              submit: _this.addStaff,
+              submit: _this.addPartner,
               structure: _this.createForm(_this.state.data),
               change: _this.handleChange,
               changeImage: _this.handleChangeImage
@@ -908,12 +908,12 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
           {
             body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
               color: "danger",
-              children: "Are you sure you want to delete this staff!"
+              children: "Are you sure you want to delete this partner!"
             });
 
             _this.setState({
               action_modal: function action_modal() {
-                return _this.deleteStaff(data);
+                return _this.deletePartner(data);
               }
             });
           }
@@ -923,8 +923,12 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
           {
             _this.setUpadteData(data);
 
+            _this.setState({
+              action_modal: false
+            });
+
             body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Form__WEBPACK_IMPORTED_MODULE_6__.default, {
-              submit: _this.updateStaff,
+              submit: _this.updatePartner,
               structure: _this.createForm(data),
               change: _this.handleChange,
               changeImage: _this.handleChangeImage
@@ -958,18 +962,14 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
         form.append('image', _this.state.image);
       }
 
-      form.append('facebook', _this.state.facebook);
-      form.append('linkedin', _this.state.linkedin);
-      form.append('twitter', _this.state.twitter);
       form.append('description', document.getElementById('description').value);
-      form.append('work_at', _this.state.country);
-      form.append('position_id', _this.state.position);
-      form.append('department_id', _this.state.department); // console.log(this.state);
+      form.append('link', _this.state.link);
+      form.append('type', _this.state.type); // console.log(this.state);
 
       return form;
     });
 
-    _defineProperty(_assertThisInitialized(_this), "addStaff", /*#__PURE__*/function () {
+    _defineProperty(_assertThisInitialized(_this), "addPartner", /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(event) {
         var form;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -979,7 +979,7 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
                 event.preventDefault();
                 form = _this.createFormData();
                 _context.next = 4;
-                return _this.call.callAPI('staff', 'post', form).then(function (response) {
+                return _this.call.callAPI('partner', 'post', form).then(function (response) {
                   if (response.data.err == 0) {
                     _this.notificationSystem.addNotification({
                       title: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_11__.MdLoyalty, {}),
@@ -996,6 +996,9 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
                 });
 
               case 4:
+                _this.resetState();
+
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -1008,7 +1011,7 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
       };
     }());
 
-    _defineProperty(_assertThisInitialized(_this), "updateStaff", /*#__PURE__*/function () {
+    _defineProperty(_assertThisInitialized(_this), "updatePartner", /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(event) {
         var form;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
@@ -1018,7 +1021,7 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
                 event.preventDefault();
                 form = _this.createFormData();
                 _context2.next = 4;
-                return _this.call.callAPI('updateStaff/' + _this.state.id, 'post', form).then(function (response) {
+                return _this.call.callAPI('updatePartner/' + _this.state.id, 'post', form).then(function (response) {
                   console.log(response.data);
 
                   if (response.data.err == 0) {
@@ -1037,6 +1040,9 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
                 });
 
               case 4:
+                _this.resetState();
+
+              case 5:
               case "end":
                 return _context2.stop();
             }
@@ -1049,8 +1055,17 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
       };
     }());
 
-    _defineProperty(_assertThisInitialized(_this), "deleteStaff", function (id) {
-      _this.call.callAPI('staff/' + id, 'delete', '').then(function (response) {
+    _defineProperty(_assertThisInitialized(_this), "resetState", function () {
+      _this.setState({
+        name: null,
+        image: null,
+        description: null,
+        link: null
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "deletePartner", function (id) {
+      _this.call.callAPI('partner/' + id, 'delete', '').then(function (response) {
         if (response.data.err == 0) {
           _this.notificationSystem.addNotification({
             title: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_11__.MdLoyalty, {}),
@@ -1063,6 +1078,8 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
       });
 
       _this.close();
+
+      _this.resetState();
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleChangeImage", function (event) {
@@ -1082,39 +1099,12 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "setUpadteData", function (data) {
-      // console.log(data);
-      _this.state.data_form.position.map(function (e) {
-        if (e.name == data.position) {
-          _this.setState({
-            position: e.id
-          });
-        }
-      });
-
-      _this.state.data_form.country.map(function (e) {
-        if (e.name == data.country) {
-          _this.setState({
-            country: e.id
-          });
-        }
-      });
-
-      _this.state.data_form.department.map(function (e) {
-        if (e.name == data.department) {
-          _this.setState({
-            department: e.id
-          });
-        }
-      });
-
       _this.setState({
         name: data.name,
-        facebook: data.facebook,
-        linkedin: data.linkedin,
-        twitter: data.twitter,
         description: data.description,
         old_image: data.image,
-        id: data.id
+        id: data.id,
+        link: data.link
       });
     });
 
@@ -1129,50 +1119,32 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
         type: 'file',
         value: data.image
       }, {
-        fill: 'facebook',
+        fill: 'link',
         type: 'text',
-        value: data.facebook
-      }, {
-        fill: 'linkedin',
-        type: 'text',
-        value: data.linkedin
-      }, {
-        fill: 'twitter',
-        type: 'text',
-        value: data.twitter
+        value: data.link
       }, {
         fill: 'description',
         type: 'textarea',
         value: data.description
       }, {
-        fill: 'position',
+        fill: 'type',
         type: 'select',
-        data: _this.state.data_form.position,
-        value: data.position
-      }, {
-        fill: 'country',
-        type: 'select',
-        data: _this.state.data_form.country,
-        value: data.country
-      }, {
-        fill: 'department',
-        type: 'select',
-        data: _this.state.data_form.department,
-        value: data.department
+        value: data.type,
+        data: [{
+          id: 'Main partner',
+          name: 'Main partner'
+        }, {
+          id: 'Local partner',
+          name: 'Local partner'
+        }]
       }];
       return structure;
     });
 
     _defineProperty(_assertThisInitialized(_this), "getData", function () {
-      _this.call.callAPI('staff', 'get', '').then(function (response) {
+      _this.call.callAPI('partner', 'get', '').then(function (response) {
         _this.setState({
           data: response.data
-        });
-      });
-
-      _this.call.callAPI('dataForm', 'get', '').then(function (response) {
-        _this.setState({
-          data_form: response.data
         });
       });
     });
@@ -1180,19 +1152,14 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       id: null,
       data: null,
-      data_form: null,
       open: false,
       title: null,
       name: null,
       image: null,
-      facebook: null,
-      linkedin: null,
-      twitter: null,
       description: null,
-      position: null,
+      link: null,
+      type: null,
       old_image: null,
-      department: null,
-      country: null,
       message: null,
       body_modal: null,
       title_modal: null,
@@ -1201,18 +1168,11 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
     return _this;
   }
 
-  _createClass(StaffPage, [{
+  _createClass(PartnerPage, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       this.intervalId = setInterval(this.timer.bind(this), 10000);
-      this.getData(); // Pusher.logToConsole = true;
-      // var pusher = new Pusher('a3e01e457211a09f947c', {
-      //     cluster: 'ap1'
-      // });
-      // var channel = pusher.subscribe('statistical');
-      // channel.bind('event', function (data) {
-      //     alert(JSON.stringify(data));
-      // });
+      this.getData();
     }
   }, {
     key: "componentWillUnmount",
@@ -1230,66 +1190,31 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_components_Page__WEBPACK_IMPORTED_MODULE_1__.default, {
-        title: "Manage Our Staffs",
+        title: "Manage Our Partner",
         breadcrumbs: [{
-          name: 'staffs',
+          name: 'partners',
           active: true
         }],
         className: "TablePage",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
           onClick: function onClick() {
-            return _this2.open('add', 'Add Staff');
+            return _this2.open('add', 'Add Partner');
           },
           outline: true,
           color: "primary",
-          children: "Add Staff"
-        }), this.state.message != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-          color: "success",
-          children: this.state.message
+          children: "Add Partner"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
               className: "mb-3",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
-                children: "Board Members"
+                children: "Partner list"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
                 children: this.state.data != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_table__WEBPACK_IMPORTED_MODULE_3__.default, {
                   id: "datatable",
                   update: this.open,
                   "delete": this.open,
-                  data: this.state.data.board
-                })
-              })]
-            })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
-              className: "mb-3",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
-                children: "Coordination team"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
-                children: this.state.data != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_table__WEBPACK_IMPORTED_MODULE_3__.default, {
-                  update: this.open,
-                  "delete": this.open,
-                  id: "datatable1",
-                  data: this.state.data.coordination
-                })
-              })]
-            })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
-              className: "mb-3",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
-                children: "Local team"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
-                children: this.state.data != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_table__WEBPACK_IMPORTED_MODULE_3__.default, {
-                  update: this.open,
-                  "delete": this.open,
-                  id: "datatable2",
-                  data: this.state.data.local
+                  data: this.state.data
                 })
               })]
             })
@@ -1311,10 +1236,10 @@ var StaffPage = /*#__PURE__*/function (_React$Component) {
     }
   }]);
 
-  return StaffPage;
+  return PartnerPage;
 }(react__WEBPACK_IMPORTED_MODULE_2__.Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StaffPage);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PartnerPage);
 
 /***/ }),
 

@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Mail;
 use Analytics;
 use App\Models\Country;
 use App\Models\Department;
+use App\Models\Partner;
 use App\Models\Position;
 use App\Models\Staff;
 use Carbon\Carbon;
@@ -183,4 +184,47 @@ class PageController extends Controller
         ];
         Mail::to('syn282002@gmail.com')->send(new SendMail($details));
     }
+
+//Partner page
+    function getPartner(){
+        $partners=Partner::all();
+        return response()->json($partners);
+    }
+    public function addPartner(Request $request)
+    {
+        $new=new Partner();
+        $new->name=$request->name;
+        $new->description=$request->description;
+        $new->link=$request->link;
+        $new->type=$request->type;
+        $file =  $request->file("image");
+        $file->move('./images/partners/',$file->getClientOriginalName());
+        $name_file=$file->getClientOriginalName();
+        $new->image='partners/'.$name_file;
+        $new->save();
+        return response()->json(['message'=>"Add partner success!", 'err'=>0]);
+    }
+    public function updatePartner(Request $request)
+    {
+        $update=Partner::find($request->id);
+        $update->name=$request->name;
+        $update->description=$request->description;
+        $update->link=$request->link;
+        $update->type=$request->type;
+        if($request->file('image')!=null){
+            $file =  $request->file("image");
+            $file->move('./images/partners/',$file->getClientOriginalName());
+            $name_file=$file->getClientOriginalName();
+            $update->image='partners/'.$name_file;
+        }
+        $update->save();
+        return response()->json(['message'=>'Update Staff success', 'err'=>0]);
+    }
+    public function deletePartner($id)
+    {
+        $staff=Partner::find($id);
+        $staff->delete();
+        return response()->json(['message'=>"Delete staff success!", 'err'=>0]);
+    }
+//End Partner page
 }

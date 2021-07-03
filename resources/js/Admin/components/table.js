@@ -62,10 +62,7 @@ class Table extends Component {
                         </tr>
                     </tfoot>
                     <tbody>
-                        <tr style={{ display: "none" }}>
-                            <td>
-                            </td>
-                        </tr>
+                       
                         {this.props.data.map(value1 => {
                             return (<tr>
                                 {Object.values(value1).map((value, key) => {

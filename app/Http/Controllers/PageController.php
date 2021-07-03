@@ -196,6 +196,7 @@ class PageController extends Controller
         $new->name=$request->name;
         $new->description=$request->description;
         $new->link=$request->link;
+        $new->type=$request->type;
         $file =  $request->file("image");
         $file->move('./images/partners/',$file->getClientOriginalName());
         $name_file=$file->getClientOriginalName();
@@ -209,6 +210,7 @@ class PageController extends Controller
         $update->name=$request->name;
         $update->description=$request->description;
         $update->link=$request->link;
+        $update->type=$request->type;
         if($request->file('image')!=null){
             $file =  $request->file("image");
             $file->move('./images/partners/',$file->getClientOriginalName());

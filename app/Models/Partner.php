@@ -13,7 +13,8 @@ class Partner extends Model
         'name',
         'image',
         'description',
-        'link'
+        'link',
+        'type'
     ];
     public $timestamps=false;
 }

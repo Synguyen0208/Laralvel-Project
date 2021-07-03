@@ -26,6 +26,7 @@ class PartnerPage extends React.Component {
             image: null,
             description: null,
             link: null,
+            type:null,
             old_image:null,
             message: null,
             body_modal: null,
@@ -89,6 +90,7 @@ class PartnerPage extends React.Component {
         }
         form.append('description', document.getElementById('description').value);
         form.append('link', this.state.link);
+        form.append('type', this.state.type);
         // console.log(this.state);
         return form;
     }
@@ -199,6 +201,22 @@ class PartnerPage extends React.Component {
                 fill: 'description',
                 type: 'textarea',
                 value:data.description
+            }
+            ,
+            {
+                fill: 'type',
+                type: 'select',
+                value:data.type,
+                data:[
+                    {
+                        id:'Main partner',
+                        name:'Main partner'
+                    },
+                    {
+                        id:'Local partner',
+                        name:'Local partner'
+                    }
+                ]
             }
         ];
         return structure;

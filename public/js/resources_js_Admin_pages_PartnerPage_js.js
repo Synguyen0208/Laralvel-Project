@@ -647,13 +647,8 @@ var Table = /*#__PURE__*/function (_Component) {
                 children: "Action"
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("tbody", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("tr", {
-              style: {
-                display: "none"
-              },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("td", {})
-            }), this.props.data.map(function (value1) {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("tbody", {
+            children: this.props.data.map(function (value1) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("tr", {
                 children: [Object.values(value1).map(function (value, key) {
                   if (keye[key] == "image") return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("td", {
@@ -773,7 +768,7 @@ var Table = /*#__PURE__*/function (_Component) {
                   })
                 })]
               });
-            })]
+            })
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_Modal__WEBPACK_IMPORTED_MODULE_5__.default, {
           body: this.state.text,
@@ -968,7 +963,8 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       }
 
       form.append('description', document.getElementById('description').value);
-      form.append('link', _this.state.link); // console.log(this.state);
+      form.append('link', _this.state.link);
+      form.append('type', _this.state.type); // console.log(this.state);
 
       return form;
     });
@@ -1130,6 +1126,17 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
         fill: 'description',
         type: 'textarea',
         value: data.description
+      }, {
+        fill: 'type',
+        type: 'select',
+        value: data.type,
+        data: [{
+          id: 'Main partner',
+          name: 'Main partner'
+        }, {
+          id: 'Local partner',
+          name: 'Local partner'
+        }]
       }];
       return structure;
     });
@@ -1151,6 +1158,7 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       image: null,
       description: null,
       link: null,
+      type: null,
       old_image: null,
       message: null,
       body_modal: null,

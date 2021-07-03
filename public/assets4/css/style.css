@@ -9,11 +9,7 @@
 # General
 --------------------------------------------------------------*/
 
-/*Contact Us*/
 
-
-
-/*End Contact Us*/
 body {
   background: #fff;
   color: #2f3138;
@@ -711,7 +707,7 @@ li{
 }
 
 #speakers .speaker .details h3 {
-  color: black;
+  color: #fff;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
@@ -1052,8 +1048,8 @@ li{
 }
 
 #gallery .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 100px;
+  height: 100px;
   background-color: #fff;
   opacity: 1;
   border: 1px solid #f82249;

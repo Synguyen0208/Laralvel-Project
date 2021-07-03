@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageClient;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login', ['as' => 'Login', 'uses' => 'App\Http\Controllers\PageController@login']);
 Route::post('/send','App\Http\Controllers\PageController@send');
 Route::get('/view','App\Http\Controllers\PageController@analytic');
+Route::get('/blog','App\Http\Controllers\PageClient@getBlog');

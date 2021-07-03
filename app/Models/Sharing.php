@@ -3,15 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
 use Illuminate\Database\Eloquent\Model;
-class User_Admin extends Model
+
+class Sharing extends Model
 {
     use HasFactory;
-    protected $table="admin";
+    protected $table="sharings";
     protected $fillable = [
-        'userName',
-        'password'
+        'image',
+        'content',
+        'name',
+        'role'
     ];
-    
+    public $timestamps =false;
 }

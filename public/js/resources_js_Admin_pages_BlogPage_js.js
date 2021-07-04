@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Admin_pages_PartnerPage_js"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Admin_pages_BlogPage_js"],{
 
 /***/ "./resources/js/Admin/components/Form.js":
 /*!***********************************************!*\
@@ -789,10 +789,10 @@ var Table = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/Admin/pages/PartnerPage.js":
-/*!*************************************************!*\
-  !*** ./resources/js/Admin/pages/PartnerPage.js ***!
-  \*************************************************/
+/***/ "./resources/js/Admin/pages/BlogPage.js":
+/*!**********************************************!*\
+  !*** ./resources/js/Admin/pages/BlogPage.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -805,20 +805,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Page */ "./resources/js/Admin/components/Page.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Alert.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Button.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Row.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Col.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardHeader.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardBody.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Form.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/FormGroup.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Label.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Input.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Button.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Row.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Col.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardHeader.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardBody.js");
 /* harmony import */ var _components_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/table */ "./resources/js/Admin/components/table.js");
 /* harmony import */ var _components_API_API__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/API/API */ "./resources/js/Admin/components/API/API.js");
-/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Modal */ "./resources/js/Admin/components/Modal.js");
-/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Form */ "./resources/js/Admin/components/Form.js");
-/* harmony import */ var react_notification_system__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-notification-system */ "./node_modules/react-notification-system/dist/NotificationSystem.js");
-/* harmony import */ var react_notification_system__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_notification_system__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/constants */ "./resources/js/Admin/utils/constants.js");
+/* harmony import */ var react_notification_system__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-notification-system */ "./node_modules/react-notification-system/dist/NotificationSystem.js");
+/* harmony import */ var react_notification_system__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_notification_system__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _utils_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/constants */ "./resources/js/Admin/utils/constants.js");
 /* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-icons/md */ "./node_modules/react-icons/md/index.esm.js");
+/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Modal */ "./resources/js/Admin/components/Modal.js");
+/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Form */ "./resources/js/Admin/components/Form.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -863,16 +867,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+var BlogPage = /*#__PURE__*/function (_React$Component) {
+  _inherits(BlogPage, _React$Component);
 
-var PartnerPage = /*#__PURE__*/function (_React$Component) {
-  _inherits(PartnerPage, _React$Component);
+  var _super = _createSuper(BlogPage);
 
-  var _super = _createSuper(PartnerPage);
-
-  function PartnerPage(props) {
+  function BlogPage(props) {
     var _this;
 
-    _classCallCheck(this, PartnerPage);
+    _classCallCheck(this, BlogPage);
 
     _this = _super.call(this, props);
 
@@ -888,32 +891,16 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       var body = '';
 
       switch (val) {
-        case 'add':
-          {
-            body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Form__WEBPACK_IMPORTED_MODULE_6__.default, {
-              submit: _this.addPartner,
-              structure: _this.createForm(_this.state.data),
-              change: _this.handleChange,
-              changeImage: _this.handleChangeImage
-            });
-
-            _this.setState({
-              action_modal: false
-            });
-
-            break;
-          }
-
         case 'delete':
           {
             body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
               color: "danger",
-              children: "Are you sure you want to delete this partner!"
+              children: "Are you sure you want to delete this blog!"
             });
 
             _this.setState({
               action_modal: function action_modal() {
-                return _this.deletePartner(data);
+                return _this.deleteBlog(data);
               }
             });
           }
@@ -921,17 +908,15 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
 
         case 'update':
           {
-            _this.setUpadteData(data);
-
             _this.setState({
-              action_modal: false
+              action_modal: false,
+              id: data.id
             });
 
-            body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Form__WEBPACK_IMPORTED_MODULE_6__.default, {
-              submit: _this.updatePartner,
+            body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Form__WEBPACK_IMPORTED_MODULE_8__.default, {
+              submit: _this.updateBlog,
               structure: _this.createForm(data),
-              change: _this.handleChange,
-              changeImage: _this.handleChangeImage
+              change: _this.handleChange
             });
           }
           break;
@@ -947,6 +932,15 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "createForm", function (data) {
+      var structure = [{
+        fill: 'description',
+        type: 'textarea',
+        value: data.description
+      }];
+      return structure;
+    });
+
     _defineProperty(_assertThisInitialized(_this), "handleChange", function (event) {
       var nam = event.target.name;
       var val = event.target.value; // alert(val);
@@ -956,20 +950,11 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "createFormData", function () {
       var form = new FormData();
-      form.append('name', _this.state.name);
-
-      if (_this.state.image != null) {
-        form.append('image', _this.state.image);
-      }
-
-      form.append('description', document.getElementById('description').value);
-      form.append('link', _this.state.link);
-      form.append('type', _this.state.type); // console.log(this.state);
-
+      form.append('description', document.getElementById('description_add').value);
       return form;
     });
 
-    _defineProperty(_assertThisInitialized(_this), "addPartner", /*#__PURE__*/function () {
+    _defineProperty(_assertThisInitialized(_this), "addBlog", /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(event) {
         var form;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -979,7 +964,7 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
                 event.preventDefault();
                 form = _this.createFormData();
                 _context.next = 4;
-                return _this.call.callAPI('partner', 'post', form).then(function (response) {
+                return _this.call.callAPI('blog', 'post', form).then(function (response) {
                   if (response.data.err == 0) {
                     _this.notificationSystem.addNotification({
                       title: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_11__.MdLoyalty, {}),
@@ -987,18 +972,11 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
                       level: 'info'
                     });
 
-                    _this.setState({
-                      open: false
-                    });
-
                     _this.getData();
                   }
                 });
 
               case 4:
-                _this.resetState();
-
-              case 5:
               case "end":
                 return _context.stop();
             }
@@ -1011,7 +989,7 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       };
     }());
 
-    _defineProperty(_assertThisInitialized(_this), "updatePartner", /*#__PURE__*/function () {
+    _defineProperty(_assertThisInitialized(_this), "updateBlog", /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(event) {
         var form;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
@@ -1020,8 +998,9 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
               case 0:
                 event.preventDefault();
                 form = _this.createFormData();
-                _context2.next = 4;
-                return _this.call.callAPI('updatePartner/' + _this.state.id, 'post', form).then(function (response) {
+                form.append('description', document.getElementById('description').value);
+                _context2.next = 5;
+                return _this.call.callAPI('updateBlog/' + _this.state.id, 'post', form).then(function (response) {
                   console.log(response.data);
 
                   if (response.data.err == 0) {
@@ -1031,16 +1010,11 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
                       level: 'info'
                     });
 
-                    _this.setState({
-                      open: false
-                    });
-
                     _this.getData();
+
+                    _this.close();
                   }
                 });
-
-              case 4:
-                _this.resetState();
 
               case 5:
               case "end":
@@ -1055,17 +1029,8 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       };
     }());
 
-    _defineProperty(_assertThisInitialized(_this), "resetState", function () {
-      _this.setState({
-        name: null,
-        image: null,
-        description: null,
-        link: null
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "deletePartner", function (id) {
-      _this.call.callAPI('partner/' + id, 'delete', '').then(function (response) {
+    _defineProperty(_assertThisInitialized(_this), "deleteBlog", function (id) {
+      _this.call.callAPI('blog/' + id, 'delete', '').then(function (response) {
         if (response.data.err == 0) {
           _this.notificationSystem.addNotification({
             title: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_11__.MdLoyalty, {}),
@@ -1078,71 +1043,12 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       });
 
       _this.close();
-
-      _this.resetState();
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "handleChangeImage", function (event) {
-      var reader = new FileReader();
-      $('#blah').removeAttr('hidden');
-      $('#new').removeAttr('hidden');
-
-      reader.onload = function (e) {
-        $('#blah').attr('src', e.target.result);
-      };
-
-      reader.readAsDataURL(event.target.files[0]);
-
-      _this.setState({
-        image: event.target.files[0]
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "setUpadteData", function (data) {
-      _this.setState({
-        name: data.name,
-        description: data.description,
-        old_image: data.image,
-        id: data.id,
-        link: data.link
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "createForm", function (data) {
-      // console.log(data);
-      var structure = [{
-        fill: 'name',
-        type: 'text',
-        value: data.name
-      }, {
-        fill: 'image',
-        type: 'file',
-        value: data.image
-      }, {
-        fill: 'link',
-        type: 'text',
-        value: data.link
-      }, {
-        fill: 'description',
-        type: 'textarea',
-        value: data.description
-      }, {
-        fill: 'type',
-        type: 'select',
-        value: data.type,
-        data: [{
-          id: 'Main partner',
-          name: 'Main partner'
-        }, {
-          id: 'Local partner',
-          name: 'Local partner'
-        }]
-      }];
-      return structure;
     });
 
     _defineProperty(_assertThisInitialized(_this), "getData", function () {
-      _this.call.callAPI('partner', 'get', '').then(function (response) {
+      _this.call.callAPI('blog', 'get', '').then(function (response) {
+        console.log(response.data);
+
         _this.setState({
           data: response.data
         });
@@ -1154,12 +1060,7 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       data: null,
       open: false,
       title: null,
-      name: null,
-      image: null,
       description: null,
-      link: null,
-      type: null,
-      old_image: null,
       message: null,
       body_modal: null,
       title_modal: null,
@@ -1168,9 +1069,13 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
     return _this;
   }
 
-  _createClass(PartnerPage, [{
+  _createClass(BlogPage, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var script = document.createElement("script");
+      script.src = "../js/dataTable.js";
+      script.async = true;
+      document.body.appendChild(script);
       this.intervalId = setInterval(this.timer.bind(this), 10000);
       this.getData();
     }
@@ -1190,27 +1095,39 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_components_Page__WEBPACK_IMPORTED_MODULE_1__.default, {
-        title: "Manage Our Partner",
+        title: "Manage Blog",
         breadcrumbs: [{
-          name: 'partners',
+          name: 'Blog',
           active: true
         }],
         className: "TablePage",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
-          onClick: function onClick() {
-            return _this2.open('add', 'Add Partner');
-          },
-          outline: true,
-          color: "primary",
-          children: "Add Partner"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+          onSubmit: this.addBlog,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+              "for": "description_add",
+              children: "Content"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
+              onChange: this.handleChange,
+              type: "textarea",
+              name: "description",
+              id: "description_add",
+              placeholder: "Write content for blog.",
+              required: true
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
+            outline: true,
+            color: "primary",
+            children: "Write blog"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_18__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
               className: "mb-3",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
-                children: "Partner list"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
-                children: this.state.data != null && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_table__WEBPACK_IMPORTED_MODULE_3__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+                children: "Blog list"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+                children: this.state.data != null && this.state.data.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_table__WEBPACK_IMPORTED_MODULE_3__.default, {
                   id: "datatable",
                   update: this.open,
                   "delete": this.open,
@@ -1219,27 +1136,27 @@ var PartnerPage = /*#__PURE__*/function (_React$Component) {
               })]
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Modal__WEBPACK_IMPORTED_MODULE_5__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Modal__WEBPACK_IMPORTED_MODULE_7__.default, {
           title: this.state.title_modal,
           body: this.state.body_modal,
           action: this.state.action_modal,
           open: this.state.open,
           close: this.close
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)((react_notification_system__WEBPACK_IMPORTED_MODULE_7___default()), {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)((react_notification_system__WEBPACK_IMPORTED_MODULE_5___default()), {
           dismissible: false,
           ref: function ref(notificationSystem) {
             return _this2.notificationSystem = notificationSystem;
           },
-          style: _utils_constants__WEBPACK_IMPORTED_MODULE_8__.NOTIFICATION_SYSTEM_STYLE
+          style: _utils_constants__WEBPACK_IMPORTED_MODULE_6__.NOTIFICATION_SYSTEM_STYLE
         })]
       });
     }
   }]);
 
-  return PartnerPage;
+  return BlogPage;
 }(react__WEBPACK_IMPORTED_MODULE_2__.Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PartnerPage);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlogPage);
 
 /***/ }),
 

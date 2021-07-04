@@ -3,7 +3,6 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-<!-- <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script> -->
 <script src="/assets_js/ckeditor/ckeditor.js"></script>
 <script src="/assets_js/ckeditor/samples/js/sample.js"></script>
 <script language="JavaScript" src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>

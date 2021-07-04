@@ -12,6 +12,7 @@ const AlertPage = React.lazy(() => import('./Admin/pages/AlertPage'));
 const AuthModalPage = React.lazy(() => import('./Admin/pages/AuthModalPage'));
 const BadgePage = React.lazy(() => import('./Admin/pages/BadgePage'));
 const StaffPage = React.lazy(() => import('./Admin/pages/StaffPage'));
+const BlogPage = React.lazy(() => import('./Admin/pages/BlogPage'));
 const PartnerPage = React.lazy(() => import('./Admin/pages/PartnerPage'));
 const ButtonGroupPage = React.lazy(() => import('./Admin/pages/ButtonGroupPage'));
 const ButtonPage = React.lazy(() => import('./Admin/pages/ButtonPage'));
@@ -67,6 +68,7 @@ class App extends React.Component {
                 <Route exact path="/admin/badges" component={BadgePage} />
                 <Route exact path="/admin/staff" component={StaffPage} />
                 <Route exact path="/admin/partner" component={PartnerPage} />
+                <Route exact path="/admin/blog" component={BlogPage} />
                 <Route
                   exact
                   path="/admin/button-groups"

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Analytics;
+use App\Models\Blog;
 use App\Models\Country;
 use App\Models\Department;
 use App\Models\Partner;
@@ -227,4 +228,31 @@ class PageController extends Controller
         return response()->json(['message'=>"Delete staff success!", 'err'=>0]);
     }
 //End Partner page
+
+    //Blog page
+    function getBlog(){
+        $blog=Blog::all();
+        return response()->json($blog);
+    }
+    public function addBlog(Request $request)
+    {
+        $new=new Blog();
+        $new->description=$request->description;
+        $new->save();
+        return response()->json(['message'=>"Add blog success!", 'err'=>0]);
+    }
+    public function updateBlog(Request $request)
+    {
+        $update=Blog::find($request->id);
+        $update->description=$request->description;
+        $update->save();
+        return response()->json(['message'=>'Update blog success', 'err'=>0]);
+    }
+    public function deleteBlog($id)
+    {
+        $find=Blog::find($id);
+        $find->delete();
+        return response()->json(['message'=>"Delete blog success!", 'err'=>0]);
+    }
+    //End Blog
 }

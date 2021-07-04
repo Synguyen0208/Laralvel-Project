@@ -26,7 +26,8 @@ import {
   MdWidgets,
   MdComputer,
   MdAccountBox,
-  MdGroup
+  MdGroup,
+  MdPictureInPicture
 } from 'react-icons/md';
 import { HiCloud } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
@@ -69,6 +70,7 @@ const navComponents = [
 const navManage = [
   { to: '/admin/staff', name: 'staff', exact: false, Icon: MdAccountBox},
   { to: '/admin/partner', name: 'partner', exact: false, Icon: MdGroup},
+  { to: '/admin/blog', name: 'blog', exact: false, Icon: MdPictureInPicture},
 ];
 
 const navContents = [

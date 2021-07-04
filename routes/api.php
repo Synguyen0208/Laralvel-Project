@@ -30,3 +30,8 @@ Route::get('/partner','App\Http\Controllers\PageController@getPartner');
 Route::post('/partner','App\Http\Controllers\PageController@addPartner');
 Route::post('/updatePartner/{id}','App\Http\Controllers\PageController@updatePartner');
 Route::delete('/partner/{id}','App\Http\Controllers\PageController@deletePartner');
+
+Route::get('/blog','App\Http\Controllers\PageController@getBlog');
+Route::post('/blog','App\Http\Controllers\PageController@addBlog');
+Route::post('/updateBlog/{id}','App\Http\Controllers\PageController@updateBlog');
+Route::delete('/blog/{id}','App\Http\Controllers\PageController@deleteBlog');

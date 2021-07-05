@@ -28,7 +28,9 @@ import {
   MdAccountBox,
   MdGroup,
   MdPictureInPicture,
-  MdGroupAdd
+  MdGroupAdd,
+  MdViewModule,
+  MdUpdate
 } from 'react-icons/md';
 import { HiCloud } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
@@ -73,6 +75,7 @@ const navManage = [
   { to: '/admin/partner', name: 'partner', exact: false, Icon: MdGroup},
   { to: '/admin/blog', name: 'blog', exact: false, Icon: MdPictureInPicture},
   { to: '/admin/partner_become', name: 'partner becomes', exact: false, Icon: MdGroupAdd},
+  { to: '/admin/key_date', name: 'key dates', exact: false, Icon: MdUpdate},
 ];
 
 const navContents = [
@@ -93,6 +96,7 @@ const navItems = [
   { to: '/admin/cards', name: 'cards', exact: false, Icon: MdWeb },
   { to: '/admin/charts', name: 'charts', exact: false, Icon: MdInsertChart },
   { to: '/admin/widgets', name: 'widgets', exact: false, Icon: MdWidgets },
+  { to: '/admin/data', name: 'data', exact: false, Icon: MdViewModule },
 ];
 
 const bem = bn.create('sidebar');

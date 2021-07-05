@@ -3687,6 +3687,11 @@ var navManage = [{
   name: 'partner becomes',
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdGroupAdd
+}, {
+  to: '/admin/key_date',
+  name: 'key dates',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdUpdate
 }];
 var navContents = [{
   to: '/admin/typography',
@@ -3730,6 +3735,11 @@ var navItems = [{
   name: 'widgets',
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdWidgets
+}, {
+  to: '/admin/data',
+  name: 'data',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdViewModule
 }];
 var bem = _utils_bemnames__WEBPACK_IMPORTED_MODULE_4__.default.create('sidebar');
 
@@ -6721,6 +6731,12 @@ var PartnerPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function 
 var Partner_become = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_Partner_become_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/Partner_become */ "./resources/js/Admin/pages/Partner_become.js"));
 });
+var KeyDatePage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_KeyDatePage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/KeyDatePage */ "./resources/js/Admin/pages/KeyDatePage.js"));
+});
+var Manage_data = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_Manage_data_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/Manage_data */ "./resources/js/Admin/pages/Manage_data.js"));
+});
 var ButtonGroupPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_ButtonGroupPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/ButtonGroupPage */ "./resources/js/Admin/pages/ButtonGroupPage.js"));
 });
@@ -6850,6 +6866,14 @@ var App = /*#__PURE__*/function (_React$Component) {
                   exact: true,
                   path: "/admin/partner_become",
                   component: Partner_become
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+                  path: "/admin/data",
+                  component: Manage_data
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+                  path: "/admin/key_date",
+                  component: KeyDatePage
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
                   exact: true,
                   path: "/admin/blog",
@@ -75486,7 +75510,7 @@ function valueEqual(a, b) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_StaffPage_js":1,"resources_js_Admin_pages_BlogPage_js":1,"resources_js_Admin_pages_PartnerPage_js":1,"resources_js_Admin_pages_Partner_become_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_demos_dashboardPage_js-resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_StaffPage_js":1,"resources_js_Admin_pages_BlogPage_js":1,"resources_js_Admin_pages_PartnerPage_js":1,"resources_js_Admin_pages_Partner_become_js":1,"resources_js_Admin_pages_KeyDatePage_js":1,"resources_js_Admin_pages_Manage_data_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_demos_dashboardPage_js-resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

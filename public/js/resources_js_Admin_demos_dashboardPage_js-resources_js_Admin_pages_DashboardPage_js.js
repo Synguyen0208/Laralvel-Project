@@ -1157,70 +1157,6 @@ var ChartData = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/Admin/demos/chartjs.js":
-/*!*********************************************!*\
-  !*** ./resources/js/Admin/demos/chartjs.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getStackLineChart": () => (/* binding */ getStackLineChart),
-/* harmony export */   "stackLineChartOptions": () => (/* binding */ stackLineChartOptions)
-/* harmony export */ });
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/src/chart.js");
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/Admin/utils/colors.js");
-
-
-var getStackLineChart = function getStackLineChart(_ref) {
-  var labels = _ref.labels,
-      data = _ref.data;
-  return function (canvas) {
-    var ctx = canvas.getContext('2d');
-    var gradient = ctx.createLinearGradient(0, 0, 0, 240);
-    gradient.addColorStop(0, chart_js__WEBPACK_IMPORTED_MODULE_0___default().helpers.color('#00c9ff').alpha(1).rgbString());
-    gradient.addColorStop(1, chart_js__WEBPACK_IMPORTED_MODULE_0___default().helpers.color('#00c9ff').alpha(0.2).rgbString());
-    return {
-      labels: labels,
-      datasets: [{
-        data: data,
-        label: 'My First dataset',
-        borderColor: (0,_utils_colors__WEBPACK_IMPORTED_MODULE_1__.getColor)('primary'),
-        backgroundColor: gradient,
-        fill: 'origin'
-      }]
-    };
-  };
-};
-var stackLineChartOptions = {
-  tooltips: {
-    intersect: false
-  },
-  animation: {
-    duration: 0
-  },
-  scales: {
-    xAxes: [{
-      display: false
-    }],
-    yAxes: [{
-      display: false
-    }]
-  },
-  legend: {
-    display: false
-  } // elements: {
-  //   line: {
-  //     tension: 0, // disables bezier curves
-  //   },
-  // },
-
-};
-
-/***/ }),
-
 /***/ "./resources/js/Admin/demos/dashboardPage.js":
 /*!***************************************************!*\
   !*** ./resources/js/Admin/demos/dashboardPage.js ***!
@@ -1599,29 +1535,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_SupportTicket__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/SupportTicket */ "./resources/js/Admin/components/SupportTicket.js");
 /* harmony import */ var _components_UserProgressTable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/UserProgressTable */ "./resources/js/Admin/components/UserProgressTable.js");
 /* harmony import */ var _components_Widget__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Widget */ "./resources/js/Admin/components/Widget/index.js");
-/* harmony import */ var _demos_chartjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../demos/chartjs */ "./resources/js/Admin/demos/chartjs.js");
-/* harmony import */ var _components_API_API__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/API/API */ "./resources/js/Admin/components/API/API.js");
-/* harmony import */ var _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../demos/dashboardPage */ "./resources/js/Admin/demos/dashboardPage.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _demos_chartData__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../demos/chartData */ "./resources/js/Admin/demos/chartData.js");
-/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-chartjs-2 */ "./node_modules/react-chartjs-2/es/index.js");
-/* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! react-icons/md */ "./node_modules/react-icons/md/index.esm.js");
-/* harmony import */ var react_infinite_calendar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-infinite-calendar */ "./node_modules/react-infinite-calendar/es/index.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Row.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Col.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardHeader.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardBody.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/ListGroup.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/ListGroupItem.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Badge.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardGroup.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardTitle.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardDeck.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Button.js");
-/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/Admin/utils/colors.js");
-/* harmony import */ var _process_data_process__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../process/data_process */ "./resources/js/Admin/process/data_process.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_API_API__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/API/API */ "./resources/js/Admin/components/API/API.js");
+/* harmony import */ var _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../demos/dashboardPage */ "./resources/js/Admin/demos/dashboardPage.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _demos_chartData__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../demos/chartData */ "./resources/js/Admin/demos/chartData.js");
+/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-chartjs-2 */ "./node_modules/react-chartjs-2/es/index.js");
+/* harmony import */ var react_icons_md__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! react-icons/md */ "./node_modules/react-icons/md/index.esm.js");
+/* harmony import */ var react_infinite_calendar__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-infinite-calendar */ "./node_modules/react-infinite-calendar/es/index.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Row.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Col.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardHeader.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardBody.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardGroup.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardDeck.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Button.js");
+/* harmony import */ var _utils_colors__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../utils/colors */ "./resources/js/Admin/utils/colors.js");
+/* harmony import */ var _process_data_process__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../process/data_process */ "./resources/js/Admin/process/data_process.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -1676,7 +1607,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var today = new Date();
 var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
 
@@ -1696,7 +1626,7 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call.apply(_super, [this].concat(args));
 
-    _defineProperty(_assertThisInitialized(_this), "data", new _process_data_process__WEBPACK_IMPORTED_MODULE_17__.default());
+    _defineProperty(_assertThisInitialized(_this), "data", new _process_data_process__WEBPACK_IMPORTED_MODULE_16__.default());
 
     _defineProperty(_assertThisInitialized(_this), "dataStatistical", {
       sessions: 0,
@@ -1714,17 +1644,17 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "dataChart", {
-      sessionsChart: new _demos_chartData__WEBPACK_IMPORTED_MODULE_13__.default(),
-      pageViewChart: new _demos_chartData__WEBPACK_IMPORTED_MODULE_13__.default(),
-      visitorChart: new _demos_chartData__WEBPACK_IMPORTED_MODULE_13__.default(),
-      bouncerateChart: new _demos_chartData__WEBPACK_IMPORTED_MODULE_13__.default()
+      sessionsChart: new _demos_chartData__WEBPACK_IMPORTED_MODULE_12__.default(),
+      pageViewChart: new _demos_chartData__WEBPACK_IMPORTED_MODULE_12__.default(),
+      visitorChart: new _demos_chartData__WEBPACK_IMPORTED_MODULE_12__.default(),
+      bouncerateChart: new _demos_chartData__WEBPACK_IMPORTED_MODULE_12__.default()
     });
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       data: null
     });
 
-    _defineProperty(_assertThisInitialized(_this), "call", new _components_API_API__WEBPACK_IMPORTED_MODULE_10__.default());
+    _defineProperty(_assertThisInitialized(_this), "call", new _components_API_API__WEBPACK_IMPORTED_MODULE_9__.default());
 
     return _this;
   }
@@ -1768,8 +1698,8 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var primaryColor = (0,_utils_colors__WEBPACK_IMPORTED_MODULE_16__.getColor)('primary');
-      var secondaryColor = (0,_utils_colors__WEBPACK_IMPORTED_MODULE_16__.getColor)('secondary');
+      var primaryColor = (0,_utils_colors__WEBPACK_IMPORTED_MODULE_15__.getColor)('primary');
+      var secondaryColor = (0,_utils_colors__WEBPACK_IMPORTED_MODULE_15__.getColor)('secondary');
 
       if (this.state.data != null) {
         this.dataStatistical = this.data.processStatistics(this.state.data);
@@ -1786,20 +1716,20 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
         this.dataChart.bouncerateChart.chartjs.line.data.datasets[0].borderColor = '#fc5c7d';
       }
 
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(_components_Page__WEBPACK_IMPORTED_MODULE_4__.default, {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_components_Page__WEBPACK_IMPORTED_MODULE_4__.default, {
         className: "DashboardPage",
         title: "Dashboard",
         breadcrumbs: [{
           name: 'Dashboard',
           active: true
         }],
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_18__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: 4,
             md: 6,
             sm: 6,
             xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
               title: "Page views",
               subtitle: "This month",
               isIncrease: true,
@@ -1810,12 +1740,12 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
                 persen: this.dataStatistical.pageviewsIncrease
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: 4,
             md: 6,
             sm: 6,
             xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
               title: "Monthly Visitors",
               subtitle: "This month",
               number: this.dataStatistical.visitors,
@@ -1826,12 +1756,12 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
                 persen: this.dataStatistical.visitorsIncrease
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: 4,
             md: 6,
             sm: 6,
             xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
               title: "Users",
               subtitle: "This month",
               number: this.dataStatistical.users,
@@ -1842,12 +1772,12 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
                 persen: this.dataStatistical.usersIncrease
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: 4,
             md: 6,
             sm: 6,
             xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
               title: "New Users",
               subtitle: "This month",
               number: this.dataStatistical.newusers,
@@ -1858,12 +1788,12 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
                 persen: this.dataStatistical.newusersIncrease
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: 4,
             md: 6,
             sm: 6,
             xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
               title: "Bounce Rate",
               subtitle: "This month",
               number: this.dataStatistical.bouncerate,
@@ -1874,12 +1804,12 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
                 persen: this.dataStatistical.bouncerateIncrease
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: 4,
             md: 6,
             sm: 6,
             xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.NumberWidget, {
               title: "Sessions",
               subtitle: "This month",
               number: this.dataStatistical.sessions,
@@ -1891,169 +1821,119 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
               }
             })
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_18__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "6",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
-                children: ["Page views", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("small", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+                children: ["Page views", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("small", {
                   className: "text-muted text-capitalize",
                   children: "This year"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__.Line, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_13__.Line, {
                   data: this.dataChart.pageViewChart.chartjs.line.data,
-                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.chartjs.line.options
+                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.chartjs.line.options
                 })
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "6",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
-                children: ["Sessions", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("small", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+                children: ["Sessions", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("small", {
                   className: "text-muted text-capitalize",
                   children: "This year"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__.Line, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_13__.Line, {
                   data: this.dataChart.sessionsChart.chartjs.line.data,
-                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.chartjs.line.options
+                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.chartjs.line.options
                 })
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "6",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
-                children: ["Visitors", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("small", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+                children: ["Visitors", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("small", {
                   className: "text-muted text-capitalize",
                   children: "This year"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__.Line, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_13__.Line, {
                   data: this.dataChart.visitorChart.chartjs.line.data,
-                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.chartjs.line.options
+                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.chartjs.line.options
                 })
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "6",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
-                children: ["Bounce rate", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("small", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+                children: ["Bounce rate", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("small", {
                   className: "text-muted text-capitalize",
                   children: "This year"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__.Line, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_13__.Line, {
                   data: this.dataChart.bouncerateChart.chartjs.line.data,
-                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.chartjs.line.options
+                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.chartjs.line.options
                 })
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
-            lg: "4",
-            md: "12",
-            sm: "12",
-            xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
-                children: "Total Expense"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__.Bar, {
-                  data: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.chartjs.bar.data,
-                  options: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.chartjs.bar.options
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_24__.default, {
-                flush: true,
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_25__.default, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdInsertChart, {
-                    size: 25,
-                    color: primaryColor
-                  }), " Cost of sales", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_27__.default, {
-                    color: "secondary",
-                    children: "$3000"
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_25__.default, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdBubbleChart, {
-                    size: 25,
-                    color: primaryColor
-                  }), " Management costs ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_27__.default, {
-                    color: "secondary",
-                    children: "$1200"
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_25__.default, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdShowChart, {
-                    size: 25,
-                    color: primaryColor
-                  }), " Financial costs", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_27__.default, {
-                    color: "secondary",
-                    children: "$800"
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_25__.default, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdPieChart, {
-                    size: 25,
-                    color: primaryColor
-                  }), " Other operating costs ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_27__.default, {
-                    color: "secondary",
-                    children: "$2400"
-                  })]
-                })]
               })]
             })
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_28__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
           style: {
             marginBottom: '1rem'
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.IconWidget, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.IconWidget, {
             bgColor: "white",
             inverse: false,
-            icon: react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdThumbUp,
+            icon: react_icons_md__WEBPACK_IMPORTED_MODULE_24__.MdThumbUp,
             title: "50+ Likes",
             subtitle: "People you like"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.IconWidget, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.IconWidget, {
             bgColor: "white",
             inverse: false,
-            icon: react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdRateReview,
+            icon: react_icons_md__WEBPACK_IMPORTED_MODULE_24__.MdRateReview,
             title: "10+ Reviews",
             subtitle: "New Reviews"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.IconWidget, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Widget__WEBPACK_IMPORTED_MODULE_8__.IconWidget, {
             bgColor: "white",
             inverse: false,
-            icon: react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdShare,
+            icon: react_icons_md__WEBPACK_IMPORTED_MODULE_24__.MdShare,
             title: "30+ Shares",
             subtitle: "New Shares"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_18__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             md: "6",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
                 children: "New Products"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.productsData.map(function (_ref) {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+                children: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.productsData.map(function (_ref) {
                   var id = _ref.id,
                       image = _ref.image,
                       title = _ref.title,
                       description = _ref.description,
                       right = _ref.right;
-                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_ProductMedia__WEBPACK_IMPORTED_MODULE_5__.default, {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_ProductMedia__WEBPACK_IMPORTED_MODULE_5__.default, {
                     image: image,
                     title: title,
                     description: description,
@@ -2062,99 +1942,30 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
                 })
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             md: "6",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
                 children: "New Users"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_UserProgressTable__WEBPACK_IMPORTED_MODULE_7__.default, {
-                  headers: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdPersonPin, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_UserProgressTable__WEBPACK_IMPORTED_MODULE_7__.default, {
+                  headers: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_24__.MdPersonPin, {
                     size: 25
                   }), 'name', 'date', 'participation', '%'],
-                  usersData: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.userProgressTableData
+                  usersData: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.userProgressTableData
                 })
               })]
             })
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
-            lg: 4,
-            md: 4,
-            sm: 12,
-            xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__.Line, {
-                data: (0,_demos_chartjs__WEBPACK_IMPORTED_MODULE_9__.getStackLineChart)({
-                  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                  data: [0, 13000, 5000, 24000, 16000, 25000, 10000]
-                }),
-                options: _demos_chartjs__WEBPACK_IMPORTED_MODULE_9__.stackLineChartOptions
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                className: "text-primary",
-                style: {
-                  position: 'absolute'
-                },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_29__.default, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdInsertChart, {}), " Sales"]
-                })
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
-            lg: 4,
-            md: 4,
-            sm: 12,
-            xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__.Line, {
-                data: (0,_demos_chartjs__WEBPACK_IMPORTED_MODULE_9__.getStackLineChart)({
-                  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                  data: [10000, 15000, 5000, 10000, 5000, 10000, 10000]
-                }),
-                options: _demos_chartjs__WEBPACK_IMPORTED_MODULE_9__.stackLineChartOptions
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                className: "text-primary",
-                style: {
-                  position: 'absolute'
-                },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_29__.default, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdInsertChart, {}), " Revenue"]
-                })
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
-            lg: 4,
-            md: 4,
-            sm: 12,
-            xs: 12,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_14__.Line, {
-                data: (0,_demos_chartjs__WEBPACK_IMPORTED_MODULE_9__.getStackLineChart)({
-                  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                  data: [0, 13000, 5000, 24000, 16000, 25000, 10000].reverse()
-                }),
-                options: _demos_chartjs__WEBPACK_IMPORTED_MODULE_9__.stackLineChartOptions
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                className: "text-primary",
-                style: {
-                  position: 'absolute',
-                  right: 0
-                },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_29__.default, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_26__.MdInsertChart, {}), " Profit"]
-                })
-              })]
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_18__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "4",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_infinite_calendar__WEBPACK_IMPORTED_MODULE_15__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(react_infinite_calendar__WEBPACK_IMPORTED_MODULE_14__.default, {
               selected: today,
               minDate: lastWeek,
               width: "100%",
@@ -2175,27 +1986,27 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
                 weekdayColor: primaryColor
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "8",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
               inverse: true,
               className: "bg-gradient-primary",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
                 className: "bg-gradient-primary",
                 children: "Map with bubbles"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_MapWithBubbles__WEBPACK_IMPORTED_MODULE_3__.default, {})
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_MapWithBubbles__WEBPACK_IMPORTED_MODULE_3__.default, {})
               })]
             })
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_30__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_25__.default, {
           style: {
             marginBottom: '1rem'
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
             body: true,
             style: {
               overflowX: 'auto',
@@ -2203,13 +2014,13 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
               'height': 'fit-content',
               'paddingTop': 'inherit'
             },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_HorizontalAvatarList__WEBPACK_IMPORTED_MODULE_2__.default, {
-              avatars: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.avatarsData,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_HorizontalAvatarList__WEBPACK_IMPORTED_MODULE_2__.default, {
+              avatars: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.avatarsData,
               avatarProps: {
                 size: 50
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
             body: true,
             style: {
               overflowX: 'auto',
@@ -2217,21 +2028,21 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
               'height': 'fit-content',
               'paddingTop': 'inherit'
             },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_HorizontalAvatarList__WEBPACK_IMPORTED_MODULE_2__.default, {
-              avatars: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.avatarsData,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_HorizontalAvatarList__WEBPACK_IMPORTED_MODULE_2__.default, {
+              avatars: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.avatarsData,
               avatarProps: {
                 size: 50
               },
               reversed: true
             })
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_18__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "4",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Card__WEBPACK_IMPORTED_MODULE_1__.AnnouncementCard, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Card__WEBPACK_IMPORTED_MODULE_1__.AnnouncementCard, {
               color: "gradient-secondary",
               header: "Announcement",
               avatarSize: 60,
@@ -2245,36 +2056,36 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
                 height: 500
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "4",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsxs)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_21__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)("div", {
                   className: "d-flex justify-content-between align-items-center",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("span", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("span", {
                     children: "Support Tickets"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_31__.default, {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)("small", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_26__.default, {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("small", {
                       children: "View All"
                     })
                   })]
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_23__.default, {
-                children: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.supportTicketsData.map(function (supportTicket) {
-                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_SupportTicket__WEBPACK_IMPORTED_MODULE_6__.default, _objectSpread({}, supportTicket), supportTicket.id);
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_22__.default, {
+                children: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.supportTicketsData.map(function (supportTicket) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_SupportTicket__WEBPACK_IMPORTED_MODULE_6__.default, _objectSpread({}, supportTicket), supportTicket.id);
                 })
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_20__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_19__.default, {
             lg: "4",
             md: "12",
             sm: "12",
             xs: "12",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_components_Card__WEBPACK_IMPORTED_MODULE_1__.TodosCard, {
-              todos: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_11__.todosData
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_components_Card__WEBPACK_IMPORTED_MODULE_1__.TodosCard, {
+              todos: _demos_dashboardPage__WEBPACK_IMPORTED_MODULE_10__.todosData
             })
           })]
         })]
@@ -2283,7 +2094,7 @@ var DashboardPage = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return DashboardPage;
-}(react__WEBPACK_IMPORTED_MODULE_12__.Component);
+}(react__WEBPACK_IMPORTED_MODULE_11__.Component);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DashboardPage);
 

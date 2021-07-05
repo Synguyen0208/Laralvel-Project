@@ -15,6 +15,7 @@ use Analytics;
 use App\Models\Blog;
 use App\Models\Country;
 use App\Models\Department;
+use App\Models\KeyDate;
 use App\Models\Partner;
 use App\Models\Partner_become;
 use App\Models\Position;
@@ -268,4 +269,37 @@ class PageController extends Controller
         return response()->json(['message'=>"Delete success!", 'err'=>0]);
     }
     //End PartnerBecome
+    //Key date page
+    function getKeyDate(){
+        $key= KeyDate::join('countries', 'key_dates.country_id', '=', 'countries.id')
+        ->select('key_dates.id','key_dates.timeline', 'key_dates.description','countries.name as country')
+        ->orderByRaw('key_dates.id ASC')
+        ->get();
+        return response()->json($key);
+    }
+    public function addKeyDate(Request $request)
+    {
+        $new=new KeyDate();
+        $new->timeline=$request->timeline;
+        $new->description=$request->description;
+        $new->country_id=$request->country_id;
+        $new->save();
+        return response()->json(['message'=>"Add key date success!", 'err'=>0]);
+    }
+    public function updateKeyDate(Request $request)
+    {
+        $update=KeyDate::find($request->id);
+        $update->description=$request->description;
+        $update->timeline=$request->timeline;
+        $update->country_id=$request->country_id;
+        $update->save();
+        return response()->json(['message'=>'Update key date success', 'err'=>0]);
+    }
+    public function deleteKeyDate($id)
+    {
+        $find=KeyDate::find($id);
+        $find->delete();
+        return response()->json(['message'=>"Delete key date success!", 'err'=>0]);
+    }
+    //End Key date page
 }

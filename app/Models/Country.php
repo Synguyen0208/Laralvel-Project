@@ -15,4 +15,7 @@ class Country extends Model
     public function staff(){
         return $this->hasMany('App\Staff', 'work_at', 'id');
     }
+    public function keydate(){
+        return $this->hasMany('App\Models\KeyDate', 'country_id', 'id');
+    }
 }

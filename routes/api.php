@@ -35,3 +35,6 @@ Route::get('/blog','App\Http\Controllers\PageController@getBlog');
 Route::post('/blog','App\Http\Controllers\PageController@addBlog');
 Route::post('/updateBlog/{id}','App\Http\Controllers\PageController@updateBlog');
 Route::delete('/blog/{id}','App\Http\Controllers\PageController@deleteBlog');
+
+Route::get('/partner_become','App\Http\Controllers\PageController@getPartnerBecome');
+Route::delete('/partner_become/{id}','App\Http\Controllers\PageController@deletePartnerBecome');

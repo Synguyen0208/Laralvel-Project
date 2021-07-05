@@ -11,7 +11,7 @@ Route::resource('', 'App\Http\Controllers\PageClient');
 
 Route::get('/get', 'App\Http\Controllers\PageController@get');
 Route::get('/log', 'App\Http\Controllers\PageController@login');
-Route::get('/view', 'App\Http\Controllers\PageController@view');
+Route::get('/view', 'App\Http\Controllers\PageController@deletePartnerBecome');
 // Route::get('/send','App\Http\Controllers\PageController@send');
 Route::get('message', function () {
     $message['user'] = "Juan Perez";

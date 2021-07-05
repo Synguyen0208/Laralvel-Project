@@ -16,6 +16,7 @@ use App\Models\Blog;
 use App\Models\Country;
 use App\Models\Department;
 use App\Models\Partner;
+use App\Models\Partner_become;
 use App\Models\Position;
 use App\Models\Staff;
 use Carbon\Carbon;
@@ -255,4 +256,16 @@ class PageController extends Controller
         return response()->json(['message'=>"Delete blog success!", 'err'=>0]);
     }
     //End Blog
+    //PartnerBecome page
+    function getPartnerBecome(){
+        $blog=Partner_become::all();
+        return response()->json($blog);
+    }
+    public function deletePartnerBecome($id)
+    {
+        $find=Partner_become::find($id);
+        $find->delete();
+        return response()->json(['message'=>"Delete success!", 'err'=>0]);
+    }
+    //End PartnerBecome
 }

@@ -43,3 +43,8 @@ Route::get('/keydate','App\Http\Controllers\PageController@getKeyDate');
 Route::post('/keydate','App\Http\Controllers\PageController@addKeyDate');
 Route::post('/updateKeyDate/{id}','App\Http\Controllers\PageController@updateKeyDate');
 Route::delete('/keydate/{id}','App\Http\Controllers\PageController@deleteKeyDate');
+
+Route::get('/pnvalue','App\Http\Controllers\PageController@getPNValue');
+Route::post('/pnvalue','App\Http\Controllers\PageController@addPnValue');
+Route::post('/updateValue/{id}','App\Http\Controllers\PageController@updateValue');
+Route::delete('/pnvalue/{id}','App\Http\Controllers\PageController@deleteValue');

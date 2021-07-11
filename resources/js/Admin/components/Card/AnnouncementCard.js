@@ -13,6 +13,7 @@ const AnnouncementCard = ({
   avatar,
   avatarSize,
   name,
+  click,
   date,
   text,
   className,
@@ -37,7 +38,7 @@ const AnnouncementCard = ({
         </CardText>
         <CardText className="text-center">{text}</CardText>
 
-        <Button color="primary" {...buttonProps} />
+        <Button color="primary" onClick={()=>click('add', 'Add Key Date')} {...buttonProps} />
       </CardBody>
     </Card>
   );
@@ -46,6 +47,7 @@ const AnnouncementCard = ({
 AnnouncementCard.propTypes = {
   color: PropTypes.string,
   header: PropTypes.node,
+  click:PropTypes.click,
   avatar: PropTypes.string,
   avatarSize: PropTypes.number,
   name: PropTypes.string,

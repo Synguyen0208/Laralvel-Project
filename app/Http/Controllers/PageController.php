@@ -18,6 +18,7 @@ use App\Models\Department;
 use App\Models\KeyDate;
 use App\Models\Partner;
 use App\Models\Partner_become;
+use App\Models\PNValue;
 use App\Models\Position;
 use App\Models\Staff;
 use Carbon\Carbon;
@@ -302,4 +303,27 @@ class PageController extends Controller
         return response()->json(['message'=>"Delete key date success!", 'err'=>0]);
     }
     //End Key date page
+    function getPNValue(){
+        $value=PNValue::all();
+        return response()->json($value);
+    }
+    function addPnValue(Request $request){
+        $new=new PNValue();
+        $new->name_value=$request->name;
+        $new->save();
+        return response()->json(['message'=>"Add value success!", 'err'=>0]);
+    }
+    public function updateValue(Request $request)
+    {
+        $update=PNValue::find($request->id);
+        $update->name_value=$request->name;
+        $update->save();
+        return response()->json(['message'=>'Update value success', 'err'=>0]);
+    }
+    public function deleteValue($id)
+    {
+        $find=PNValue::find($id);
+        $find->delete();
+        return response()->json(['message'=>"Delete value success!", 'err'=>0]);
+    }
 }

@@ -8,17 +8,20 @@ import ModalText from '../components/Modal';
 import FormAction from '../components/Form';
 import NotificationSystem from 'react-notification-system';
 import { NOTIFICATION_SYSTEM_STYLE } from '../utils/constants';
+import { AnnouncementCard, TodosCard } from '../components/Card';
 import {
     MdImportantDevices,
     // MdCardGiftcard,
     MdLoyalty,
 } from 'react-icons/md';
+import CardData from '../components/Card/CardData';
+import PNvalue from '../components/PNvalue';
 class Manage_data extends React.Component {
     call = new API();
     constructor(props) {
         super(props);
         this.state = {
-            data:null
+            data: null
         }
     }
     getData = () => {
@@ -43,6 +46,7 @@ class Manage_data extends React.Component {
                 breadcrumbs={[{ name: 'Data', active: true }]}
                 className="TablePage"
             >
+                    <PNvalue />
             </Page>
         );
     }

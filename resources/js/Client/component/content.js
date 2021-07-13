@@ -5,6 +5,7 @@ import Partner from './content/partner';
 import Service from './content/service';
 import { Helmet } from 'react-helmet';
 import Key_date from './content/key_date';
+import Selection from './content/selection';
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -16,6 +17,7 @@ class Content extends Component {
             <main id="main">
                 <About/>
                 <Key_date/>
+                <Selection/>
             </main>
         );
     }

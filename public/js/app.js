@@ -5858,8 +5858,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _slider_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider.css */ "./resources/js/Client/component/content/slider.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Admin_components_API_API__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Admin/components/API/API */ "./resources/js/Admin/components/API/API.js");
+/* harmony import */ var _slider_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./slider.css */ "./resources/js/Client/component/content/slider.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -5882,6 +5883,9 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -5895,233 +5899,158 @@ var Partner = /*#__PURE__*/function (_Component) {
   var _super = _createSuper(Partner);
 
   function Partner(props) {
+    var _this;
+
     _classCallCheck(this, Partner);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "call", new _Admin_components_API_API__WEBPACK_IMPORTED_MODULE_3__.default());
+
+    _this.state = {
+      data: null
+    };
+    return _this;
   }
 
   _createClass(Partner, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.call.callAPI("getpartner", "get", "").then(function (response) {
+        _this2.setState({
+          data: response.data
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("section", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("section", {
         id: "clients",
         "class": "clients",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           "class": "container",
           "data-aos": "zoom-in",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             "class": "section-header",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
               children: "   PARTNER "
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             "class": "container-fluid",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               "class": "row gx-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h4", {
                   style: ({
                     color: 'rgb(34, 187, 234)'
                   }, {
                     backgroundColor: 'rgb(0, 191, 255)'
                   }),
-                  children: "Nh\u1EEFng \u0111\u1ED1i t\xE1c ch\xEDnh h\u1ED7 tr\u1EE3 PN Vi\u1EC7t Nam"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-                  children: "V\u1EDBi mong mu\u1ED1n mang \u0111\u1EBFn nh\u1EEFng \u0111i\u1EC1u t\u1ED1t nh\u1EA5t cho sinh vi\xEAn PN Vi\u1EC7t Nam, ch\xFAng t\xF4i \u0111\xE1nh gi\xE1 cao s\u1EF1 h\u1ED7 tr\u1EE3 c\u1EE7a c\xE1c \u0111\u1ED1i t\xE1c v\u1EC1 \u0111\xE0o t\u1EA1o v\xE0 t\xE0i ch\xEDnh. B\u1EA1n c\xF3 th\u1EC3 h\u1ED7 tr\u1EE3 ch\xFAng t\xF4i theo nhi\u1EC1u c\xE1ch nh\u01B0 h\u1ED7 tr\u1EE3 b\u1EB1ng hi\u1EC7n v\u1EADt, \u0111\xE0o t\u1EA1o v\xE0 chia s\u1EBB ki\u1EBFn th\u1EE9c."
+                  children: "Main partners supporting PN Vietnam"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+                  children: "With the desire to bring the best to PN Vietnam students, we appreciate the support of our partners in training and finance. You can support us, me in many ways such as in-kind support, training and knowledge sharing."
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                 "class": "col-12",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                   "class": "swiper-container pb-4 overflow-hidden",
                   "data-pagination-target": "pagination1",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                    "class": "swiper-wrapper",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Agility-IO.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Code-engine.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Orient.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/07/seadev.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/06/Logigear-logo.png",
-                        alt: "products"
-                      })
-                    })]
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                    "class": "row",
+                    children: this.state.data != null && this.state.data.map(function (e) {
+                      if (e.type == 'Main partner') {
+                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                          "class": "col-md-3",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                            "class": "w-100",
+                            src: '../images/' + e.image,
+                            alt: "products"
+                          })
+                        });
+                      }
+                    })
                   })
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                 "class": "col-12",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                   "class": "swiper-container pb-4 overflow-hidden",
                   "data-pagination-target": "pagination1",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                    "class": "swiper-wrapper",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Neolab.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Sunbytes.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Sunbytes.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/06/Logigear-logo.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/06/Logigear-logo.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "20%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/06/Logigear-logo.png",
-                        alt: "products"
-                      })
-                    })]
-                  })
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                "class": "col-12",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                  "class": "swiper-container pb-4 overflow-hidden",
-                  "data-pagination-target": "pagination1",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h4", {
                       style: ({
                         color: 'rgb(34, 187, 234)'
                       }, {
                         backgroundColor: 'rgb(0, 191, 255)'
                       }),
-                      children: "Nh\u1EEFng \u0111\u1ED1i t\xE1c \u0111\u1ECBa ph\u01B0\u01A1ng h\u1ED7 tr\u1EE3 PN Vi\u1EC7t Nam"
+                      children: "Local partners supporting PN Vietnam"
                     })
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                   className: "gallery-slider swiper-container",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                     className: "swiper-wrapper align-items-center",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                       className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
                         src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/07/linkbynet-400x284.png",
                         className: "img-fluid",
                         alt: ""
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                       className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
                         src: "https://www.passerellesnumeriques.org/wp-content/uploads/2020/10/Logo_Luciole.png",
                         className: "img-fluid",
                         alt: ""
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                       className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
                         src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/04/microsoft-logo-400x284.jpg ",
                         className: "img-fluid",
                         alt: ""
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                       className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
                         src: "https://www.passerellesnumeriques.org/wp-content/uploads/2018/02/motorola-solutions-foundation-400x284.png",
                         className: "img-fluid",
                         alt: ""
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                       className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
                         src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/04/microsoft-logo-400x284.jpg ",
                         className: "img-fluid",
                         alt: ""
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                       className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
                         src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/07/Thales_logo.jpg ",
                         className: "img-fluid",
                         alt: ""
                       })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                      className: "swiper-slide",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Neolab.png",
+                        className: "img-fluid",
+                        alt: ""
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                      className: "swiper-slide",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Orient.pn",
+                        className: "img-fluid",
+                        alt: ""
+                      })
                     })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                     className: "swiper-pagination"
                   })]
                 })]

@@ -60,7 +60,7 @@ class Partner extends Component {
                                 </div>
                                 <div className="gallery-slider swiper-container">
                                     <div className="swiper-wrapper align-items-center">
-                                    {/* {
+                                    {
                                             this.state.data!=null &&this.state.data.map(e=>{
                                                 if(e.type=='Local partner'){
                                                     return(
@@ -70,16 +70,7 @@ class Partner extends Component {
                                                         )
                                                 }
                                             })
-                                        } */}
-                                        <div className="swiper-slide"><img src="https://www.passerellesnumeriques.org/wp-content/uploads/2016/07/linkbynet-400x284.png" className="img-fluid" alt="" /></div>
-                                        <div className="swiper-slide"><img src="https://www.passerellesnumeriques.org/wp-content/uploads/2020/10/Logo_Luciole.png" className="img-fluid" alt="" /></div>
-                                        <div className="swiper-slide"><img src="https://www.passerellesnumeriques.org/wp-content/uploads/2016/04/microsoft-logo-400x284.jpg " className="img-fluid" alt="" /></div>
-                                        <div className="swiper-slide"><img src="https://www.passerellesnumeriques.org/wp-content/uploads/2018/02/motorola-solutions-foundation-400x284.png" className="img-fluid" alt="" /></div>
-                                        <div className="swiper-slide"><img src="https://www.passerellesnumeriques.org/wp-content/uploads/2016/04/microsoft-logo-400x284.jpg " className="img-fluid" alt="" /></div>
-                                        <div className="swiper-slide"><img src="https://www.passerellesnumeriques.org/wp-content/uploads/2016/07/Thales_logo.jpg " className="img-fluid" alt="" /></div>
-                                        <div className="swiper-slide"><img src="https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Neolab.png" className="img-fluid" alt="" /></div>
-                                        <div className="swiper-slide"><img src="https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Orient.pn" className="img-fluid" alt="" /></div>
-
+                                        }
                                     </div>
                                     <div className="swiper-pagination" />
                                 </div>

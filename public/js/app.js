@@ -5991,65 +5991,20 @@ var Partner = /*#__PURE__*/function (_Component) {
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                   className: "gallery-slider swiper-container",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                     className: "swiper-wrapper align-items-center",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                      className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/07/linkbynet-400x284.png",
-                        className: "img-fluid",
-                        alt: ""
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                      className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2020/10/Logo_Luciole.png",
-                        className: "img-fluid",
-                        alt: ""
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                      className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/04/microsoft-logo-400x284.jpg ",
-                        className: "img-fluid",
-                        alt: ""
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                      className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2018/02/motorola-solutions-foundation-400x284.png",
-                        className: "img-fluid",
-                        alt: ""
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                      className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/04/microsoft-logo-400x284.jpg ",
-                        className: "img-fluid",
-                        alt: ""
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                      className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/07/Thales_logo.jpg ",
-                        className: "img-fluid",
-                        alt: ""
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                      className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Neolab.png",
-                        className: "img-fluid",
-                        alt: ""
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                      className: "swiper-slide",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Orient.pn",
-                        className: "img-fluid",
-                        alt: ""
-                      })
-                    })]
+                    children: this.state.data != null && this.state.data.map(function (e) {
+                      if (e.type == 'Local partner') {
+                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                          className: "swiper-slide",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                            src: '../images/' + e.image,
+                            className: "img-fluid",
+                            alt: ""
+                          })
+                        });
+                      }
+                    })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                     className: "swiper-pagination"
                   })]

@@ -13,7 +13,10 @@ body {
   color: #2f3138;
   font-family: "Open Sans", Arial, sans-serif;
 }
-
+.training li{
+  list-style: circle;
+  text-align: left;
+}
 a {
   color: #f82249;
   text-decoration: none;
@@ -637,26 +640,46 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-#about {
+#about{
   color: black;
   padding: 60px 0 40px 0;
 }
-
+#training{
+  color: black;
+  padding: 60px 0 40px 0;
+}
 @media (min-width: 1024px) {
-  #about {
+  #about{
+    background-attachment: fixed;
+  }
+  #training{
     background-attachment: fixed;
   }
 }
-
-#about:before {
+.video{
+  width: 100%;
+}
+#about :before {
   content: "";
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
 }
-
+#training :before {
+  content: "";
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 #about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+#training h2 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -673,13 +696,23 @@ li{
   margin-bottom: 10px;
   color: black;
 }
-
+#training h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: black;
+}
 #about p {
   font-size: 14px;
   margin-bottom: 20px;
   color: black;
 }
-
+#training p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: black;
+}
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/

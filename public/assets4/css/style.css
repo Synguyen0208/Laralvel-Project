@@ -656,23 +656,34 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
   }
 }
-.video{
-  width: 100%;
+
+.video-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
 }
-#about :before {
+.video-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+/* #about :before {
   content: "";
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
-}
-#training :before {
+} */
+/* #training :before {
   content: "";
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 #about h2 {
   font-size: 36px;
   font-weight: bold;

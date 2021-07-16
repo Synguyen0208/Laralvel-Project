@@ -6,6 +6,7 @@ import Service from './content/service';
 import { Helmet } from 'react-helmet';
 import Key_date from './content/key_date';
 import Staff from './content/staff';
+
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +18,7 @@ class Content extends Component {
             <main id="main">
                 <About/>
                 <Key_date/>
-                <Staff/>
+             <Staff/>
             </main>
         );
     }

@@ -26,30 +26,26 @@ class Staff extends Component {
             <div class="section-header">
                     <h2>  EMPLOYEES </h2>
                 </div>
-                
-         
 
                 {
-                                            this.state.data!=null && this.state.data.map(e=>{
-                                               
-                                                    return(
-                                                        <div className="col-sm-4">
-                                                        <div className="card">
-                                                       
-                                                            <img src={e.image}  style={{width: '100%'}} />
-                                                            <div className="container">
-                                                              <h4> {e.name}</h4>
-                                                              <p> {e.description}</p>
-                                                            
-                                                              <br/>
-                                                            
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                    )
+                     this.state.data!=null && this.state.data.map(e=>{
+                    return(
+                        <div className="col-sm-4">
+                            <div className="card">
+                                                        
+                            <img src={e.image}  style={{width: '100%'}} />
+                            <div className="container">
+                                <h4> {e.name}</h4>
+                                <p> {e.description}</p>
+                                                                    
+                                <br/>                                
+                            </div>
+                            </div>
+                        </div>
+                        )
                                                 
-                                            })
-                                        }
+                    })
+                }
 
                 {/* <div className="col-sm-4">
                 <div className="card">

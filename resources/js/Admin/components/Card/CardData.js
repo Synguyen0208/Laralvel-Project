@@ -16,10 +16,8 @@ class CardData extends React.Component {
             <Col md={6} sm={12}>
                 <Card>
                     <div className="position-relative">
-                        <CardImg src={backgroundImage} />
+                        <CardImg src='https://i.ytimg.com/vi/4bSedXitz7Y/maxresdefault.jpg' />
                         <CardImgOverlay className="bg-dark" style={{ opacity: 0.2 }}>
-                            <CardTitle className="text-white">ỵytyt</CardTitle>
-                            <CardText className="text-white">hgjhgjhg</CardText>
                         </CardImgOverlay>
                     </div>
                     

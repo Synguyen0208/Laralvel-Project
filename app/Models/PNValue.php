@@ -10,7 +10,7 @@ class PNValue extends Model
     use HasFactory;
     protected $table="pn_values";
     protected $fillable = [
-        'name_value',
+        'name_value'
     ];
     public $timestamps=false;
 }

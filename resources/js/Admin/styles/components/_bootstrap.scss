@@ -7,7 +7,9 @@ table {
 td, th {
     padding: 0
 }
-
+th, td{
+    border: none;
+}
 @media print {
     
     thead {
@@ -16,19 +18,11 @@ td, th {
     tr, img {
         page-break-inside: avoid
     }
-    
-    .table td, .table th {
-        background-color: #fff!important
-    }
-
     .label {
         border: 1px solid #000
     }
     .table {
         border-collapse: collapse!important
-    }
-    .table-bordered th, .table-bordered td {
-        border: 1px solid #ddd!important
     }
 }
 
@@ -43,28 +37,35 @@ th {
 .table {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
-
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+.table>thead>tr>th{
+    border: none;
+}
+.table>tfoot>tr>th{
+ font-size: 0.8rem;
+    text-align: center;
+}
+.table>tbody>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     padding: 8px;
     line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid #ddd
+    vertical-align: middle;
+    border: none;
+    border-top: 1px solid #dee2e6;
+   
+    // font-size: 10px;
 }
 
 .table>thead>tr>th {
     vertical-align: bottom;
-    border-bottom: 2px solid #ddd
 }
 
 .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>th, .table>caption+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>td, .table>thead:first-child>tr:first-child>td {
-    border-top: 0
+    border-top: 0;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
-.table>tbody+tbody {
-    border-top: 2px solid #ddd
-}
 
 .table .table {
     background-color: #fff
@@ -74,13 +75,6 @@ th {
     padding: 5px
 }
 
-.table-bordered {
-    border: 1px solid #ddd
-}
-
-.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-    border: 1px solid #ddd
-}
 
 .table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
     border-bottom-width: 2px
@@ -154,7 +148,6 @@ table td[class*=col-], table th[class*=col-] {
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid #ddd
     }
     .table-responsive>.table {
         margin-bottom: 0

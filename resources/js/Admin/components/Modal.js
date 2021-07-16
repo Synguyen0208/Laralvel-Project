@@ -1,5 +1,6 @@
-import Page from '../components/Page';
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Alert } from 'reactstrap';
 import {
     Button,
     ButtonGroup,
@@ -13,28 +14,32 @@ import {
     ModalHeader,
     Row,
 } from 'reactstrap';
-import { Alert } from 'reactstrap';
-
-class ModalPage extends React.Component {
-    state = {
-        modal: this.props.false
-    };
+class ModalAction extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
+        const closeBtn = <button className="close" onClick={this.props.close}>&times;</button>;
+        
         return (
             <Modal
-                isOpen={this.props.action}
-                className={this.props.className}>
-                <ModalHeader toggle={this.toggle}>{this.props.title}</ModalHeader>
+                size="lg"
+                isOpen={this.props.open}>
+                <ModalHeader close={closeBtn}>{this.props.title}</ModalHeader>
                 <ModalBody>
-                    {this.props.body}
-                    <Alert color="warning">
+                   <div id='body'>{this.props.body}</div>
+                   {this.props.alert!=null && <Alert color="warning">
                         {this.props.alert}
-                    </Alert>
+                    </Alert>}
+                   
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={this.props.submit}>
-                        Submit
-                    </Button>
+                {
+                    this.props.action!=false&&
+                        <Button color="primary" onClick={this.props.action}>
+                            Continue
+                        </Button>
+                    }
                     <Button color="secondary" onClick={this.props.close}>
                         Cancel
                     </Button>
@@ -43,5 +48,4 @@ class ModalPage extends React.Component {
         );
     }
 }
-
-export default ModalPage;
+export default ModalAction;

@@ -13,6 +13,11 @@ const AlertPage = React.lazy(() => import('./Admin/pages/AlertPage'));
 const AuthModalPage = React.lazy(() => import('./Admin/pages/AuthModalPage'));
 const BadgePage = React.lazy(() => import('./Admin/pages/BadgePage'));
 const StaffPage = React.lazy(() => import('./Admin/pages/StaffPage'));
+const BlogPage = React.lazy(() => import('./Admin/pages/BlogPage'));
+const PartnerPage = React.lazy(() => import('./Admin/pages/PartnerPage'));
+const Partner_become = React.lazy(() => import('./Admin/pages/Partner_become'));
+const KeyDatePage = React.lazy(() => import('./Admin/pages/KeyDatePage'));
+const Manage_data = React.lazy(() => import('./Admin/pages/Manage_data'));
 const ButtonGroupPage = React.lazy(() => import('./Admin/pages/ButtonGroupPage'));
 const ButtonPage = React.lazy(() => import('./Admin/pages/ButtonPage'));
 const CardPage = React.lazy(() => import('./Admin/pages/CardPage'));
@@ -73,6 +78,11 @@ class App extends React.Component {
                 <Route exact path="/admin/tables" component={TablePage} />
                 <Route exact path="/admin/badges" component={BadgePage} />
                 <Route exact path="/admin/staff" component={StaffPage} />
+                <Route exact path="/admin/partner" component={PartnerPage} />
+                <Route exact path="/admin/partner_become" component={Partner_become} />
+                <Route exact path="/admin/data" component={Manage_data} />
+                <Route exact path="/admin/key_date" component={KeyDatePage} />
+                <Route exact path="/admin/blog" component={BlogPage} />
                 <Route
                   exact
                   path="/admin/button-groups"

@@ -6,7 +6,6 @@ import ProductMedia from '../components/ProductMedia';
 import SupportTicket from '../components/SupportTicket';
 import UserProgressTable from '../components/UserProgressTable';
 import { IconWidget, NumberWidget } from '../components/Widget';
-import { getStackLineChart, stackLineChartOptions } from '../demos/chartjs';
 import API from '../components/API/API'
 import {
   avatarsData,
@@ -20,29 +19,21 @@ import React from 'react';
 import ChartData from '../demos/chartData';
 import { Bar, Line } from 'react-chartjs-2';
 import {
-  MdBubbleChart,
-  MdInsertChart,
   MdPersonPin,
-  MdPieChart,
   MdRateReview,
   MdShare,
-  MdShowChart,
   MdThumbUp,
 } from 'react-icons/md';
 import InfiniteCalendar from 'react-infinite-calendar';
 import {
-  Badge,
   Button,
   Card,
   CardBody,
   CardDeck,
   CardGroup,
   CardHeader,
-  CardTitle,
   Col,
-  ListGroup,
-  ListGroupItem,
-  Row,
+  Row
 } from 'reactstrap';
 import { getColor } from '../utils/colors';
 import Data_process from '../process/data_process';
@@ -244,32 +235,6 @@ class DashboardPage extends React.Component {
               </CardBody>
             </Card>
           </Col>
-          <Col lg="4" md="12" sm="12" xs="12">
-            <Card>
-              <CardHeader>Total Expense</CardHeader>
-              <CardBody>
-                <Bar data={chartjs.bar.data} options={chartjs.bar.options} />
-              </CardBody>
-              <ListGroup flush>
-                <ListGroupItem>
-                  <MdInsertChart size={25} color={primaryColor} /> Cost of sales{' '}
-                  <Badge color="secondary">$3000</Badge>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <MdBubbleChart size={25} color={primaryColor} /> Management
-                  costs <Badge color="secondary">$1200</Badge>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <MdShowChart size={25} color={primaryColor} /> Financial costs{' '}
-                  <Badge color="secondary">$800</Badge>
-                </ListGroupItem>
-                <ListGroupItem>
-                  <MdPieChart size={25} color={primaryColor} /> Other operating
-                  costs <Badge color="secondary">$2400</Badge>
-                </ListGroupItem>
-              </ListGroup>
-            </Card>
-          </Col>
         </Row>
 
         <CardGroup style={{ marginBottom: '1rem' }}>
@@ -335,90 +300,7 @@ class DashboardPage extends React.Component {
           </Col>
         </Row>
 
-        <Row>
-          <Col lg={4} md={4} sm={12} xs={12}>
-            <Card>
-              <Line
-                data={getStackLineChart({
-                  labels: [
-                    'January',
-                    'February',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                    'July',
-                  ],
-                  data: [0, 13000, 5000, 24000, 16000, 25000, 10000],
-                })}
-                options={stackLineChartOptions}
-              />
-              <CardBody
-                className="text-primary"
-                style={{ position: 'absolute' }}
-              >
-                <CardTitle>
-                  <MdInsertChart /> Sales
-                </CardTitle>
-              </CardBody>
-            </Card>
-          </Col>
-
-          <Col lg={4} md={4} sm={12} xs={12}>
-            <Card>
-              <Line
-                data={getStackLineChart({
-                  labels: [
-                    'January',
-                    'February',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                    'July',
-                  ],
-                  data: [10000, 15000, 5000, 10000, 5000, 10000, 10000],
-                })}
-                options={stackLineChartOptions}
-              />
-              <CardBody
-                className="text-primary"
-                style={{ position: 'absolute' }}
-              >
-                <CardTitle>
-                  <MdInsertChart /> Revenue
-                </CardTitle>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col lg={4} md={4} sm={12} xs={12}>
-            <Card>
-              <Line
-                data={getStackLineChart({
-                  labels: [
-                    'January',
-                    'February',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                    'July',
-                  ],
-                  data: [0, 13000, 5000, 24000, 16000, 25000, 10000].reverse(),
-                })}
-                options={stackLineChartOptions}
-              />
-              <CardBody
-                className="text-primary"
-                style={{ position: 'absolute', right: 0 }}
-              >
-                <CardTitle>
-                  <MdInsertChart /> Profit
-                </CardTitle>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
+        
 
         <Row>
           <Col lg="4" md="12" sm="12" xs="12">

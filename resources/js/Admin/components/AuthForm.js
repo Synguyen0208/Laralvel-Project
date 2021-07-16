@@ -5,7 +5,7 @@ import { Button, Form, FormGroup, Input, Label, Alert } from 'reactstrap';
 import API from './API/API';
 import history from '../utils/history';
 import cookie from 'react-cookies';
-import Modal from './Modal';
+import ModalAction from './Modal';
 class AuthForm extends React.Component {
   call = new API();
   state = {
@@ -128,7 +128,7 @@ class AuthForm extends React.Component {
             {this.state.message}
           </Alert>
         }
-        <Modal action={this.state.action} submit={this.veryfy} body={body_modal} close={this.close} alert={this.state.error_confirm} title="Account Verification!" />
+        <ModalAction action={this.veryfy} body={body_modal} open={this.state.action} close={this.close} alert={this.state.error_confirm} title="Account Verification!" />
         <FormGroup>
           <Label for={usernameLabel}>{usernameLabel}</Label>
           <Input onChange={this.handleChange} {...usernameInputProps} required />

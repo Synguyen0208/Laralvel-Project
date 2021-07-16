@@ -6,6 +6,7 @@
 <link href="assets4/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 <link href="assets4/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 <link href="assets4/css/style.css" rel="stylesheet">
+<link href="assets4/css/write.css" rel="stylesheet">
 <style>
     body {
         font-family: 'Nunito', sans-serif;

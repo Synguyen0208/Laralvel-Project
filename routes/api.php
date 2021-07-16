@@ -49,3 +49,4 @@ Route::get('/pnvalue','App\Http\Controllers\PageController@getPNValue');
 Route::post('/pnvalue','App\Http\Controllers\PageController@addPnValue');
 Route::post('/updateValue/{id}','App\Http\Controllers\PageController@updateValue');
 Route::delete('/pnvalue/{id}','App\Http\Controllers\PageController@deleteValue');
+Route::get('/training','App\Http\Controllers\PageClient@getTraining');

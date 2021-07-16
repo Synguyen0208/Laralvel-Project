@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import'./staff.css';
 import API from "../../../Admin/components/API/API";
 
-
-class staffs extends Component {
+class Staff extends Component {
   call = new API();
   constructor(props) {
       super(props);
@@ -13,6 +12,11 @@ class staffs extends Component {
       };
       
   }
+  componentDidMount() {
+    this.call.callAPI("getstaff", "get", "").then((response) => {
+        this.setState({ data: response.data });
+    });
+}
   componentDidMount() {
     this.call.callAPI("getpartner", "get", "").then((response) => {
         this.setState({ data: response.data });

@@ -21,7 +21,7 @@ class Middle extends Component {
                             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                             <li><a class="nav-link scrollto" href="#about">About</a></li>
                             <li><a class="nav-link scrollto" href="#schedule">Key Dates</a></li>
-                            <li><a class="nav-link scrollto" href="#staffs">Employee</a></li>
+                           
                             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>

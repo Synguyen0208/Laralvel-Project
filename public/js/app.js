@@ -6300,15 +6300,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var staffs = /*#__PURE__*/function (_Component) {
-  _inherits(staffs, _Component);
+var Staff = /*#__PURE__*/function (_Component) {
+  _inherits(Staff, _Component);
 
-  var _super = _createSuper(staffs);
+  var _super = _createSuper(Staff);
 
-  function staffs(props) {
+  function Staff(props) {
     var _this;
 
-    _classCallCheck(this, staffs);
+    _classCallCheck(this, Staff);
 
     _this = _super.call(this, props);
 
@@ -6320,7 +6320,7 @@ var staffs = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(staffs, [{
+  _createClass(Staff, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -7154,7 +7154,7 @@ var staffs = /*#__PURE__*/function (_Component) {
     }
   }]);
 
-  return staffs;
+  return Staff;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (staffs);
@@ -7416,12 +7416,6 @@ var Middle = /*#__PURE__*/function (_Component) {
                   "class": "nav-link scrollto",
                   href: "#schedule",
                   children: "Key Dates"
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-                  "class": "nav-link scrollto",
-                  href: "#staffs",
-                  children: "Employee"
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {

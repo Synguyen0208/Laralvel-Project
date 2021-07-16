@@ -29,11 +29,53 @@ class Staff extends Component {
           <section id="staffss" class="clients">
           <div className="container-xl">
             <div className="row">
-              <div className="col-md-12">
-              <div class="section-header">
+            <div class="section-header">
                     <h2>  EMPLOYEES </h2>
+                </div>
+                <div className="col-sm-4">
+                <div className="card">
+                    <img src="images/staffs/Ms_Trang.jpg" alt="Jane" style={{width: '100%'}} />
+                    <div className="container">
+                      <h2>      Võ Hoàng Thùy Trang </h2>
+                      <p className="title">CEO &amp; Founder</p>
+                      <p>I am CEO, study at Passerllesnumeriques Vietnam
+                      </p>
+                      <p>thuctrung@emal.com</p>
+                      <br/>
+                      <br/>
                     </div>
-                  
+                  </div>
+                </div>
+                <div className="col-sm-4">
+                <div className="card">
+                    <img src="images/staffs/Ms_Trang.jpg" alt="Jane" style={{width: '100%'}} />
+                    <div className="container">
+                      <h2>      Võ Hoàng Thùy Trang </h2>
+                      <p className="title">CEO &amp; Founder</p>
+                      <p>I am CEO, study at Passerllesnumeriques Vietnam
+                      </p>
+                      <p>thuctrung@emal.com</p>
+                      <br/>
+                      <br/>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-4">
+                <div className="card">
+                    <img src="images/staffs/Ms_Trang.jpg" alt="Jane" style={{width: '100%'}} />
+                    <div className="container">
+                      <h2>      Võ Hoàng Thùy Trang </h2>
+                      <p className="title">CEO &amp; Founder</p>
+                      <p>I am CEO, study at Passerllesnumeriques Vietnam
+                      </p>
+                      <p>thuctrung@emal.com</p>
+                      <br/>
+                      <br/>
+                    </div>
+                  </div>
+                </div>
+            
+                <div className="col-md-12">
                 <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval={0}>
                   {/* Carousel indicators */}
                   <ol className="carousel-indicators">

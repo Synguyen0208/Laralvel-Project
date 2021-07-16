@@ -5824,9 +5824,9 @@ var About = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("section", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("section", {
         id: "about",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        children: ["=", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           "class": "container",
           "data-aos": "fade-up",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -5858,9 +5858,9 @@ var About = /*#__PURE__*/function (_Component) {
                     "class": "col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content",
                     "data-aos": "fade-right",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
-                      children: "T\u1EA7m nh\xECn"
+                      children: "Vision"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-                      children: ["Passerelles num\xE9riques Vietnam l\xE0 m\u1ED9t t\u1ED5 ch\u1EE9c phi l\u1EE3i nhu\u1EADn theo lu\u1EADt c\u1EE7a Ph\xE1p, \u0111\u01B0\u1EE3c th\xE0nh l\u1EADp n\u0103m 2005, ho\u1EA1t \u0111\u1ED9ng t\u1EA1i 3 qu\u1ED1c gia ch\xE2u \xC1: Campuchia, Philippines v\xE0 Vi\u1EC7t Nam.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "S\u1EE9 m\u1EC7nh c\u1EE7a ch\xFAng t\xF4i l\xE0 cung c\u1EA5p gi\xE1o d\u1EE5c, \u0111\xE0o t\u1EA1o k\u1EF9 thu\u1EADt v\xE0 chuy\xEAn m\xF4n trong l\u0129nh v\u1EF1c c\xF4ng ngh\u1EC7 th\xF4ng tin cho nh\u1EEFng b\u1EA1n tr\u1EBB k\xE9m may m\u1EAFn b\u1EB1ng c\xE1ch t\u1EADn d\u1EE5ng ti\u1EC1m n\u0103ng v\xE0 \xFD ch\xED c\u1EE7a h\u1ECD. Ch\xFAng t\xF4i n\u1ED7 l\u1EF1c \u0111\u1EC3 th\u1EF1c s\u1EF1 ph\xE1t tri\u1EC3n kh\u1EA3 n\u0103ng tuy\u1EC3n d\u1EE5ng c\u1EE7a h\u1ECD \u0111\u1EC3 gi\xFAp h\u1ECD v\xE0 gia \u0111\xECnh h\u1ECD tho\xE1t ngh\xE8o m\u1ED9t c\xE1ch b\u1EC1n v\u1EEFng v\xE0 \u0111\xF3ng g\xF3p v\xE0o s\u1EF1 ph\xE1t tri\u1EC3n kinh t\u1EBF v\xE0 x\xE3 h\u1ED9i c\u1EE7a \u0111\u1EA5t n\u01B0\u1EDBc."]
+                      children: ["Passerelles num\xE9riques Vietnam is a non-profit organization under French law, established in 2005, operating in 3 Asian countries: Cambodia, Philippines and Vietnam.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "Our mission is to provide education, technical training and expertise in the field of information technology to underprivileged young people by leveraging their potential and will. We work hard to really develop their employability to help them and their families move out of poverty in a sustainable way and contribute to the economic and social development of the country."]
                     })]
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -5879,26 +5879,19 @@ var About = /*#__PURE__*/function (_Component) {
                     "class": "col-lg-6 order-1 order-lg-2",
                     "data-aos": "fade-left",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
-                      children: "M\u1EE5c ti\xEAu"
+                      children: "Target"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-                      children: ["M\u1EE5c ti\xEAu c\u1EE7a PN l\xE0 \xEDt nh\u1EA5t 90% sinh vi\xEAn \u0111\u0103ng k\xFD c\xE1c ch\u01B0\u01A1ng tr\xECnh c\u1EE7a ch\xFAng t\xF4i c\xF3 th\u1EC3 tho\xE1t ngh\xE8o v\xE0 t\u1EADn d\u1EE5ng l\u1EE3i th\u1EBF c\u1EE7a 'C\xE1nh c\u1ED5ng cho cu\u1ED9c s\u1ED1ng'.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "M\u1EE5c ti\xEAu b\u1ED5 sung c\u1EE7a PN l\xE0 gi\u1EA3m b\u1EA5t b\xECnh \u0111\u1EB3ng gi\u1EDBi t\xEDnh. Do \u0111\xF3, PN ph\u1EA5n \u0111\u1EA5u thu nh\u1EADn t\u1EF7 l\u1EC7 \xEDt nh\u1EA5t 50% l\xE0 tr\u1EBB em g\xE1i (ho\u1EB7c t\u1ED1i \u0111a l\xE0 2/3) t\u1EA1i m\u1ED7i trung t\xE2m c\u1EE7a ch\xFAng t\xF4i."]
+                      children: ["PN's goal is that at least 90% of students enrolled in our programs can escape poverty and take advantage of the 'Gateway to Life'.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "An additional goal of PN is to reduce gender inequality. As a result, PN strives to enroll at least 50% girls (or a maximum of 2/3) in each of our centers."]
                     })]
                   })]
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 "class": "col-lg-12",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                  "class": "row",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                    "class": "col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content",
-                    "data-aos": "fade-right",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
-                      children: "Gi\xE1 tr\u1ECB"
-                    })
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                   className: "value-content-one",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
+                    children: "Value"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                     className: "row",
                     children: this.state.data != null && this.state.data.map(function (e) {
                       if (e.id <= 3) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -5922,7 +5915,7 @@ var About = /*#__PURE__*/function (_Component) {
                         })
                       });
                     })
-                  })
+                  })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                   className: "value-content-two",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -5958,7 +5951,7 @@ var About = /*#__PURE__*/function (_Component) {
               })]
             })
           })]
-        })
+        })]
       });
     }
   }]);

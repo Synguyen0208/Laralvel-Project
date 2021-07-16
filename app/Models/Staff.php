@@ -22,4 +22,10 @@ class Staff extends Model
     
     ];
     public $timestamps=false;
+    public function position(){
+        return $this->belongsTo('App\Position','position_id','id');
+    }
+    public function department(){
+        return $this->belongsTo('App\Department','department_id','id');
+    }
 }

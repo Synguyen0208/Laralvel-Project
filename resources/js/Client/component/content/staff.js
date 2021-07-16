@@ -5,25 +5,19 @@ import'./staff.css';
 import API from "../../../Admin/components/API/API";
 
 class Staff extends Component {
-  call = new API();
-  constructor(props) {
-      super(props);
-      this.state = {
-          data:"" ,
-      };
-      
-  }
-  componentDidMount() {
-    this.call.callAPI("getstaff", "get", "").then((response) => {
-        this.setState({ data: response.data });
-    });
-}
-  componentDidMount() {
-    this.call.callAPI("getpartner", "get", "").then((response) => {
-        this.setState({ data: response.data });
-    });
-}
+    call = new API();
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: null,
+        };
 
+    }
+    componentDidMount() {
+        this.call.callAPI("getstaff", "get", "").then((response) => {
+            this.setState({ data: response.data });
+        });
+    }
     render() {
         return (
           <section id="staffss" class="clients">
@@ -32,11 +26,36 @@ class Staff extends Component {
             <div class="section-header">
                     <h2>  EMPLOYEES </h2>
                 </div>
-                <div className="col-sm-4">
+                
+         
+
+                {
+                                            this.state.data!=null && this.state.data.map(e=>{
+                                               
+                                                    return(
+                                                        <div className="col-sm-4">
+                                                        <div className="card">
+                                                       
+                                                            <img src={e.image}  style={{width: '100%'}} />
+                                                            <div className="container">
+                                                              <h4> {e.name}</h4>
+                                                              <p> {e.description}</p>
+                                                            
+                                                              <br/>
+                                                            
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    )
+                                                
+                                            })
+                                        }
+
+                {/* <div className="col-sm-4">
                 <div className="card">
                     <img src="images/staffs/Ms_Trang.jpg" alt="Jane" style={{width: '100%'}} />
                     <div className="container">
-                      <h2>      Võ Hoàng Thùy Trang </h2>
+                    <h4> Võ Hoàng Thùy Trang </h4>
                       <p className="title">CEO &amp; Founder</p>
                       <p>I am CEO, study at Passerllesnumeriques Vietnam
                       </p>
@@ -50,7 +69,7 @@ class Staff extends Component {
                 <div className="card">
                     <img src="images/staffs/Ms_Trang.jpg" alt="Jane" style={{width: '100%'}} />
                     <div className="container">
-                      <h2>      Võ Hoàng Thùy Trang </h2>
+                    <h4> Võ Hoàng Thùy Trang </h4>
                       <p className="title">CEO &amp; Founder</p>
                       <p>I am CEO, study at Passerllesnumeriques Vietnam
                       </p>
@@ -60,21 +79,7 @@ class Staff extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-4">
-                <div className="card">
-                    <img src="images/staffs/Ms_Trang.jpg" alt="Jane" style={{width: '100%'}} />
-                    <div className="container">
-                      <h2>      Võ Hoàng Thùy Trang </h2>
-                      <p className="title">CEO &amp; Founder</p>
-                      <p>I am CEO, study at Passerllesnumeriques Vietnam
-                      </p>
-                      <p>thuctrung@emal.com</p>
-                      <br/>
-                      <br/>
-                    </div>
-                  </div>
-                </div>
-            
+             */}
                 <div className="col-md-12">
                 <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval={0}>
                   {/* Carousel indicators */}

@@ -15,4 +15,5 @@ class PageClient extends Controller
         $staff = Staff::All();
         return response()->json($staff);
     }
+    
 }

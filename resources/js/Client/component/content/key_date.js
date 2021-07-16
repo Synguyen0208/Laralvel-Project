@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import API from '../../../Admin/components/API/API';
 
 class Key_date extends Component {
+    call = new API;
     constructor(props) {
         super(props);
-
+        this.state = {
+            data: null
+        }
     }
-
-
-
+    componentDidMount() {
+        this.call.callAPI('keydate', 'get', '').then(response => {
+            console.log(response.data)
+            this.setState({
+                data: response.data
+            })
+        })
+    }
     render() {
         return (
             <section id="schedule" class="section-with-bg">
@@ -22,8 +31,8 @@ class Key_date extends Component {
                         <li class="nav-item">
                             <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">Our organization</a>
                         </li>
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         <li class="nav-item">
                             <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Viet Nam</a>
                         </li>
@@ -39,49 +48,64 @@ class Key_date extends Component {
 
                     <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
                         <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-                            <div class="row schedule-item">
-                                <div class="col-md-2"><time>09:30 AM</time></div>
-                                <div class="col-md-10">
-                                    <h4>Registration</h4>
-                                    <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
-                                </div>
-                            </div>
+                            {
+                                this.state.data != null && this.state.data.map(e => {
+                                    if (e.country == 'Global')
+                                        return (
+                                            <div class="row schedule-item">
+                                                <div class="col-md-2"><time>{e.timeline}</time></div>
+                                                <div class="col-md-10">
+                                                    <p>{e.description}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                })
+                            }
                         </div>
                         <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-                            <div class="row schedule-item">
-                                <div class="col-md-2"><time>10:00 AM</time></div>
-                                <div class="col-md-10">
-                                    <div class="speaker">
-                                        <img src="assets/img/speakers/1.jpg" alt="Brenden Legros" />
-                                    </div>
-                                    <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                                    <p>Facere provident incidunt quos voluptas.</p>
-                                </div>
-                            </div>
+                        {
+                                this.state.data != null && this.state.data.map(e => {
+                                    if (e.country == 'Viet Nam')
+                                        return (
+                                            <div class="row schedule-item">
+                                                <div class="col-md-2"><time>{e.timeline}</time></div>
+                                                <div class="col-md-10">
+                                                    <p>{e.description}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                })
+                            }
                         </div>
                         <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
-                            <div class="row schedule-item">
-                                <div class="col-md-2"><time>10:00s AM</time></div>
-                                <div class="col-md-10">
-                                    <div class="speaker">
-                                        <img src="assets/img/speakers/1.jpg" alt="Brenden Legros" />
-                                    </div>
-                                    <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                                    <p>Facere provident incidunt quos voluptas.</p>
-                                </div>
-                            </div>
+                            {
+                                this.state.data != null && this.state.data.map(e => {
+                                    if (e.country == 'Cambodia')
+                                        return (
+                                            <div class="row schedule-item">
+                                                <div class="col-md-2"><time>{e.timeline}</time></div>
+                                                <div class="col-md-10">
+                                                    <p>{e.description}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                })
+                            }
                         </div>
                         <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-4">
-                            <div class="row schedule-item">
-                                <div class="col-md-2"><time>10:00 ggAM</time></div>
-                                <div class="col-md-10">
-                                    <div class="speaker">
-                                        <img src="assets/img/speakers/1.jpg" alt="Brenden Legros" />
-                                    </div>
-                                    <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                                    <p>Facere provident incidunt quos voluptas.</p>
-                                </div>
-                            </div>
+                            {
+                                this.state.data != null && this.state.data.map(e => {
+                                    if (e.country == 'Philippines')
+                                        return (
+                                            <div class="row schedule-item">
+                                                <div class="col-md-2"><time>{e.timeline}</time></div>
+                                                <div class="col-md-10">
+                                                    <p>{e.description}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                })
+                            }
                         </div>
                     </div>
                 </div>

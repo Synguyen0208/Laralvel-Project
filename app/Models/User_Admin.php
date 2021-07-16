@@ -17,7 +17,10 @@ class User_Admin extends Model
     protected $table="admin";
     protected $fillable = [
         'userName',
-        'password'
+        'password',
+        'code',
+        'birth_day'
     ];
+    public $timestamps=false;
     
 }

@@ -1,3 +1,4 @@
+
 import { STATE_LOGIN, STATE_SIGNUP } from './Admin/components/AuthForm';
 import GAListener from './Admin/components/GAListener';
 import { EmptyLayout, LayoutRoute, MainLayout } from './Admin/components/Layout';
@@ -41,7 +42,7 @@ class App extends React.Component {
               path="/admin/login"
               layout={EmptyLayout}
               component={props => (
-                <AuthPage {...props} authState={STATE_LOGIN} />
+                <AuthPage {...props} authState={STATE_LOGIN} component='Auth'/>
               )}
             />
             <LayoutRoute
@@ -49,10 +50,17 @@ class App extends React.Component {
               path="/admin/signup"
               layout={EmptyLayout}
               component={props => (
-                <AuthPage {...props} authState={STATE_SIGNUP} />
+                <AuthPage {...props} authState={STATE_SIGNUP} component='Auth'/>
               )}
             />
-
+            <LayoutRoute
+              exact
+              path="/admin/confirm"
+              layout={EmptyLayout}
+              component={props => (
+                <AuthPage {...props} component='Confirm'/>
+              )}
+            />
             <MainLayout breakpoint={this.props.breakpoint}>
               <React.Suspense fallback={<PageSpinner />}>
                 <Route exact path="/admin" component={DashboardPage} />

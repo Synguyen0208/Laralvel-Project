@@ -2622,7 +2622,8 @@ var AnnouncementCard = function AnnouncementCard(_ref) {
         className: "text-center",
         children: text
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread({
-        color: "primary"
+        color: "primary",
+        onClick: _utils_propTypes__WEBPACK_IMPORTED_MODULE_1__.default.click
       }, buttonProps))]
     })]
   }));
@@ -3615,6 +3616,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var sidebarBackground = {
   backgroundImage: "url(\"".concat(_assets_img_sidebar_sidebar_4_jpg__WEBPACK_IMPORTED_MODULE_1__.default, "\")"),
   backgroundSize: 'cover',
@@ -3666,6 +3668,32 @@ var navComponents = [{
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdViewDay
 }];
+var navManage = [{
+  to: '/admin/staff',
+  name: 'staff',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdAccountBox
+}, {
+  to: '/admin/partner',
+  name: 'partner',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdGroup
+}, {
+  to: '/admin/blog',
+  name: 'blog',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdPictureInPicture
+}, {
+  to: '/admin/partner_become',
+  name: 'partner becomes',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdGroupAdd
+}, {
+  to: '/admin/key_date',
+  name: 'key dates',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdUpdate
+}];
 var navContents = [{
   to: '/admin/typography',
   name: 'typography',
@@ -3708,6 +3736,11 @@ var navItems = [{
   name: 'widgets',
   exact: false,
   Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdWidgets
+}, {
+  to: '/admin/data',
+  name: 'data',
+  exact: false,
+  Icon: react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdViewModule
 }];
 var bem = _utils_bemnames__WEBPACK_IMPORTED_MODULE_4__.default.create('sidebar');
 
@@ -3729,6 +3762,7 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       isOpenComponents: true,
+      isOpenManage: true,
       isOpenContents: true,
       isOpenPages: true
     });
@@ -3796,6 +3830,54 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
               }, index);
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
               className: bem.e('nav-item'),
+              onClick: this.handleClick('Manage'),
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+                className: bem.e('nav-item-collapse'),
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                  className: "d-flex",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdComputer, {
+                    className: bem.e('nav-item-icon')
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                    className: " align-self-start",
+                    children: "Manage"
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_icons_md__WEBPACK_IMPORTED_MODULE_6__.MdKeyboardArrowDown, {
+                  className: bem.e('nav-item-icon'),
+                  style: {
+                    padding: 0,
+                    transform: this.state.isOpenManage ? 'rotate(0deg)' : 'rotate(-90deg)',
+                    transitionDuration: '0.3s',
+                    transitionProperty: 'transform'
+                  }
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+              isOpen: this.state.isOpenManage,
+              children: navManage.map(function (_ref3, index) {
+                var to = _ref3.to,
+                    name = _ref3.name,
+                    exact = _ref3.exact,
+                    Icon = _ref3.Icon;
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+                  className: bem.e('nav-item'),
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+                    id: "navItem-".concat(name, "-").concat(index),
+                    className: "text-uppercase",
+                    tag: react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default,
+                    to: to,
+                    activeClassName: "active",
+                    exact: exact,
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Icon, {
+                      className: bem.e('nav-item-icon')
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                      className: "",
+                      children: name
+                    })]
+                  })
+                }, index);
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+              className: bem.e('nav-item'),
               onClick: this.handleClick('Components'),
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
                 className: bem.e('nav-item-collapse'),
@@ -3819,11 +3901,11 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               isOpen: this.state.isOpenComponents,
-              children: navComponents.map(function (_ref3, index) {
-                var to = _ref3.to,
-                    name = _ref3.name,
-                    exact = _ref3.exact,
-                    Icon = _ref3.Icon;
+              children: navComponents.map(function (_ref4, index) {
+                var to = _ref4.to,
+                    name = _ref4.name,
+                    exact = _ref4.exact,
+                    Icon = _ref4.Icon;
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                   className: bem.e('nav-item'),
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
@@ -3867,11 +3949,11 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               isOpen: this.state.isOpenContents,
-              children: navContents.map(function (_ref4, index) {
-                var to = _ref4.to,
-                    name = _ref4.name,
-                    exact = _ref4.exact,
-                    Icon = _ref4.Icon;
+              children: navContents.map(function (_ref5, index) {
+                var to = _ref5.to,
+                    name = _ref5.name,
+                    exact = _ref5.exact,
+                    Icon = _ref5.Icon;
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                   className: bem.e('nav-item'),
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
@@ -3915,11 +3997,11 @@ var Sidebar = /*#__PURE__*/function (_React$Component) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               isOpen: this.state.isOpenPages,
-              children: pageContents.map(function (_ref5, index) {
-                var to = _ref5.to,
-                    name = _ref5.name,
-                    exact = _ref5.exact,
-                    Icon = _ref5.Icon;
+              children: pageContents.map(function (_ref6, index) {
+                var to = _ref6.to,
+                    name = _ref6.name,
+                    exact = _ref6.exact,
+                    Icon = _ref6.Icon;
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                   className: bem.e('nav-item'),
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
@@ -6641,6 +6723,24 @@ var BadgePage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function ()
 var StaffPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_StaffPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/StaffPage */ "./resources/js/Admin/pages/StaffPage.js"));
 });
+<<<<<<< HEAD
+=======
+var BlogPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_BlogPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/BlogPage */ "./resources/js/Admin/pages/BlogPage.js"));
+});
+var PartnerPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_PartnerPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/PartnerPage */ "./resources/js/Admin/pages/PartnerPage.js"));
+});
+var Partner_become = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_Partner_become_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/Partner_become */ "./resources/js/Admin/pages/Partner_become.js"));
+});
+var KeyDatePage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_KeyDatePage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/KeyDatePage */ "./resources/js/Admin/pages/KeyDatePage.js"));
+});
+var Manage_data = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
+  return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_Manage_data_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/Manage_data */ "./resources/js/Admin/pages/Manage_data.js"));
+});
+>>>>>>> 3.3_Login
 var ButtonGroupPage = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5__.lazy(function () {
   return __webpack_require__.e(/*! import() */ "resources_js_Admin_pages_ButtonGroupPage_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Admin/pages/ButtonGroupPage */ "./resources/js/Admin/pages/ButtonGroupPage.js"));
 });
@@ -6764,6 +6864,29 @@ var App = /*#__PURE__*/function (_React$Component) {
                   component: StaffPage
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
                   exact: true,
+<<<<<<< HEAD
+=======
+                  path: "/admin/partner",
+                  component: PartnerPage
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+                  path: "/admin/partner_become",
+                  component: Partner_become
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+                  path: "/admin/data",
+                  component: Manage_data
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+                  path: "/admin/key_date",
+                  component: KeyDatePage
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+                  path: "/admin/blog",
+                  component: BlogPage
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  exact: true,
+>>>>>>> 3.3_Login
                   path: "/admin/button-groups",
                   component: ButtonGroupPage
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.default, {
@@ -75394,7 +75517,9 @@ function valueEqual(a, b) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_StaffPage_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_demos_dashboardPage_js-resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
+
+/******/ 			if ({"resources_js_Admin_pages_AlertPage_js":1,"resources_js_Admin_pages_AuthModalPage_js":1,"resources_js_Admin_pages_BadgePage_js":1,"resources_js_Admin_pages_StaffPage_js":1,"resources_js_Admin_pages_BlogPage_js":1,"resources_js_Admin_pages_PartnerPage_js":1,"resources_js_Admin_pages_Partner_become_js":1,"resources_js_Admin_pages_KeyDatePage_js":1,"resources_js_Admin_pages_Manage_data_js":1,"resources_js_Admin_pages_ButtonGroupPage_js":1,"resources_js_Admin_pages_ButtonPage_js":1,"resources_js_Admin_pages_CardPage_js":1,"resources_js_Admin_pages_ChartPage_js":1,"resources_js_Admin_demos_dashboardPage_js-resources_js_Admin_pages_DashboardPage_js":1,"resources_js_Admin_pages_DropdownPage_js":1,"resources_js_Admin_pages_FormPage_js":1,"resources_js_Admin_pages_InputGroupPage_js":1,"resources_js_Admin_pages_ModalPage_js":1,"resources_js_Admin_pages_ProgressPage_js":1,"resources_js_Admin_pages_TablePage_js":1,"resources_js_Admin_pages_TypographyPage_js":1,"resources_js_Admin_pages_WidgetPage_js":1}[chunkId]) return "js/" + chunkId + ".js";
+
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

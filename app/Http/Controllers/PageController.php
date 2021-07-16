@@ -22,10 +22,6 @@ class PageController extends Controller
 {
     public function show()
     {
-        // $cookie=Cookie::get('admin');
-        // if($cookie==null)
-        // return redirect()->route("Login");
-        // else
         return view('pages/admin');
     }
     public function index()

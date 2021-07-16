@@ -7,7 +7,6 @@
 }
   .card-deck .card {
     margin: 0 0 1rem;
-    border: 2px solid #ff9933;
   }
   @media (min-width: 576px) {
     .card-deck .card {

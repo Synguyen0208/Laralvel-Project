@@ -5738,7 +5738,7 @@ var Content = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("main", {
         id: "main",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_about__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_key_date__WEBPACK_IMPORTED_MODULE_6__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_training__WEBPACK_IMPORTED_MODULE_7__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_help__WEBPACK_IMPORTED_MODULE_8__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_sharing__WEBPACK_IMPORTED_MODULE_9__.default, {})]
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_about__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_key_date__WEBPACK_IMPORTED_MODULE_6__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_training__WEBPACK_IMPORTED_MODULE_7__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_help__WEBPACK_IMPORTED_MODULE_8__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_sharing__WEBPACK_IMPORTED_MODULE_9__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_content_partner__WEBPACK_IMPORTED_MODULE_3__.default, {})]
       });
     }
   }]);
@@ -6337,8 +6337,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-/* harmony import */ var _slider_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider.css */ "./resources/js/Client/component/content/slider.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Admin_components_API_API__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Admin/components/API/API */ "./resources/js/Admin/components/API/API.js");
+/* harmony import */ var _slider_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./slider.css */ "./resources/js/Client/component/content/slider.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -6361,6 +6362,9 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -6374,142 +6378,117 @@ var Partner = /*#__PURE__*/function (_Component) {
   var _super = _createSuper(Partner);
 
   function Partner(props) {
+    var _this;
+
     _classCallCheck(this, Partner);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "call", new _Admin_components_API_API__WEBPACK_IMPORTED_MODULE_3__.default());
+
+    _this.state = {
+      data: null
+    };
+    return _this;
   }
 
   _createClass(Partner, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.call.callAPI("getpartner", "get", "").then(function (response) {
+        _this2.setState({
+          data: response.data
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("section", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("section", {
         id: "clients",
         "class": "clients",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           "class": "container",
           "data-aos": "zoom-in",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            "class": "section-title",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-              children: "Our partner"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
-              children: "Our partner"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            "class": "section-header",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
+              children: "   PARTNER "
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             "class": "container-fluid",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               "class": "row gx-2",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h4", {
+                  style: ({
+                    color: 'rgb(34, 187, 234)'
+                  }, {
+                    backgroundColor: 'rgb(0, 191, 255)'
+                  }),
+                  children: "Main partners supporting PN Vietnam"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+                  children: "With the desire to bring the best to PN Vietnam students, we appreciate the support of our partners in training and finance. You can support us, me in many ways such as in-kind support, training and knowledge sharing."
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                 "class": "col-12",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                   "class": "swiper-container pb-4 overflow-hidden",
                   "data-pagination-target": "pagination1",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                    "class": "swiper-wrapper",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Agility-IO.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Code-engine.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Orient.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/07/seadev.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2016/06/Logigear-logo.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Neolab.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Sunbytes.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Sunbytes.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Sunbytes.png",
-                        alt: "products"
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      "class": "swiper-slide h-auto",
-                      style: {
-                        width: "10%"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                        "class": "w-100",
-                        src: "https://www.passerellesnumeriques.org/wp-content/uploads/2021/04/Sunbytes.png",
-                        alt: "products"
-                      })
-                    })]
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                    "class": "row",
+                    children: this.state.data != null && this.state.data.map(function (e) {
+                      if (e.type == 'Main partner') {
+                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                          "class": "col-md-3",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                            "class": "w-100",
+                            src: '../images/' + e.image,
+                            alt: "products"
+                          })
+                        });
+                      }
+                    })
                   })
                 })
-              })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                "class": "col-12",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                  "class": "swiper-container pb-4 overflow-hidden",
+                  "data-pagination-target": "pagination1",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h4", {
+                      style: ({
+                        color: 'rgb(34, 187, 234)'
+                      }, {
+                        backgroundColor: 'rgb(0, 191, 255)'
+                      }),
+                      children: "Local partners supporting PN Vietnam"
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                  className: "gallery-slider swiper-container",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                    className: "swiper-wrapper align-items-center",
+                    children: this.state.data != null && this.state.data.map(function (e) {
+                      if (e.type == 'Local partner') {
+                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                          className: "swiper-slide",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                            src: '../images/' + e.image,
+                            className: "img-fluid",
+                            alt: ""
+                          })
+                        });
+                      }
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                    className: "swiper-pagination"
+                  })]
+                })]
+              })]
             })
           })]
         })
@@ -7436,6 +7415,12 @@ var Middle = /*#__PURE__*/function (_Component) {
                   "class": "nav-link scrollto",
                   href: "#schedule",
                   children: "Key Dates"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                  "class": "nav-link scrollto",
+                  href: "#clients",
+                  children: "Partner"
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
@@ -9288,7 +9273,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".gx-2 {\r\n    --bs-gutter-x: 0.5rem;\r\n  }\r\n  .col-12 {\r\n    flex: 0 0 auto;\r\n    width: 100%;\r\n  }\r\n  .pb-4 {\r\n    padding-bottom: 1.8rem !important;\r\n  }\r\n  .overflow-hidden[class*='rounded'] {\r\n    -webkit-mask-image: radial-gradient(#FFFEFE, #000);\r\n    mask-image: radial-gradient(#FFFEFE, #000);\r\n  }\r\n  .overflow-hidden {\r\n    overflow: hidden !important;\r\n  }\r\n  .h-auto {\r\n    height: auto !important;\r\n  }\r\n  .w-100 {\r\n      height: 20rem;\r\n    width: 100% !important;\r\n  }\r\n  .swiper-slide{\r\n      width: 10%;\r\n  }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".gx-2 {\r\n  --bs-gutter-x: 0.5rem;\r\n}\r\n.col-12 {\r\n  flex: 0 0 auto;\r\n  width: 100%;\r\n}\r\n.pb-4 {\r\n  padding-bottom: 1.8rem !important;\r\n}\r\n.overflow-hidden[class*='rounded'] {\r\n  -webkit-mask-image: radial-gradient(#FFFEFE, #000);\r\n  mask-image: radial-gradient(#FFFEFE, #000);\r\n}\r\n.overflow-hidden {\r\n  overflow: hidden !important;\r\n}\r\n.h-auto {\r\n  height: auto !important;\r\n}\r\n.w-100 {\r\n    height: 14rem;\r\n  width: 100% !important;\r\n}\r\n.swiper-slide{\r\n    width: 10%;\r\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

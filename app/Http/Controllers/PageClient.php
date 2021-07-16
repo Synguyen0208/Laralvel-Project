@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Training;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 use App\Models\Sharing;
 
@@ -21,5 +22,9 @@ class PageClient extends Controller
     {
         $data=Sharing::all();
         return response()->json($data);
+    }
+    public function getPartner(){
+        $partner = Partner::all();
+        return response()->json($partner);
     }
 }

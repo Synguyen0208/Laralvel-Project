@@ -51,3 +51,4 @@ Route::post('/updateValue/{id}','App\Http\Controllers\PageController@updateValue
 Route::delete('/pnvalue/{id}','App\Http\Controllers\PageController@deleteValue');
 Route::get('/training','App\Http\Controllers\PageClient@getTraining');
 Route::get('/sharing','App\Http\Controllers\PageClient@getSharing');
+Route::get('/getpartner','App\Http\Controllers\PageClient@getPartner');

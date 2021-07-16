@@ -22,6 +22,7 @@ class Content extends Component {
                 <Training/>
                 <Help/>
                 <Sharing/>
+                <Partner/>
             </main>
         );
     }

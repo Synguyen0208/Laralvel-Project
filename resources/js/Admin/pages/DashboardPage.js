@@ -80,7 +80,7 @@ class DashboardPage extends React.Component {
   state = {
     data: null
   }
-  call = new API();
+  call=new API;
   async componentDidMount() {
     let data = await this.call.callAPI('view', 'get', '').then((response) => {
       this.setState({ data: response.data });

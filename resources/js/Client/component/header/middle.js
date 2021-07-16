@@ -13,7 +13,7 @@ class Middle extends Component {
                 <div class="container-fluid container-xxl d-flex align-items-center">
 
                     <div id="logo" class="me-auto">
-                        <a href="index.html" class="scrollto"><img src="https://www.passerellesnumeriques.org/misc/logo-en.png" alt="" title="" /></a>
+                        <a href="index.html" class="scrollto"><img src="https://www.passerellesnumeriques.org/misc/logo-en.png" alt="Passerellesnumeriques" title="" /></a>
                     </div>
 
                     <nav id="navbar" class="navbar order-last order-lg-0">
@@ -25,13 +25,12 @@ class Middle extends Component {
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav>
-                    <a class="buy-tickets scrollto" href="#buy-tickets">Buy Tickets</a>
+                    <a class="buy-tickets scrollto" href="">Donate</a>
 
                 </div>
             </header>
         );
     }
 }
-
 
 export default Middle;

@@ -14,13 +14,14 @@ import {
 } from "react-router-dom";
 import Header from "./Client/component/header/header";
 import Content from "./Client/component/content";
-
+import Footer from "./Client/component/footer/footer";
 
 function Client() {
   return (
     <div className="App">
       <Header/>
       <Content/>
+      <Footer/>
     </div>
   );
 }

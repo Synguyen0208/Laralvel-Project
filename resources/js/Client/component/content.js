@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import Key_date from './content/key_date';
 import Training from './content/training';
 import Help from './content/help';
+import Sharing from './content/sharing';
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -20,6 +21,7 @@ class Content extends Component {
                 <Key_date/>
                 <Training/>
                 <Help/>
+                <Sharing/>
             </main>
         );
     }

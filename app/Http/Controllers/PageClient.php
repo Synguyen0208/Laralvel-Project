@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Training;
 use Illuminate\Http\Request;
+use App\Models\Sharing;
 
 class PageClient extends Controller
 {
@@ -15,5 +16,10 @@ class PageClient extends Controller
     {
         $training=Training::all();
         return response()->json($training);
+    }
+    public function getSharing()
+    {
+        $data=Sharing::all();
+        return response()->json($data);
     }
 }

@@ -50,3 +50,4 @@ Route::post('/pnvalue','App\Http\Controllers\PageController@addPnValue');
 Route::post('/updateValue/{id}','App\Http\Controllers\PageController@updateValue');
 Route::delete('/pnvalue/{id}','App\Http\Controllers\PageController@deleteValue');
 Route::get('/training','App\Http\Controllers\PageClient@getTraining');
+Route::get('/sharing','App\Http\Controllers\PageClient@getSharing');

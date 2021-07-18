@@ -133,3 +133,56 @@ body {
 .star-rating li {
     padding: 0;
 }
+
+
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+ }
+
+
+
+ /* ========= */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    }
+    
+    section
+    {
+        padding: 30px;
+        width: 1280px;
+        margin: 40px auto;
+    }
+    section ul
+    {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    section ul li{
+        list-style: none;
+        background: #eee;
+        padding: 8px 30px;
+        margin: 5px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+    
+    section ul li.active{
+       
+        background: #03a9f4;
+        color: #fff;
+    } 
+    
+    .product{
+     /* display: flex;
+     flex-wrap: wrap; */
+    
+     display: grid;
+     grid-template-columns: 25% 25% 25% 25%;
+    }

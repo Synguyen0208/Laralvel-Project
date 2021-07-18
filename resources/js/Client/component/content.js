@@ -18,7 +18,7 @@ class Content extends Component {
             <main id="main">
                 <About/>
                 <Key_date/>
-             <Staff/>
+                <Staff/>
             </main>
         );
     }

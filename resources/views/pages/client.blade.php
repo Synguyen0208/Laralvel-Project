@@ -46,4 +46,36 @@ $(document).ready(function(){
 	});
 });	
 </script>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+
+  <script type ="text/javascript">
+
+    $(document).ready(function(){
+$('.list').click(function(){
+    const value =$(this).attr('data-filter');
+    if(value=='all'){
+        $('.itemBox').show('1000');
+
+    }else{
+        $('.itemBox').not('.'+value).hide('1000');
+        $('.itemBox').filter('.'+value).show('1000');
+    }
+})
+
+// add active
+
+$('.list').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+})
+    })
+</script>
+
+
 @endsection

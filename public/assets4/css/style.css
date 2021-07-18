@@ -721,6 +721,12 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
   padding: 60px 0 40px 0;
 }
+#team{
+  background-color: #f6f7fd;
+}
+#clients{
+  background-color: white;
+}
 #training{
   color: black;
   padding: 60px 0 40px 0;

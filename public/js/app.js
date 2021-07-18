@@ -5238,9 +5238,9 @@ var About = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("section", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("section", {
         id: "about",
-        children: ["=", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           "class": "container",
           "data-aos": "fade-up",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -5365,7 +5365,7 @@ var About = /*#__PURE__*/function (_Component) {
               })]
             })
           })]
-        })]
+        })
       });
     }
   }]);

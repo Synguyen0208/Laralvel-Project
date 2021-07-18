@@ -7,7 +7,6 @@
   <title>Laravel</title>
   @yield('css')
   <link rel="icon" href="https://www.passerellesnumeriques.org/wp-content/uploads/2016/03/pn-logo.png" type="image/x-icon" />
-
 </head>
 <body>
     <div id="app">

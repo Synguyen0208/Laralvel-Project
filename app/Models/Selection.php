@@ -9,7 +9,7 @@ class Selection extends Model
 {
     use HasFactory;
     protected $table ="selections";
-    protected $filltables =[
+    protected $filltable =[
     "name",
     "birthday",
     "card",
@@ -21,5 +21,6 @@ class Selection extends Model
     "major",
     "graduation_score"
     ];
+
     public $timestamps =false;
 }

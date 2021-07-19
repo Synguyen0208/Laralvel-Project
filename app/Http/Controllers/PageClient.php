@@ -12,7 +12,30 @@ class PageClient extends Controller
     }
 
     public function getSelection(){
-        //$selection = Selection::all();
-        
+        $selection = Selection::All();
+        return response()->json($selection);
+    }
+
+    public function addSelection(Request $request)
+    {
+        $selection=new Selection();
+        $selection->name=$request->name;
+        $selection->birthday=$request->birthday;
+        $selection->card=$request->card;
+        $selection->mail=$request->email;
+        $selection->phone=$request->phone;
+        $selection->graduation_years=$request->graduation_years;
+        $selection->address=$request->address;
+        $selection->link_facebook=$request->link_fb;
+        $selection->major=$request->major;
+        $selection->graduation_score=$request->graduation_score;
+        $selection->save();
+
+        $checkResponse = $selection->save();
+       if($checkResponse){
+        return response()->json($selection, 200);
+       }else{
+        return response()->json('Tên không được bỏ trống', 400);
+       }
     }
 }

@@ -55,7 +55,7 @@ class Selection extends Component {
                                 </div>
                                 <div className="form-row">
                                     <div className="form-group col-md-6">
-                                        <label >Birtday</label>
+                                        <label >Birthday</label>
                                         <input type="date" className="form-control" name="birthday" placeholder="12/05/2001" />
                                     </div>
                                     <div className="form-group col-md-6">

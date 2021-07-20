@@ -47,65 +47,55 @@ class Selection extends Component {
         this.getData();
     }
 
-    addSelection = async() => {
-        // 
-        this.call.callAPI("addselections", "post", "").then((response) => {
-              if(response.status === 200){
-                this.state.data.push(response.data);
-                console.log('data: ' + JSON.stringify(response));
-                alert('Đăng kí thành công :) ');
-              }else{
-                alert('vui lòng thử lại sau');
-              }
-            });
-          console.log('hello');
-    } 
+    
 
-    // getData=()=>{
-    //     this.call.callAPI("getselections", "get", "").then((response) => {
-    //         this.setState({ data: response.data });
+
+    
+
+    getData=()=>{
+        this.call.callAPI("getselections", "get", "").then((response) => {
+            this.setState({ data: response.data });
             
-    //     });
-    // }
+        });
+    }
 
     
-    // componentDidMount() {
-    //     this.setState({
-    //         data:this.handleSubmit
-    //     })
-	// 	this.getData();
-    // }
+    componentDidMount() {
+        this.setState({
+            data:this.handleSubmit
+        })
+		this.getData();
+    }
 
-    // createForm = () => {
-    //     const formData = new FormData();
-    
-    //     formData.append('id', this.state.id);
-    //     formData.append('name', this.state.name);
-    //     formData.append('birthday', this.state.birthday);
-    //     formData.append('card', this.state.card);
-    //     formData.append('email', this.state.email);
-    //     formData.append('phone', this.state.phone);
-    //     formData.append('graduation_years', this.state.graduation_years);
-    //     formData.append('graduation_years', this.state.graduation_years);        
-    //     formData.append('link_facebook', this.state.link_fb);
-    //     formData.append('major', this.state.major);
-    //     formData.append('graduation_score', this.state.graduation_score);
+    createForm = () => {
+        const formData = new FormData();
+        formData.append('name', this.state.name);
+        formData.append('birthday', this.state.birthday);
+        formData.append('card', this.state.card);
+        formData.append('email', this.state.email);
+        formData.append('phone', this.state.phone);
+        formData.append('graduation_years', this.state.graduation_years);
+        formData.append('address', this.state.address);
+        formData.append('link_facebook', this.state.link_fb);
+        formData.append('major', this.state.major);
+        formData.append('graduation_score', this.state.graduation_score);
        
-    //     return formData;
-    // }
+        return formData;
+    }
     
-    // handleSubmit=(event)=>{
-    //     this.call.callAPI("addselections", "post", "").then((response) => {
-    //         if(response.status === 200){
-    //           this.state.data.push(response.data);
-    //           console.log('data: ' + JSON.stringify(response));
-    //           alert('Đăng kí thành công :) ');
-    //         }else{
-    //           alert('vui lòng thử lại sau');
-    //         }
-    //       });
-    //     console.log('hello');
-    // } 
+    handleSubmit=(event)=>{
+        event.preventDefault();
+        let form=this.createForm();
+        this.call.callAPI("addselections", "post", form).then((response) => {
+            if(response.status === 200){
+              this.state.data.push(response.data);
+              console.log('data: ' + JSON.stringify(response));
+              alert('Đăng kí thành công :) ');
+            }else{
+              alert('vui lòng thử lại sau');
+            }
+          });
+    } 
 
 
     render() {
@@ -149,7 +139,7 @@ class Selection extends Component {
                                 <p style={{ color: 'blue ' }, { textAlign: 'center' }} > <br /><br />Students can register here</p>
                             </div>
 
-                            <form onSubmit={this.state.data} >
+                            <form onSubmit={this.handleSubmit} >
                                 <div className="form-group">
                                     <label htmlFor="inputAddress">Name</label>
                                     <input type="text" className="form-control" name="name" placeholder="Ho Thi Huou "  onChange={this.handleInputChange} required/>
@@ -198,8 +188,8 @@ class Selection extends Component {
                                     </div>
                                     <div className="form-group col-md-6">
                                         <label>Major</label>
-                                        <select name="major" className="form-control"  value={this.state.major} onChange={this.handleInputChange} required>
-                                            <option selected>Information technology</option>
+                                        <select name="major" className="form-control" onChange={this.handleInputChange} required>
+                                            <option value="IT" selected>Information technology</option>
                                             <option>...</option>
                                         </select>
                                     </div>
@@ -212,7 +202,7 @@ class Selection extends Component {
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" className="btn btn-primary"  onClick={()=>this.state.addSelection()} >Register</button>
+                                <button type="submit" className="btn btn-primary" >Register</button>
                             </form>
                         </div>
 

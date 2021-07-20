@@ -26,7 +26,7 @@ class PageClient extends Controller
         $selection->phone=$request->phone;
         $selection->graduation_years=$request->graduation_years;
         $selection->address=$request->address;
-        $selection->link_facebook=$request->link_fb;
+        $selection->link_facebook=$request->link_facebook;
         $selection->major=$request->major;
         $selection->graduation_score=$request->graduation_score;
         $selection->save();

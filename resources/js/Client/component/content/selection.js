@@ -39,26 +39,6 @@ class Selection extends Component {
             [name]: value
         });
     }
-
-    componentDidMount() {
-        this.setState({
-            data:this.addSelection
-        })
-        this.getData();
-    }
-
-    
-
-
-    
-
-    getData=()=>{
-        this.call.callAPI("getselections", "get", "").then((response) => {
-            this.setState({ data: response.data });
-            
-        });
-    }
-
     
     componentDidMount() {
         this.setState({
@@ -96,8 +76,6 @@ class Selection extends Component {
             }
           });
     } 
-
-
     render() {
         return (
             <section id="selection" class="selections">
@@ -105,7 +83,7 @@ class Selection extends Component {
                 <div class="container" data-aos="zoom-in">
 
                     <div class="section-header">
-                        <h2>   SELECTION</h2>
+                        <h2> SELECTION</h2>
                     </div>
                     <div class="row ">
                         <div className="col-12">
@@ -136,7 +114,7 @@ class Selection extends Component {
                         </div>
                         <div className="col-sm-6 ">
                             <div className="register">
-                                <p style={{ color: 'blue ' }, { textAlign: 'center' }} > <br /><br />Students can register here</p>
+                                <p style={ { textAlign: 'center', color: '#0e1b4d '}} > <br /><br /><b>Students can register here </b></p>
                             </div>
 
                             <form onSubmit={this.handleSubmit} >

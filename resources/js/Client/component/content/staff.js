@@ -58,42 +58,54 @@ class Staff extends Component {
                         <div class="section-header">
                             <h2>  EMPLOYEES </h2>
                         </div>
+                        <div >
+                            <h4> <b><i> BOARD MEMBERS </i> </b> </h4>
+                        </div>
                         
                         {
                             this.state.data != null && this.state.dataShow.map(e => {
+                                if(e.department_id==1){
                                 return (
                                     <InforStaff image={e.image} name={e.name} description={e.description}/>
                                 )
-
+                                }
                             })
                         }
                         {
-                            this.state.buttonSeeMore    ? <p  style={{ color: 'rgb(255, 136, 0)' }} onClick={()=>this.setDataShow(6)}> See All... </p> 
-                                                        : <p style={{ color: 'rgb(255, 136, 0)' }} onClick={()=>this.setDataShow(3)}> ...Compact </p> 
+                            this.state.buttonSeeMore    ? <p  style={{ color: 'rgb(255, 136, 0)', textAlign:'right', paddingTop: '30px' }} onClick={()=>this.setDataShow(6)}> See All... </p> 
+                                                        : <p style={{ color: 'rgb(255, 136, 0)' , textAlign:'right', paddingTop: '30px' }} onClick={()=>this.setDataShow(3)}> ...Compact </p> 
                         }
                     
-
+                        <div >
+                            <h4> <b><i> LOCAL MEMBERS </i> </b> </h4>
+                        </div>
                         <div className="col-md-12">
                         <ul>
                             <li className="list active" data-filter="all">All</li>
-                            <li className="list" data-filter="mobile">Mobile</li>
-                            <li className="list" data-filter="camera">Camera</li>
-                            <li className="list" data-filter="watch ">Watch</li>
-                            <li className="list" data-filter="shoe">Shoe</li>
-                            <li className="list" data-filter="headphone">headphone</li>
+                            <li className="list" data-filter="Selection">Selection</li>
+                            <li className="list" data-filter="IT">IT And Training</li>
+                            <li className="list" data-filter="EXTERNAL ">EXTERNAL RELATIONS</li>
+                            <li className="list" data-filter="HR">HR A FINANCE A ADMIN</li>
+                            <li className="list" data-filter="education">EDUCATION</li>
                             </ul>
-                            <div className="product">
-                            <div className="itemBox mobile"><img src="mobile1.jpg" /></div>
-                            <div className="itemBox camera"><img src="camera1.jpg" /></div>
-                            <div className="itemBox watch"><img src="watch.jpg" /></div>
-                            <div className="itemBox shoe"><img src="shoe1.jpg" /></div>
-                            <div className="itemBox headphone"><img src="headphone1.jpg" /></div>
-                            <div className="itemBox mobile"><img src="mobile2.jpg" /></div>
-                            <div className="itemBox camera"><img src="camera2.jpg" /></div>
-                            <div className="itemBox watch"><img src="watch2.jpg" /></div>
-                            <div className="itemBox shoe"><img src="shoe2.jpg" /></div>
-                            <div className="itemBox headphone"><img src="headphone2.jpg" /></div>
-                            </div>
+                            {
+                                    this.state.data != null && this.state.data.map(e => {
+                                        if (e.department_id == 3) {
+                                            return (
+                                                <div className="product">
+                                                    <div className="itemBox Selection"><img src={'../images/staffs/' + e.image}/></div>
+                                                    <div className="itemBox IT"><img src={'../images/staffs/' + e.image}/></div>
+                                                    <div className="itemBox EXTERNAL"><img src={'../images/staffs/' + e.image} /></div>
+                                                    <div className="itemBox HR"><img src={'../images/staffs/' + e.image} /></div>
+                                                    <div className="itemBox education"><img src={'../images/staffs' + e.image} /></div>
+
+                                                </div>
+                                            )
+                                        }
+                                    })
+                                }
+                               
+                            
                         </div>
                     
                         <div className="col-md-12">

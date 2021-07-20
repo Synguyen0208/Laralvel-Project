@@ -6485,15 +6485,27 @@ var Staff = /*#__PURE__*/function (_Component) {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
                 children: "  EMPLOYEES "
               })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h4", {
+                children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("b", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
+                    children: " BOARD MEMBERS "
+                  }), " "]
+                }), " "]
+              })
             }), this.state.data != null && this.state.dataShow.map(function (e) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_inforStaff__WEBPACK_IMPORTED_MODULE_4__.default, {
-                image: e.image,
-                name: e.name,
-                description: e.description
-              });
+              if (e.department_id == 1) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_inforStaff__WEBPACK_IMPORTED_MODULE_4__.default, {
+                  image: e.image,
+                  name: e.name,
+                  description: e.description
+                });
+              }
             }), this.state.buttonSeeMore ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
               style: {
-                color: 'rgb(255, 136, 0)'
+                color: 'rgb(255, 136, 0)',
+                textAlign: 'right',
+                paddingTop: '30px'
               },
               onClick: function onClick() {
                 return _this3.setDataShow(6);
@@ -6501,12 +6513,22 @@ var Staff = /*#__PURE__*/function (_Component) {
               children: " See All... "
             }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
               style: {
-                color: 'rgb(255, 136, 0)'
+                color: 'rgb(255, 136, 0)',
+                textAlign: 'right',
+                paddingTop: '30px'
               },
               onClick: function onClick() {
                 return _this3.setDataShow(3);
               },
               children: " ...Compact "
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h4", {
+                children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("b", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
+                    children: " LOCAL MEMBERS "
+                  }), " "]
+                }), " "]
+              })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "col-md-12",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("ul", {
@@ -6516,78 +6538,57 @@ var Staff = /*#__PURE__*/function (_Component) {
                   children: "All"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
                   className: "list",
-                  "data-filter": "mobile",
-                  children: "Mobile"
+                  "data-filter": "Selection",
+                  children: "Selection"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
                   className: "list",
-                  "data-filter": "camera",
-                  children: "Camera"
+                  "data-filter": "IT",
+                  children: "IT And Training"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
                   className: "list",
-                  "data-filter": "watch ",
-                  children: "Watch"
+                  "data-filter": "EXTERNAL ",
+                  children: "EXTERNAL RELATIONS"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
                   className: "list",
-                  "data-filter": "shoe",
-                  children: "Shoe"
+                  "data-filter": "HR",
+                  children: "HR A FINANCE A ADMIN"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
                   className: "list",
-                  "data-filter": "headphone",
-                  children: "headphone"
+                  "data-filter": "education",
+                  children: "EDUCATION"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                className: "product",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox mobile",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "mobile1.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox camera",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "camera1.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox watch",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "watch.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox shoe",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "shoe1.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox headphone",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "headphone1.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox mobile",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "mobile2.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox camera",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "camera2.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox watch",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "watch2.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox shoe",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "shoe2.jpg"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                  className: "itemBox headphone",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                    src: "headphone2.jpg"
-                  })
-                })]
+              }), this.state.data != null && this.state.data.map(function (e) {
+                if (e.department_id == 3) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                    className: "product",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                      className: "itemBox Selection",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                        src: '../images/staffs/' + e.image
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                      className: "itemBox IT",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                        src: '../images/staffs/' + e.image
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                      className: "itemBox EXTERNAL",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                        src: '../images/staffs/' + e.image
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                      className: "itemBox HR",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                        src: '../images/staffs/' + e.image
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                      className: "itemBox education",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                        src: '../images/staffs' + e.image
+                      })
+                    })]
+                  });
+                }
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "col-md-12",
@@ -9476,7 +9477,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n    background: #e2eaef;\r\n    font-family: \"Open Sans\", sans-serif;\r\n}\r\n\r\n.carousel {\r\n    margin: 50px auto;\r\n    padding: 0 70px;\r\n}\r\n.carousel .item {\r\n    color: #747d89;\r\n    min-height: 325px;\r\n    text-align: center;\r\n    overflow: hidden;\r\n}\r\n.carousel .thumb-wrapper {\r\n    padding: 25px 15px;\r\n    background: #fff;\r\n    border-radius: 6px;\r\n    text-align: center;\r\n    position: relative;\r\n    box-shadow: 0 2px 3px rgba(0,0,0,0.2);\r\n}\r\n.carousel .item .img-box {\r\n    height: 120px;\r\n    margin-bottom: 20px;\r\n    width: 100%;\r\n    position: relative;\r\n}\r\n.carousel .item img {   \r\n    max-width: 100%;\r\n    max-height: 100%;\r\n    display: inline-block;\r\n    position: absolute;\r\n    bottom: 0;\r\n    margin: 0 auto;\r\n    left: 0;\r\n    right: 0;\r\n}\r\n.carousel .item h4 {\r\n    font-size: 13px;\r\n}\r\n\r\n.carousel .thumb-content .btn {\r\n    color: #7ac400;\r\n    font-size: 11px;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n    background: none;\r\n    border: 1px solid #7ac400;\r\n    padding: 6px 14px;\r\n    margin-top: 5px;\r\n    line-height: 16px;\r\n    border-radius: 20px;\r\n}\r\n.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {\r\n    color: #fff;\r\n    background: #7ac400;\r\n    box-shadow: none;\r\n}\r\n.carousel .thumb-content .btn i {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    margin-left: 5px;\r\n}\r\n.carousel .item-price {\r\n    font-size: 13px;\r\n    padding: 2px 0;\r\n}\r\n.carousel .item-price strike {\r\n    opacity: 0.7;\r\n    margin-right: 5px;\r\n}\r\n.carousel-control-prev, .carousel-control-next {\r\n    height: 44px;\r\n    width: 40px;\r\n    background:blue;    \r\n    margin: auto 0;\r\n    border-radius: 4px;\r\n    opacity: 0.8;\r\n}\r\n.carousel-control-prev:hover, .carousel-control-next:hover {\r\n    background: #1e64fa;\r\n    opacity: 1;\r\n}\r\n.carousel-control-prev i, .carousel-control-next i {\r\n    font-size: 36px;\r\n    position: absolute;\r\n    top: 50%;\r\n    display: inline-block;\r\n    margin: -19px 0 0 0;\r\n    z-index: 5;\r\n    left: 0;\r\n    right: 0;\r\n    color: #fff;\r\n    text-shadow: none;\r\n    font-weight: bold;\r\n}\r\n.carousel-control-prev i {\r\n    margin-left: -2px;\r\n}\r\n.carousel-control-next i {\r\n    margin-right: -4px;\r\n}       \r\n.carousel-indicators {\r\n    bottom: -50px;\r\n}\r\n.carousel-indicators li, .carousel-indicators li.active {\r\n    width: 10px;\r\n    height: 10px;\r\n    margin: 4px;\r\n    border-radius: 50%;\r\n    border: none;\r\n}\r\n.carousel-indicators li {   \r\n    background: rgba(0, 0, 0, 0.2);\r\n}\r\n.carousel-indicators li.active {    \r\n    background: rgba(0, 0, 0, 0.6);\r\n}\r\n.carousel .wish-icon {\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 10px;\r\n    z-index: 99;\r\n    cursor: pointer;\r\n    font-size: 16px;\r\n    color: #dd2c15;\r\n}\r\n.carousel .wish-icon .fa-heart {\r\n    color: #c91d1d;\r\n}\r\n.star-rating li {\r\n    padding: 0;\r\n}\r\n\r\n\r\n  /* Add a card effect for articles */\r\n  .card {\r\n    background-color: white;\r\n    padding: 20px;\r\n    margin-top: 20px;\r\n }\r\n\r\n\r\n\r\n /* ========= */\r\n *{\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: 'Poppins',sans-serif;\r\n    }\r\n    \r\n    section\r\n    {\r\n        padding: 30px;\r\n        width: 1280px;\r\n        margin: 40px auto;\r\n    }\r\n    section ul\r\n    {\r\n        display: flex;\r\n        margin-bottom: 10px;\r\n    }\r\n    \r\n    section ul li{\r\n        list-style: none;\r\n        background: #eee;\r\n        padding: 8px 30px;\r\n        margin: 5px;\r\n        letter-spacing: 1px;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    section ul li.active{\r\n       \r\n        background: #03a9f4;\r\n        color: #fff;\r\n    } \r\n    \r\n    .product{\r\n     /* display: flex;\r\n     flex-wrap: wrap; */\r\n    \r\n     display: grid;\r\n     grid-template-columns: 25% 25% 25% 25%;\r\n    }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n    background: #e2eaef;\r\n    font-family: \"Open Sans\", sans-serif;\r\n}\r\n\r\n.carousel {\r\n    margin: 50px auto;\r\n    padding: 0 70px;\r\n}\r\n.carousel .item {\r\n    color: #747d89;\r\n    min-height: 325px;\r\n    text-align: center;\r\n    overflow: hidden;\r\n}\r\n.carousel .thumb-wrapper {\r\n    padding: 25px 15px;\r\n    background: #fff;\r\n    border-radius: 6px;\r\n    text-align: center;\r\n    position: relative;\r\n    box-shadow: 0 2px 3px rgba(0,0,0,0.2);\r\n}\r\n.carousel .item .img-box {\r\n    height: 120px;\r\n    margin-bottom: 20px;\r\n    width: 100%;\r\n    position: relative;\r\n}\r\n.carousel .item img {   \r\n    max-width: 100%;\r\n    max-height: 100%;\r\n    display: inline-block;\r\n    position: absolute;\r\n    bottom: 0;\r\n    margin: 0 auto;\r\n    left: 0;\r\n    right: 0;\r\n}\r\n.carousel .item h4 {\r\n    font-size: 13px;\r\n}\r\n\r\n.carousel .thumb-content .btn {\r\n    color: #7ac400;\r\n    font-size: 11px;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n    background: none;\r\n    border: 1px solid #7ac400;\r\n    padding: 6px 14px;\r\n    margin-top: 5px;\r\n    line-height: 16px;\r\n    border-radius: 20px;\r\n}\r\n.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {\r\n    color: #fff;\r\n    background: #7ac400;\r\n    box-shadow: none;\r\n}\r\n.carousel .thumb-content .btn i {\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    margin-left: 5px;\r\n}\r\n.carousel .item-price {\r\n    font-size: 13px;\r\n    padding: 2px 0;\r\n}\r\n.carousel .item-price strike {\r\n    opacity: 0.7;\r\n    margin-right: 5px;\r\n}\r\n.carousel-control-prev, .carousel-control-next {\r\n    height: 44px;\r\n    width: 40px;\r\n    background:blue;    \r\n    margin: auto 0;\r\n    border-radius: 4px;\r\n    opacity: 0.8;\r\n}\r\n.carousel-control-prev:hover, .carousel-control-next:hover {\r\n    background: #1e64fa;\r\n    opacity: 1;\r\n}\r\n.carousel-control-prev i, .carousel-control-next i {\r\n    font-size: 36px;\r\n    position: absolute;\r\n    top: 50%;\r\n    display: inline-block;\r\n    margin: -19px 0 0 0;\r\n    z-index: 5;\r\n    left: 0;\r\n    right: 0;\r\n    color: #fff;\r\n    text-shadow: none;\r\n    font-weight: bold;\r\n}\r\n.carousel-control-prev i {\r\n    margin-left: -2px;\r\n}\r\n.carousel-control-next i {\r\n    margin-right: -4px;\r\n}       \r\n.carousel-indicators {\r\n    bottom: -50px;\r\n}\r\n.carousel-indicators li, .carousel-indicators li.active {\r\n    width: 10px;\r\n    height: 10px;\r\n    margin: 4px;\r\n    border-radius: 50%;\r\n    border: none;\r\n}\r\n.carousel-indicators li {   \r\n    background: rgba(0, 0, 0, 0.2);\r\n}\r\n.carousel-indicators li.active {    \r\n    background: rgba(0, 0, 0, 0.6);\r\n}\r\n.carousel .wish-icon {\r\n    position: absolute;\r\n    right: 10px;\r\n    top: 10px;\r\n    z-index: 99;\r\n    cursor: pointer;\r\n    font-size: 16px;\r\n    color: #dd2c15;\r\n}\r\n.carousel .wish-icon .fa-heart {\r\n    color: #c91d1d;\r\n}\r\n.star-rating li {\r\n    padding: 0;\r\n}\r\n\r\n\r\n  /* Add a card effect for articles */\r\n  .card {\r\n    background-color: white;\r\n    padding: 20px;\r\n    margin-top: 20px;\r\n }\r\n\r\n\r\n\r\n /* ========= */\r\n *{\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: 'Poppins',sans-serif;\r\n    }\r\n    \r\n    section\r\n    {\r\n        padding: 30px;\r\n        width: 1280px;\r\n        margin: 40px auto;\r\n    }\r\n    section ul\r\n    {\r\n        display: flex;\r\n        margin-bottom: 10px;\r\n    }\r\n    \r\n    section ul li{\r\n        list-style: none;\r\n        background: #eee;\r\n        padding: 8px 30px;\r\n        margin: 5px;\r\n        letter-spacing: 1px;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    section ul li.active{\r\n       \r\n        background: #03a9f4;\r\n        color: #fff;\r\n    } \r\n    \r\n    .product{\r\n     display: flex;\r\n     flex-wrap: wrap;\r\n    /* \r\n     display: grid;\r\n     grid-template-columns: 25% 25% 25% 25%; */\r\n    }\r\n    \r\n    .product .itemBox{\r\n        position: relative;\r\n        width: 300px;\r\n        height: 300px;\r\n        margin: 5px;\r\n    }\r\n    \r\n    .product .itemBox img{\r\n        position: absolute;\r\n        top: 0;\r\n        left: 0;\r\n        width: 100%;\r\n        height: 100%;\r\n        -o-object-fit: cover;\r\n           object-fit: cover;\r\n    }\r\n    ", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

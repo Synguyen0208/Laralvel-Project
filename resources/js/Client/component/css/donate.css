@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset .form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+.info {
+    padding: 0px 8px 4px 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #22bbea;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #f28f48;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #22bbea;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+}
+#progressbar #money:before {
+  font-family: FontAwesome;
+  content: "\f0d6"
+}
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: skyblue
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+.nxt{
+    width: 10rem;
+    background: #22bbea;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border-radius: 50px;
+}
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+
+.donate_form {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 767px) {
+    .donate_form {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .donate_form .tabs {
+    margin-bottom: 15px;
+  }
+  .donate_form .tabs .styles{
+    width: 50%;
+    float: left;
+    border: 1px solid #22bbea;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center; 
+  }
+  .donate_form .tabs .btn_styles {
+    width: 100%;
+    float: left;
+    border: 1px solid #22bbea;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .donate_form .tabs .btn_styles:not(.active) {
+    color: #7e7549;
+  }
+  .donate_form .tabs .styles:not(.active) {
+    color: #7e7549;
+  }
+  .donate_form .tabs .btn_styles.active {
+    background-color: #22bbea;
+    color: #2a2b2f;
+  }
+  .donate_form .tabs .styles.active {
+    background-color: #22bbea;
+    color: #2a2b2f;
+  }
+  .donate_form .donat-box {
+    width: 33.3% !important;
+  }
+  
+  .donate_form .radio {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .donate_form .radio .checkmark {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #7e7549;
+    border-radius: 2px;
+    margin-right: 5px;
+  }
+  
+  .donate_form .radio input {
+    display: none;
+  }
+  
+  .donate_form .radio input:checked ~ .checkmark {
+    background-color: #7e7549;
+  }
+  
+  .donate_form .input {
+    position: relative;
+  }
+  
+  .donate_form .input:before {
+    content: '$';
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    -webkit-transform: translateX(-100%) translateY(-50%);
+            transform: translateX(-100%) translateY(-50%);
+  }
+  
+  .donate_form .input input[type="number"] {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    padding: 0 120px 0 20px;
+    color: #7e7549;
+    font-size: 20px;
+  }
+  .amount{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    padding: 0 120px 0 20px;
+    color: #7e7549;
+    font-size: 20px;
+  }
+  
+  .donate_form .input input[type="number"]::-webkit-inner-spin-button, .donate_form .input input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .donate_form .input .addition {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
+  .donate_form #monthly .input input[type="number"] {
+    padding: 0 120px 0 20px;
+  }
+  
+  .donate_form #once .input input[type="number"] {
+    padding: 0 55px 0 20px;
+  }
+  
+  .donate_form .description {
+    background-color: #c4c4c4;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  .donate_form .body {
+    border-top: none;
+    padding: 25px;
+  }
+  
+  .donate_form .body .info {
+    margin-bottom: 20px;
+    color: #ff9933;
+  }
+  
+  .donate_form .body .donate_buttons .btn_styles {
+      border: none;
+    background-color: #22bbea;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    width: 100%;
+  }
+ .donate_buttons .btn_styles {
+    border: none;
+  background-color: #22bbea;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  width: 100%;
+}
+  .donate_form .goal,
+  .donate_form .subgoal,
+  .donate_form .thank-you {
+    text-align: center;
+    max-width: 470px;
+    margin: 0 auto;
+  }
+  
+  .donate_form .goal {
+    font-size: 21px;
+    line-height: 25.2px;
+    color: #7e7549;
+    margin-bottom: 20px;
+  }
+  
+  .donate_form .subgoal {
+    font-size: 12px;
+    line-height: 16.8px;
+    color: #2a3033;
+    margin-bottom: 30px;
+  }
+  
+  .donate_form .thank-you {
+    font-size: 43px;
+    line-height: 51.6px;
+    color: #7e7549;
+  }
+  /*# sourceMappingURL=convert.css.map */
+  #smiley{
+    height: 190px;
+    width: 190px;
+    left: 290px;
+    position: absolute;
+    font-size: 150px;
+    animation: wobble 10s infinite;
+    -webkit-animation: wobble 10s infinite;
+    opacity: 0.3;
+  
+  }
+  
+  #message{
+    position: absolute;
+    height:200px;
+    width:700px;
+    top: 80px;
+    align-content:center;
+    text-align: center;
+    font-size: 132px;
+    opacity: 0.7;
+  }
+  
+  .confetti:nth-child(1){
+    animation: throw 5s 2s 1;
+    -webkit-animation: throw 5s 1;
+  }
+  
+  .confetti:nth-child(2){
+    animation: throw 5s 2.5s 1;
+    -webkit-animation: throw 5s .25s 1;
+  }
+  
+  .confetti:nth-child(3){
+    animation: throw 5s 4s 1;
+    -webkit-animation: throw 5s .5s 1;
+  }
+  
+  .confetti:nth-child(4){
+    animation: throw 5s 3s 1;
+    -webkit-animation: throw 5s .5s 1;
+  }
+  
+  .confetti:nth-child(5){
+    animation: throw 5s 1.7s 1;
+    -webkit-animation: throw 5s .25s 1;
+  }
+  
+  .confetti:nth-child(6){
+    animation: throw 5s 3.5s 1;
+    -webkit-animation: throw 5s 1;
+  }
+  
+  .confetti{
+    border-radius: 7px;
+    position: relative;
+    left: 30px;
+    height: 50px;
+    width: 16%;
+    background-color: white;
+    opacity: 0.3;
+    float: left;
+  }
+  .logo{
+    width: 40%;
+  }
+  .image-donate{
+    width: 100%;
+  }
+  .fy-title{
+    color: #ff9933;
+  }
+  @keyframes wobble {
+    0%{transform: rotate(97deg);}
+    50%{transform: rotate(83deg);}
+    100%{transform: rotate(97deg);}
+  }
+  
+  @-webkit-keyframes wobble {
+    0%{transform: rotate(97deg);}
+    50%{transform: rotate(83deg);}
+    100%{transform: rotate(97deg);}
+  }
+  
+  @keyframes throw {
+    from {top: 0px; opacity: 1.0;}
+      to {top: -400px; opacity: 0;}
+  }
+  
+  @-webkit-keyframes throw {
+    from {top: 0px; opacity: 1.0;}
+      to {top:-400px; opacity: 0;}
+  }

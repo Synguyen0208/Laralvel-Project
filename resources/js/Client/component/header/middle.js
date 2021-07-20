@@ -26,7 +26,7 @@ class Middle extends Component {
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav>
-                    <a class="buy-tickets scrollto" href="">Donate</a>
+                    <a class="buy-tickets scrollto" href="#donate">Donate</a>
 
                 </div>
             </header>

@@ -727,6 +727,11 @@ h1, h2, h3, h4, h5, h6 {
 #clients{
   background-color: white;
 }
+.session-white{
+  color: black;
+  padding: 60px 0 40px 0;
+  background-color: white;
+}
 #training{
   color: black;
   padding: 60px 0 40px 0;
@@ -742,6 +747,9 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
   }
   #training{
+    background-attachment: fixed;
+  }
+  .session-white{
     background-attachment: fixed;
   }
   #help{
@@ -788,6 +796,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
   color: black;
 }
+.session-white h2{
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
 #help h2 {
   font-size: 36px;
   font-weight: bold;
@@ -812,6 +826,13 @@ li{
   margin-bottom: 10px;
   color: black;
 }
+.session-white h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: black;
+}
 #help h3 {
   font-size: 18px;
   font-weight: bold;
@@ -825,6 +846,11 @@ li{
   color: black;
 }
 #training p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: black;
+}
+.session-white p {
   font-size: 14px;
   margin-bottom: 20px;
   color: black;
@@ -846,7 +872,9 @@ li{
   overflow: hidden;
   margin-bottom: 30px;
 }
-
+#progressbar{
+  padding-left: 0px;
+}
 #speakers .speaker .details {
   background: rgba(6, 12, 34, 0.76);
   position: absolute;
@@ -863,6 +891,84 @@ li{
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
+}
+.donate-area {
+  background-color: #22bbea;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+}
+.primary-btn {
+  line-height: 42px;
+  padding-left: 30px;
+  padding-right: 60px;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  position: relative;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.donate-area .overlay-bg {
+  opacity: .9;
+  background-color: #000
+}
+
+.donate-area .header-text h1 {
+  color: #fff;
+  margin-bottom: 25px
+}
+
+.donate-area .contact-left h4 {
+  color: #fff;
+  margin-bottom: 10px
+}
+
+.donate-area .contact-left .single-info {
+  margin-bottom: 30px
+}
+
+.donate-area .contact-right .form-control {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid #656463;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px
+}
+
+.donate-area .contact-right input, .donate-area .contact-right textarea {
+  font-size: 14px;
+  font-weight: 200
+}
+
+.donate-area .contact-right .option {
+  color: #222
+}
+
+.donate-area .contact-right .nice-select span {
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 200
+}
+
+.donate-area .contact-right textarea {
+  height: 150px
+}
+
+.donate-area .contact-right .list {
+  width: 100%
+}
+
+.donate-area .contact-right .payment-method {
+  color: #ccc;
+  margin-top: 30px
 }
 
 #speakers .speaker .details p {

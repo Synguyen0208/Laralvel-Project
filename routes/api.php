@@ -52,3 +52,6 @@ Route::delete('/pnvalue/{id}','App\Http\Controllers\PageController@deleteValue')
 Route::get('/training','App\Http\Controllers\PageClient@getTraining');
 Route::get('/sharing','App\Http\Controllers\PageClient@getSharing');
 Route::get('/getpartner','App\Http\Controllers\PageClient@getPartner');
+
+Route::post('/donate','App\Http\Controllers\PageClient@donate');
+Route::post('/donateGGP','App\Http\Controllers\PageClient@donateGGP');

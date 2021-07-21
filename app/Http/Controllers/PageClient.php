@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Mail;
 use App\Models\Selection;
 use Illuminate\Http\Request;
+use App\Jobs\SendEmail;
 class PageClient extends Controller
 {
     public function index()
@@ -32,6 +33,25 @@ class PageClient extends Controller
         $selection->save();
 
         $checkResponse = $selection->save();
+        $message = [
+            'type' => 'Thông báo bạn đã đăng kí học bổng Passerellesnumeriques thành công',
+            'thanks' =>'Cảm ơn '.$request->name . ' Đã đăng kí ',
+            'content' => 'Hãy chờ thầy cô liên hệ với bạn nhé !',
+            'name'=>$request->name ,
+            'birtday'=>$request->birthday,
+            'card'=>$request->card,
+            'mail'=>$request->email,
+            'phone'=>$request->phone,
+            'graduation_years'=>$request->graduation_years,
+            'address'=>$request->address,
+            'link_facebook'=>$request->link_facebook,
+            'major'=>$request->major,
+            'graduation_score'=>$request->graduation_score,
+
+        ];
+        
+        SendEmail::dispatch($message, $request->email)->delay(now()->addMinute(1));
+
        if($checkResponse){
         return response()->json($selection, 200);
        }else{

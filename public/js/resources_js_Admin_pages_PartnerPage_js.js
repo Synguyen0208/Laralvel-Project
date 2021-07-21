@@ -511,7 +511,7 @@ var Table = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var script = document.createElement("script");
-      script.src = "../js/dataTable.js";
+      script.src = "/js/dataTable.js";
       script.async = true;
       document.body.appendChild(script);
     }
@@ -521,6 +521,7 @@ var Table = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       var keye = Object.keys(this.props.data[0]);
+      var dk = true;
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("table", {
           id: this.props.id,
@@ -548,7 +549,13 @@ var Table = /*#__PURE__*/function (_Component) {
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("tbody", {
             children: this.props.data.map(function (value1) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("tr", {
+              var dk = true;
+
+              if (_this2.props.search != undefined) {
+                dk = value1.id_donator == _this2.props.search;
+              }
+
+              if (dk) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("tr", {
                 children: [Object.values(value1).map(function (value, key) {
                   if (keye[key] == "image") return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("td", {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
@@ -663,6 +670,12 @@ var Table = /*#__PURE__*/function (_Component) {
                           })]
                         })
                       })
+                    }), _this2.props.view != undefined && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
+                      style: {
+                        fontSize: '0.9rem'
+                      },
+                      href: '/admin' + _this2.props.view + '/' + value1.id,
+                      children: _this2.props.title_view
                     })]
                   })
                 })]

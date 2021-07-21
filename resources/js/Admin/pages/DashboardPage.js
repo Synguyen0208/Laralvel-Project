@@ -29,25 +29,26 @@ import {
   Button,
   Card,
   CardBody,
-  CardDeck,
-  CardGroup,
   CardHeader,
   Col,
   Row
 } from 'reactstrap';
 import { getColor } from '../utils/colors';
 import Data_process from '../process/data_process';
-
+import { randomNum } from '../utils/demos';
 const today = new Date();
 const lastWeek = new Date(
   today.getFullYear(),
   today.getMonth(),
   today.getDate() - 7,
 );
-
-
+const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+let label = [];
+for (let index = 0; index <= today.getMonth(); index++) {
+  label.push(month[index]);
+};
 class DashboardPage extends React.Component {
-  data=new Data_process();
+  data = new Data_process();
   dataStatistical = {
     sessions: 0,
     pageviews: 0,
@@ -57,45 +58,118 @@ class DashboardPage extends React.Component {
     avgsessionduration: 0,
     pageviewsIncrease: 0,
     visitorsIncrease: 0,
-    newusersIncrease:0,
-    sessionsIncrease:0,
-    bouncerateIncrease:0,
-    avgsessiondurationIncrease:0
+    newusersIncrease: 0,
+    sessionsIncrease: 0,
+    bouncerateIncrease: 0,
+    avgsessiondurationIncrease: 0
   };
-  dataChart={
-    sessionsChart:new ChartData(),
-    pageViewChart:new ChartData(),
-    visitorChart:new ChartData(),
-    bouncerateChart:new ChartData()
-  }
   state = {
-    data: null
+    data: null,
+    data_statistical: null
   }
-  call=new API;
+  call = new API;
   async componentDidMount() {
     let data = await this.call.callAPI('view', 'get', '').then((response) => {
       this.setState({ data: response.data });
     });
-    
+    let data1 = await this.call.callAPI('statistical', 'get', '').then((response) => {
+      console.log(response.data)
+      this.setState({ data_statistical: response.data });
+    });
     window.scrollTo(0, 0);
   }
   render() {
+    const rand = () => Math.floor(Math.random() * 255);
     const primaryColor = getColor('primary');
     const secondaryColor = getColor('secondary');
-
-    if (this.state.data != null) {
-      this.dataStatistical=this.data.processStatistics(this.state.data);
-      let chartData=this.data.chartData(this.state.data);
-      this.dataChart.sessionsChart.chartjs.line.data.datasets[0].data=chartData.session;
-      this.dataChart.sessionsChart.chartjs.line.data.datasets[0].backgroundColor='#22bbea';
-      this.dataChart.sessionsChart.chartjs.line.data.datasets[0].borderColor='#22bbea';
-      this.dataChart.pageViewChart.chartjs.line.data.datasets[0].data=chartData.pageView;
-      this.dataChart.pageViewChart.chartjs.line.data.datasets[0].backgroundColor='#ff9933';
-      this.dataChart.pageViewChart.chartjs.line.data.datasets[0].borderColor='#ff9933';
-      this.dataChart.visitorChart.chartjs.line.data.datasets[0].data=chartData.visitor;
-      this.dataChart.bouncerateChart.chartjs.line.data.datasets[0].data=chartData.bouncerate;
-      this.dataChart.bouncerateChart.chartjs.line.data.datasets[0].backgroundColor='#fc5c7d';
-      this.dataChart.bouncerateChart.chartjs.line.data.datasets[0].borderColor='#fc5c7d';
+    let genData = (() => { })
+    let genLineData = (() => { })
+    let options='';
+    if (this.state.data != null && this.state.data_statistical != null) {
+      genData = () => ({
+        labels: label,
+        datasets: [
+          {
+            type: 'line',
+            label: 'Donator',
+            borderColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
+            borderWidth: 2,
+            fill: false,
+            yAxisID: 'y-axis-2',
+            data: this.state.data_statistical.chart_donator,
+          },
+          {
+            type: 'bar',
+            label: 'Amount donate($)',
+            backgroundColor: `rgb(${rand()}, ${rand()}, ${rand()})`,
+            data: this.state.data_statistical.chart_amount,
+            yAxisID: 'y-axis-1',
+          },
+        ],
+      });
+  
+      options = {
+        scales: {
+          yAxes: [
+            {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-axis-1',
+            },
+            {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              id: 'y-axis-2',
+              gridLines: {
+                drawOnArea: false,
+              },
+            },
+          ],
+        },
+      };
+      this.dataStatistical = this.data.processStatistics(this.state.data);
+      let chartData = this.data.chartData(this.state.data);
+      genLineData = (moreData = {}, moreData2 = {}, moreData3 = {}, moreData4 = {}) => {
+        return {
+          labels: label,
+          datasets: [
+            {
+              label: 'Sesson',
+              backgroundColor: getColor('primary'),
+              borderColor: getColor('primary'),
+              borderWidth: 1,
+              data: chartData.session,
+              ...moreData,
+            },
+            {
+              label: 'Page views',
+              backgroundColor: getColor('secondary'),
+              borderColor: getColor('secondary'),
+              borderWidth: 1,
+              data: chartData.pageView,
+              ...moreData2,
+            },
+            {
+              label: 'BOUNCE RATE',
+              backgroundColor: getColor('warning'),
+              borderColor: getColor('warning'),
+              borderWidth: 1,
+              data: chartData.bouncerate,
+              ...moreData3,
+            },
+            {
+              label: 'Visitor',
+              backgroundColor: getColor('info'),
+              borderColor: getColor('info'),
+              borderWidth: 1,
+              data: chartData.visitor,
+              ...moreData4,
+            },
+          ],
+        };
+      };
     }
     return (
       <Page
@@ -117,7 +191,6 @@ class DashboardPage extends React.Component {
               }}
             />
           </Col>
-
           <Col lg={4} md={6} sm={6} xs={12}>
             <NumberWidget
               title="Monthly Visitors"
@@ -186,122 +259,63 @@ class DashboardPage extends React.Component {
               }}
             />
           </Col>
+          {
+            this.state.data_statistical != null &&
+            <Col lg={4} md={6} sm={6} xs={12}>
+              <NumberWidget
+                title="Amount donate"
+                subtitle="This month"
+                number={this.state.data_statistical.count.count_amount}
+                isIncrease={true}
+                color="secondary"
+                progress={{
+                  value: 100,
+                  persen: parseInt(this.state.data_statistical.count.count_amount) - parseInt(this.state.data_statistical.count.count_amount_last)
+                }}
+              />
+            </Col>
+          }
+          {this.state.data_statistical!=null&&
+          <Col lg={4} md={6} sm={6} xs={12}>
+          <NumberWidget
+            title="Donator"
+            subtitle="This month"
+            number={'$'+this.state.data_statistical.count.count_donator}
+            isIncrease={true}
+            color="secondary"
+            progress={{
+              value: 100,
+              persen: parseInt(this.state.data_statistical.count.count_donator) - parseInt(this.state.data_statistical.count.count_donator_last)
+            }}
+          />
+        </Col>}
         </Row>
 
         <Row>
-          <Col lg="6" md="12" sm="12" xs="12">
+          <Col md="12" sm="12" xs="12">
             <Card>
               <CardHeader>
-                Page views{' '}
+                Website Statistics{' '}
                 <small className="text-muted text-capitalize">This year</small>
               </CardHeader>
               <CardBody>
-                <Line data={this.dataChart.pageViewChart.chartjs.line.data} options={chartjs.line.options} />
+                {this.state.data != null && <Line data={genLineData({ fill: false }, { fill: false }, { fill: false }, { fill: false })} />}
               </CardBody>
             </Card>
           </Col>
-         
-          <Col lg="6" md="12" sm="12" xs="12">
+          <Col md="12" sm="12" xs="12">
             <Card>
               <CardHeader>
-                Sessions{' '}
+                Donate Statistics{' '}
                 <small className="text-muted text-capitalize">This year</small>
               </CardHeader>
               <CardBody>
-                <Line data={this.dataChart.sessionsChart.chartjs.line.data} options={chartjs.line.options} />
+                {this.state.data_statistical!=null&&<Bar data={genData} options={options} />}
               </CardBody>
             </Card>
           </Col>
-          <Col lg="6" md="12" sm="12" xs="12">
-            <Card>
-              <CardHeader>
-                Visitors{' '}
-                <small className="text-muted text-capitalize">This year</small>
-              </CardHeader>
-              <CardBody>
-                <Line data={this.dataChart.visitorChart.chartjs.line.data} options={chartjs.line.options} />
-              </CardBody>
-            </Card>
-          </Col>
-         
-          <Col lg="6" md="12" sm="12" xs="12">
-            <Card>
-              <CardHeader>
-              Bounce rate{' '}
-                <small className="text-muted text-capitalize">This year</small>
-              </CardHeader>
-              <CardBody>
-                <Line data={this.dataChart.bouncerateChart.chartjs.line.data} options={chartjs.line.options} />
-              </CardBody>
-            </Card>
-          </Col>
+
         </Row>
-
-        <CardGroup style={{ marginBottom: '1rem' }}>
-          <IconWidget
-            bgColor="white"
-            inverse={false}
-            icon={MdThumbUp}
-            title="50+ Likes"
-            subtitle="People you like"
-          />
-          <IconWidget
-            bgColor="white"
-            inverse={false}
-            icon={MdRateReview}
-            title="10+ Reviews"
-            subtitle="New Reviews"
-          />
-          <IconWidget
-            bgColor="white"
-            inverse={false}
-            icon={MdShare}
-            title="30+ Shares"
-            subtitle="New Shares"
-          />
-        </CardGroup>
-
-        <Row>
-          <Col md="6" sm="12" xs="12">
-            <Card>
-              <CardHeader>New Products</CardHeader>
-              <CardBody>
-                {productsData.map(
-                  ({ id, image, title, description, right }) => (
-                    <ProductMedia
-                      key={id}
-                      image={image}
-                      title={title}
-                      description={description}
-                      right={right}
-                    />
-                  ),
-                )}
-              </CardBody>
-            </Card>
-          </Col>
-
-          <Col md="6" sm="12" xs="12">
-            <Card>
-              <CardHeader>New Users</CardHeader>
-              <CardBody>
-                <UserProgressTable
-                  headers={[
-                    <MdPersonPin size={25} />,
-                    'name',
-                    'date',
-                    'participation',
-                    '%',
-                  ]}
-                  usersData={userProgressTableData}
-                />
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-
-        
-
         <Row>
           <Col lg="4" md="12" sm="12" xs="12">
             <InfiniteCalendar
@@ -330,68 +344,12 @@ class DashboardPage extends React.Component {
           <Col lg="8" md="12" sm="12" xs="12">
             <Card inverse className="bg-gradient-primary">
               <CardHeader className="bg-gradient-primary">
-                Map with bubbles
+                Passerelles numeriques map
               </CardHeader>
               <CardBody>
                 <MapWithBubbles />
               </CardBody>
             </Card>
-          </Col>
-        </Row>
-
-        <CardDeck style={{ marginBottom: '1rem' }}>
-          <Card body style={{ overflowX: 'auto', 'paddingBottom': '15px', 'height': 'fit-content', 'paddingTop': 'inherit' }}>
-            <HorizontalAvatarList
-              avatars={avatarsData}
-              avatarProps={{ size: 50 }}
-            />
-          </Card>
-
-          <Card body style={{ overflowX: 'auto', 'paddingBottom': '15px', 'height': 'fit-content', 'paddingTop': 'inherit' }}>
-            <HorizontalAvatarList
-              avatars={avatarsData}
-              avatarProps={{ size: 50 }}
-              reversed
-            />
-          </Card>
-        </CardDeck>
-
-        <Row>
-          <Col lg="4" md="12" sm="12" xs="12">
-            <AnnouncementCard
-              color="gradient-secondary"
-              header="Announcement"
-              avatarSize={60}
-              name="Jamy"
-              date="1 hour ago"
-              text="Lorem ipsum dolor sit amet,consectetuer edipiscing elit,sed diam nonummy euismod tinciduntut laoreet doloremagna"
-              buttonProps={{
-                children: 'show',
-              }}
-              style={{ height: 500 }}
-            />
-          </Col>
-
-          <Col lg="4" md="12" sm="12" xs="12">
-            <Card>
-              <CardHeader>
-                <div className="d-flex justify-content-between align-items-center">
-                  <span>Support Tickets</span>
-                  <Button>
-                    <small>View All</small>
-                  </Button>
-                </div>
-              </CardHeader>
-              <CardBody>
-                {supportTicketsData.map(supportTicket => (
-                  <SupportTicket key={supportTicket.id} {...supportTicket} />
-                ))}
-              </CardBody>
-            </Card>
-          </Col>
-
-          <Col lg="4" md="12" sm="12" xs="12">
-            <TodosCard todos={todosData} />
           </Col>
         </Row>
       </Page>

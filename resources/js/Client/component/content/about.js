@@ -21,7 +21,7 @@ class About extends Component {
       <section id="about">
         <div class="container" data-aos="fade-up">
           <div class="section-header">
-            <h2>ABOUT US 1</h2>
+            <h2>ABOUT US</h2>
           </div>
           <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <div class="col-lg-12">

@@ -36,12 +36,14 @@ class Table extends Component {
     }
     componentDidMount() {
         const script = document.createElement("script");
-        script.src = "../js/dataTable.js";
+        script.src = "/js/dataTable.js";
         script.async = true;
         document.body.appendChild(script);
+        
     }
     render() {
         var keye = Object.keys(this.props.data[0]);
+        let dk=true;
         return (
             <div>
                 <table id={this.props.id} class="table table-striped table-bordered" width="100%">
@@ -64,6 +66,11 @@ class Table extends Component {
                     <tbody>
                        
                         {this.props.data.map(value1 => {
+                            let dk=true;
+                            if(this.props.search!=undefined){
+                                dk=value1.id_donator==this.props.search
+                            }
+                            if( dk)
                             return (<tr>
                                 {Object.values(value1).map((value, key) => {
                                     if (keye[key] == "image")
@@ -124,7 +131,11 @@ class Table extends Component {
                                                 </button>
                                             </p>
                                         }
-
+                                        {
+                                            this.props.view!=undefined
+                                            &&
+                                            <a style={{fontSize:'0.9rem'}} href={'/admin'+this.props.view+'/'+value1.id}>{this.props.title_view}</a>
+                                        }
                                     </div>
                                 </td>
                             </tr>)

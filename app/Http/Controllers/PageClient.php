@@ -50,7 +50,6 @@ class PageClient extends Controller
         $donate->payer_id=$request->payer_id;
         $donate->amount=$request->amount;
         $donate->currency_code=$request->currency_code;
-        $donate->created_time=$request->create_time;
         $donate->status=$request->status;
         $donate->id_donator=$donator->id;
         $donate->save();

@@ -30,7 +30,9 @@ import {
   MdPictureInPicture,
   MdGroupAdd,
   MdViewModule,
-  MdUpdate
+  MdUpdate,
+  MdFavorite,
+  MdPayment
 } from 'react-icons/md';
 import { HiCloud } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
@@ -76,6 +78,8 @@ const navManage = [
   { to: '/admin/blog', name: 'blog', exact: false, Icon: MdPictureInPicture},
   { to: '/admin/partner_become', name: 'partner becomes', exact: false, Icon: MdGroupAdd},
   { to: '/admin/key_date', name: 'key dates', exact: false, Icon: MdUpdate},
+  { to: '/admin/donator', name: 'Donators', exact: false, Icon: MdFavorite},
+  { to: '/admin/transaction', name: 'Transaction donate', exact: false, Icon: MdPayment},
 ];
 
 const navContents = [

@@ -47,3 +47,6 @@ Route::get('/getpartner','App\Http\Controllers\PageClient@getPartner');
 Route::post('/donate','App\Http\Controllers\PageClient@donate');
 Route::post('/donateGGP','App\Http\Controllers\PageClient@donateGGP');
 Route::post('/contact',[PageClient::class,'mail']);
+Route::get('/statistical','App\Http\Controllers\PageController@getDonateStatistical');
+Route::get('/donator','App\Http\Controllers\PageController@getDonator');
+Route::get('/payment','App\Http\Controllers\PageController@getTransaction');

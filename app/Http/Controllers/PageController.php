@@ -16,6 +16,9 @@ use Analytics;
 use App\Models\Blog;
 use App\Models\Country;
 use App\Models\Department;
+use App\Models\Donate;
+use App\Models\DonateGGP;
+use App\Models\Donator;
 use App\Models\KeyDate;
 use App\Models\Partner;
 use App\Models\Partner_become;
@@ -318,5 +321,30 @@ class PageController extends Controller
         $find=PNValue::find($id);
         $find->delete();
         return response()->json(['message'=>"Delete value success!", 'err'=>0]);
+    }
+    public function getDonateStatistical(){
+        $now = Carbon::now();
+        $count = [
+            'count_amount' => Donate::whereMonth('created_time', '=', $now->month)->sum('amount')+DonateGGP::whereMonth('created_time', '=', $now->month)->sum('amount'),
+            'count_amount_last' => Donate::whereMonth('created_time', '=', $now->month-1)->sum('amount')+DonateGGP::whereMonth('created_time', '=', $now->month-1)->sum('amount'),
+            'count_donator' => Donator::whereMonth('created_time', '=', $now->month)->count('id'),
+            'count_donator_last' => Donator::whereMonth('created_time', '=', $now->month-1)->count('id'),
+        ];
+        $chart_amount = [];
+        $chart_donator = [];
+        for ($i = 1; $i <= $now->month; $i++) {
+            $chart_amount[] = Donate::whereMonth('created_time', '=', $i)->sum('amount')+DonateGGP::whereMonth('created_time', '=', $i)->sum('amount');
+            $chart_donator[] = Donator::whereMonth('created_time', '=', $i)->count('id');
+        }
+        return response()->json(['count'=>$count, 'chart_amount'=>$chart_amount, 'chart_donator'=>$chart_donator]);
+    }
+    public function getDonator(){
+        $donator=Donator::all();
+        return response()->json($donator);
+    }
+    public function getTransaction(){
+        $paypal=Donate::all();
+        $GGPay=DonateGGP::all();
+        return response()->json(['paypal'=>$paypal, 'GGPay'=>$GGPay]);
     }
 }

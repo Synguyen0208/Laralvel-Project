@@ -7,7 +7,8 @@ function () {
 }
 ]);
 Route::resource('admin', 'App\Http\Controllers\PageController');
+Route::resource('admin/transaction', 'App\Http\Controllers\PageController');
 Route::resource('', 'App\Http\Controllers\PageClient');
-Route::get('/get', 'App\Http\Controllers\PageController@get');
+Route::get('/get', 'App\Http\Controllers\PageController@getDonateStatistical');
 Route::get('/log', 'App\Http\Controllers\PageController@login');
 Route::get('return-vnpay', array('as' => 'status','uses' => 'App\Http\Controllers\PageClient@return',));

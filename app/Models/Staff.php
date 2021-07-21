@@ -8,12 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Staff extends Model
 {
     use HasFactory;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $table="staffs";
     protected $fillable = [
         'name',
@@ -30,12 +24,4 @@ class Staff extends Model
     public function cat(){
         return $this->belongsTo('App\Position', 'position_id', 'id');
     }
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'cost' => 'float',
-    ];
 }

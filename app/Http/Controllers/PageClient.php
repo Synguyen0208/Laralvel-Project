@@ -6,6 +6,8 @@ use App\Models\DonateGGP;
 use App\Models\Donator;
 use App\Models\Training;
 use App\Models\Partner;
+
+use App\Models\Staff;
 use Illuminate\Http\Request;
 use App\Models\Sharing;
 
@@ -138,5 +140,9 @@ class PageClient extends Controller
        }else{
         return response()->json('Tên không được bỏ trống', 400);
        }
+    }
+    public function getStaff(){
+        $staff = Staff::All();
+        return response()->json($staff);
     }
 }

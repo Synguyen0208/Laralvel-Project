@@ -10,6 +10,7 @@ import Training from './content/training';
 import Help from './content/help';
 import Sharing from './content/sharing';
 import Donate from './content/donate';
+import About from './content/about';
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +20,7 @@ class Content extends Component {
     render() {
         return (
             <main id="main">
+                <About/>
                 <Key_date/>
                 <Training/>
                 <Help/>

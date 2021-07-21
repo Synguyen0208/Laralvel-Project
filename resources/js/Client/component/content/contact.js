@@ -94,7 +94,7 @@ class Contact extends Component {
                   <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" onChange={this.onHandleChange} required />
                 </div>
                 <div className="form-group mt-3">
-                  <textarea className="form-control" name="message" id="message" rows={5} placeholder="Message" onChange={this.onHandleChange}  required defaultValue={""} />
+                  <textarea className="form-control" name="message" rows={5} placeholder="Message" onChange={this.onHandleChange}  required defaultValue={""} />
                 </div>
                 <div className="my-3">
                   <div className="loading">Loading</div>

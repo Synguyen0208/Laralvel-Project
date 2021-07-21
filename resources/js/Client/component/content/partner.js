@@ -29,7 +29,7 @@ class Partner extends Component {
                     <div class="container-fluid">
                          <div class="row gx-2">
                              <div>
-                                 <h4 style={{ color: 'rgb(34, 187, 234)' }, { backgroundColor: 'rgb(0, 191, 255)' }}>Main partners supporting PN Vietnam</h4>
+                                 <h4 style={{ color: '#ff9933' }}>Main partners supporting PN Vietnam</h4>
                                  <p>With the desire to bring the best to PN Vietnam students, we appreciate the support of our partners in training and finance. You can support us, me in many ways such as in-kind support, training and knowledge sharing.</p>
                              </div>
                             <div class="col-12">
@@ -53,7 +53,7 @@ class Partner extends Component {
                             <div class="col-12">
                                 <div class="swiper-container pb-4 overflow-hidden" data-pagination-target="pagination1">
                                     <div>
-                                        <h4 style={{ color: 'rgb(34, 187, 234)' }, { backgroundColor: 'rgb(0, 191, 255)' }}>Local partners supporting PN Vietnam</h4>
+                                        <h4 style={{ color: '#ff9933' }}>Local partners supporting PN Vietnam</h4>
 
                                     </div>
 

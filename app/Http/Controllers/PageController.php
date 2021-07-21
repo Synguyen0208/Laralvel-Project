@@ -24,6 +24,7 @@ use App\Models\Partner;
 use App\Models\Partner_become;
 use App\Models\PNValue;
 use App\Models\Position;
+use App\Models\Selection;
 use App\Models\Staff;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Artisan;
@@ -347,4 +348,9 @@ class PageController extends Controller
         $GGPay=DonateGGP::all();
         return response()->json(['paypal'=>$paypal, 'GGPay'=>$GGPay]);
     }
+    public function deleteSelection(Request $request){
+        $delete=Selection::find($request->id);
+        $delete->delete();
+    }
+
 }

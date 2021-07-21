@@ -52,3 +52,4 @@ Route::get('/donator','App\Http\Controllers\PageController@getDonator');
 Route::get('/payment','App\Http\Controllers\PageController@getTransaction');
 Route::get('/getselections','App\Http\Controllers\PageClient@getSelection');
 Route::post('/addselections','App\Http\Controllers\PageClient@addSelection');
+Route::delete('/selection/{id}','App\Http\Controllers\PageController@deleteSelection');

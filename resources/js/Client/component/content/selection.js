@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { controllers } from 'chart.js';
 import API from "../../../Admin/components/API/API";
-
+import Swal from 'sweetalert2'
 class Selection extends Component {
     call = new API();
     constructor(props) {
@@ -25,10 +25,10 @@ class Selection extends Component {
     }
 
 
-     getData=()=>{
+    getData = () => {
         this.call.callAPI("getselections", "get", "").then((response) => {
             this.setState({ data: response.data });
-            
+
         });
     }
 
@@ -39,12 +39,12 @@ class Selection extends Component {
             [name]: value
         });
     }
-    
+
     componentDidMount() {
         this.setState({
-            data:this.handleSubmit
+            data: this.handleSubmit
         })
-		this.getData();
+        this.getData();
     }
 
     createForm = () => {
@@ -59,23 +59,28 @@ class Selection extends Component {
         formData.append('link_facebook', this.state.link_fb);
         formData.append('major', this.state.major);
         formData.append('graduation_score', this.state.graduation_score);
-       
+
         return formData;
     }
-    
-    handleSubmit=(event)=>{
+
+    handleSubmit = (event) => {
         event.preventDefault();
-        let form=this.createForm();
+        let form = this.createForm();
         this.call.callAPI("addselections", "post", form).then((response) => {
-            if(response.status === 200){
-              this.state.data.push(response.data);
-              console.log('data: ' + JSON.stringify(response));
-              alert('Đăng kí thành công :) ');
-            }else{
-              alert('vui lòng thử lại sau');
+            if (response.status === 200) {
+                console.log('data: ' + JSON.stringify(response));
+                this.myFormRef.reset();
+                Swal.fire({
+                    title: 'Hurray!!',
+                    text: "Admission application has been submitted!",
+                    type: 'success',
+
+                });
+            } else {
+                alert('vui lòng thử lại sau');
             }
-          });
-    } 
+        });
+    }
     render() {
         return (
             <section id="selection" class="selections">
@@ -114,47 +119,47 @@ class Selection extends Component {
                         </div>
                         <div className="col-sm-6 ">
                             <div className="register">
-                                <p style={ { textAlign: 'center', color: '#0e1b4d '}} > <br /><br /><b>Students can register here </b></p>
+                                <p style={{ textAlign: 'center', color: '#0e1b4d ' }} > <br /><br /><b>Students can register here </b></p>
                             </div>
 
-                            <form onSubmit={this.handleSubmit} >
+                            <form onSubmit={this.handleSubmit} ref={(el) => this.myFormRef = el}>
                                 <div className="form-group">
                                     <label htmlFor="inputAddress">Name</label>
-                                    <input type="text" className="form-control" name="name" placeholder="Ho Thi Huou "  onChange={this.handleInputChange} required/>
+                                    <input type="text" className="form-control" name="name" placeholder="Ho Thi Huou " onChange={this.handleInputChange} required />
                                 </div>
                                 <div className="form-row">
                                     <div className="form-group col-md-6">
                                         <label >Birthday</label>
-                                        <input type="date" className="form-control" name="birthday" placeholder="12/05/2001"   onChange={this.handleInputChange} required/>
+                                        <input type="date" className="form-control" name="birthday" placeholder="12/05/2001" onChange={this.handleInputChange} required />
                                     </div>
                                     <div className="form-group col-md-6">
                                         <label > Identity Card</label>
-                                        <input type="text" className="form-control" name="card" placeholder="Card" value={this.state.card}  onChange={this.handleInputChange} required />
+                                        <input type="text" className="form-control" name="card" placeholder="Card" value={this.state.card} onChange={this.handleInputChange} required />
                                     </div>
                                 </div>
                                 <div className="form-group">
                                     <label >Email</label>
-                                    <input type="email" className="form-control" name="email" placeholder="Email" value={this.state.email}  onChange={this.handleInputChange} required/>
+                                    <input type="email" className="form-control" name="email" placeholder="Email" value={this.state.email} onChange={this.handleInputChange} required />
                                 </div>
 
                                 <div className="form-row">
                                     <div className="form-group col-md-6">
                                         <label >Phone</label>
-                                        <input type="number" className="form-control" name="phone" placeholder="Phone" value={this.state.phone}  onChange={this.handleInputChange} required/>
+                                        <input type="number" className="form-control" name="phone" placeholder="Phone" value={this.state.phone} onChange={this.handleInputChange} required />
                                     </div>
                                     <div className="form-group col-md-6">
                                         <label >Graduation years</label>
-                                        <input type="date" className="form-control" name="graduation_years" placeholder="2019" value={this.state.graduation_years}  onChange={this.handleInputChange} required/>
+                                        <input type="date" className="form-control" name="graduation_years" placeholder="2019" value={this.state.graduation_years} onChange={this.handleInputChange} required />
                                     </div>
                                 </div>
 
                                 <div className="form-group">
                                     <label >Address</label>
-                                    <input type="text" className="form-control" name="address" placeholder="Fill in information about village, district, province" value={this.state.address}  onChange={this.handleInputChange} required />
+                                    <input type="text" className="form-control" name="address" placeholder="Fill in information about village, district, province" value={this.state.address} onChange={this.handleInputChange} required />
                                 </div>
                                 <div className="form-group">
                                     <label >Link facebook </label>
-                                    <input type="text" className="form-control" name="link_fb" placeholder=""  value={this.state.link_fb}  onChange={this.handleInputChange} required />
+                                    <input type="text" className="form-control" name="link_fb" placeholder="" value={this.state.link_fb} onChange={this.handleInputChange} required />
                                 </div>
 
 
@@ -162,7 +167,7 @@ class Selection extends Component {
 
                                     <div className="form-group col-md-6">
                                         <label >Graduation Score </label>
-                                        <input type="number" className="form-control" name="graduation_score" placeholder=""  value={this.state.graduation_score} onChange={this.handleInputChange} required/>
+                                        <input type="number" className="form-control" name="graduation_score" placeholder="" value={this.state.graduation_score} onChange={this.handleInputChange} required />
                                     </div>
                                     <div className="form-group col-md-6">
                                         <label>Major</label>

@@ -32,7 +32,8 @@ import {
   MdViewModule,
   MdUpdate,
   MdFavorite,
-  MdPayment
+  MdPayment,
+  MdLocalLibrary
 } from 'react-icons/md';
 import { HiCloud } from "react-icons/hi";
 import { NavLink } from 'react-router-dom';
@@ -80,6 +81,7 @@ const navManage = [
   { to: '/admin/key_date', name: 'key dates', exact: false, Icon: MdUpdate},
   { to: '/admin/donator', name: 'Donators', exact: false, Icon: MdFavorite},
   { to: '/admin/transaction', name: 'Transaction donate', exact: false, Icon: MdPayment},
+  { to: '/admin/selection', name: 'Admission form', exact: false, Icon: MdLocalLibrary},
 ];
 
 const navContents = [

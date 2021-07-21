@@ -33,6 +33,7 @@ const TablePage = React.lazy(() => import('./Admin/pages/TablePage'));
 const TypographyPage = React.lazy(() => import('./Admin/pages/TypographyPage'));
 const WidgetPage = React.lazy(() => import('./Admin/pages/WidgetPage'));
 const TransactionPage = React.lazy(() => import('./Admin/pages/TransactionPage'));
+const SelectionPage = React.lazy(() => import('./Admin/pages/SelectionPage'));
 // const getBasename = () => {
 //   return `/${process.env.PUBLIC_URL.split('/').pop()}`;
 // };
@@ -84,6 +85,7 @@ class App extends React.Component {
                 <Route exact path="/admin/data" component={Manage_data} />
                 <Route exact path="/admin/key_date" component={KeyDatePage} />
                 <Route exact path="/admin/donator" component={DonatorPage} />
+                <Route exact path="/admin/selection" component={SelectionPage} />
                 <Route exact path="/admin/transaction" component={TransactionPage} />
                 <Route exact path="/admin/transaction/:id" component={TransactionPage} />
                 <Route exact path="/admin/blog" component={BlogPage} />

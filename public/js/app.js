@@ -6533,10 +6533,12 @@ var Staff = /*#__PURE__*/function (_Component) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
                 href: "../images/staffs/PNV_OrgaChart_April2021.pdf",
                 className: "btn btn-primary",
-                children: "S\u01A1 \u0111\u1ED3"
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("b", {
+                  children: "Map"
+                })
               })]
             }), this.state.data != null && this.state.data.map(function (event) {
-              if (event.department_id == 3) {
+              if (event.department_id == 3 && event.twitter == 1) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                   className: "col-sm-4",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
@@ -6550,6 +6552,8 @@ var Staff = /*#__PURE__*/function (_Component) {
                       className: "container",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("h4", {
                         children: [" ", event.name]
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
+                        children: [" ", event.description]
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {})]
                     })]
                   })

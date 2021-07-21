@@ -79,12 +79,12 @@ class Staff extends Component {
 
                         <div >
                             <h4> <b><i> LOCAL MEMBERS </i> </b> </h4>
-                            <a href="../images/staffs/PNV_OrgaChart_April2021.pdf" className="btn btn-primary">Sơ đồ</a>
+                            <a href="../images/staffs/PNV_OrgaChart_April2021.pdf" className="btn btn-primary"><b>Map</b ></a>
                         </div>
 
                         {
                             this.state.data != null && this.state.data.map(event => {
-                                if (event.department_id ==3  ) {
+                                if (event.department_id ==3 && event.twitter ==1 ) {
                                     return (
                                         <div className="col-sm-4">
                                         <div className="card" style={{marginTop: 15}} >
@@ -92,6 +92,7 @@ class Staff extends Component {
                                             <img src={'../images/staffs/' + event.image} />
                                             <div className="container">
                                                 <h4> {event.name}</h4>
+                                                <p> {event.description}</p>
                                                 <br />
                                             </div>
                                         </div>

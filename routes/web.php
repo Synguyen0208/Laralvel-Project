@@ -8,12 +8,6 @@ function () {
 ]);
 Route::resource('admin', 'App\Http\Controllers\PageController');
 Route::resource('', 'App\Http\Controllers\PageClient');
-
 Route::get('/get', 'App\Http\Controllers\PageController@get');
 Route::get('/log', 'App\Http\Controllers\PageController@login');
-// Route::get('/send','App\Http\Controllers\PageController@send');
-Route::get('message', function () {
-    $message['user'] = "Juan Perez";
-    $message['message'] =  "Prueba mensaje desde Pusher";
-    $success = event(new App\Events\NewMessage($message));
-});
+Route::get('return-vnpay', array('as' => 'status','uses' => 'App\Http\Controllers\PageClient@return',));

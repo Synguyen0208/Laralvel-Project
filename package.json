@@ -52,6 +52,7 @@
         "victory": "^32.0.0"
     },
     "dependencies": {
+        "@google-pay/button-react": "^2.5.0",
         "history": "^5.0.0",
         "react-bootstrap": "^1.6.1",
         "react-cookie": "^4.0.3",

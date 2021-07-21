@@ -5828,7 +5828,7 @@ var About = /*#__PURE__*/function (_Component) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             "class": "section-header",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-              children: "ABOUT US"
+              children: "ABOUT US 1"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             "class": "row justify-content-center",

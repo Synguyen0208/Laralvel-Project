@@ -50,3 +50,5 @@ Route::post('/contact',[PageClient::class,'mail']);
 Route::get('/statistical','App\Http\Controllers\PageController@getDonateStatistical');
 Route::get('/donator','App\Http\Controllers\PageController@getDonator');
 Route::get('/payment','App\Http\Controllers\PageController@getTransaction');
+Route::get('/getselections','App\Http\Controllers\PageClient@getSelection');
+Route::post('/addselections','App\Http\Controllers\PageClient@addSelection');

@@ -10,6 +10,7 @@ import Help from './content/help';
 import Sharing from './content/sharing';
 import Donate from './content/donate';
 import About from './content/about';
+import Selection from './content/selection';
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -22,6 +23,7 @@ class Content extends Component {
                 <About/>
                 <Key_date/>
                 <Training/>
+                <Selection/>
                 <Help/>
                 <Donate/>
                 <Sharing/>

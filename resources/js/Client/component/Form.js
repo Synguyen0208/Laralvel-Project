@@ -64,6 +64,7 @@ class Form extends Component {
                 })
             })
     }
+    
     createForm = () => {
         const formData = new FormData();
         formData.append('name', this.state.name);

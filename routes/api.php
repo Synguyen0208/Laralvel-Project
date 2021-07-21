@@ -2,17 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageClient;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -55,3 +46,4 @@ Route::get('/getpartner','App\Http\Controllers\PageClient@getPartner');
 
 Route::post('/donate','App\Http\Controllers\PageClient@donate');
 Route::post('/donateGGP','App\Http\Controllers\PageClient@donateGGP');
+Route::post('/contact',[PageClient::class,'mail']);

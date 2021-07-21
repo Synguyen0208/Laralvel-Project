@@ -9,7 +9,6 @@
 # General
 --------------------------------------------------------------*/
 
-
 .value{
   padding: 116px 0 85px;
 }
@@ -83,7 +82,6 @@ font-family: 'Poppins', sans-serif;
 .row{
   text-align: justify;
 }
-
 body {
   background: #fff;
   color: #2f3138;
@@ -1706,7 +1704,7 @@ li{
 }
 
 #contact .php-email-form button[type="submit"]:hover {
-  background-color: rgba(255,153,51,0.8);
+  background: #2ea3f2;
 }
 
 @-webkit-keyframes animate-loading {

@@ -17,7 +17,7 @@ class Sharing extends Component {
     }
     render() {
         return (
-            <section id="team" class="pb-5">
+            <section id="sharing" class="pb-5">
                 <div class="container">
                     <div class="section-header">
                         <h2>Sharings</h2>

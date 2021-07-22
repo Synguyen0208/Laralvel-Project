@@ -67,18 +67,12 @@ class Selection extends Component {
         event.preventDefault();
         let form = this.createForm();
         this.call.callAPI("addselections", "post", form).then((response) => {
-            if (response.status === 200) {
-                console.log('data: ' + JSON.stringify(response));
                 this.myFormRef.reset();
                 Swal.fire({
                     title: 'Hurray!!',
                     text: "Admission application has been submitted!",
                     type: 'success',
-
                 });
-            } else {
-                alert('vui lòng thử lại sau');
-            }
         });
     }
     render() {

@@ -14,6 +14,8 @@ use App\Models\Sharing;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Selection;
 use App\Jobs\SendEmail;
+use App\Models\Become_Partner;
+
 class PageClient extends Controller
 {
     public function index()
@@ -144,5 +146,17 @@ class PageClient extends Controller
     public function getStaff(){
         $staff = Staff::All();
         return response()->json($staff);
+    }
+    public function addBecomePartner(Request $request){
+        $become_partner = new Become_Partner();
+        $become_partner->name_company= $request->name_company;
+        $become_partner->address_company= $request->address_company;
+        $become_partner->company_representative= $request->company_representative;
+        $become_partner->position_representative= $request->position_representative;
+        $become_partner->phone_contact= $request->phone_contact;
+        $become_partner->email_contact= $request->email_contact;
+        $become_partner->description= $request->reason;
+        $become_partner->save();
+        return response()->json(["Error"=>0]);
     }
 }

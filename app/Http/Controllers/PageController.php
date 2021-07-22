@@ -307,6 +307,10 @@ class PageController extends Controller
     function addPnValue(Request $request){
         $new=new PNValue();
         $new->name_value=$request->name;
+        $file =  $request->file("image");
+        $file->move('./images/content/',$file->getClientOriginalName());
+        $name_file=$file->getClientOriginalName();
+        $new->image='content/'.$name_file;
         $new->save();
         return response()->json(['message'=>"Add value success!", 'err'=>0]);
     }
@@ -314,6 +318,12 @@ class PageController extends Controller
     {
         $update=PNValue::find($request->id);
         $update->name_value=$request->name;
+        if($request->file('image')!=null){
+            $file =  $request->file("image");
+            $file->move('./images/content/',$file->getClientOriginalName());
+            $name_file=$file->getClientOriginalName();
+            $update->image='content/'.$name_file;
+        }
         $update->save();
         return response()->json(['message'=>'Update value success', 'err'=>0]);
     }

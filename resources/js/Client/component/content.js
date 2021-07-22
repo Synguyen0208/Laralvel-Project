@@ -28,9 +28,9 @@ class Content extends Component {
                 <Help/>
                 <Donate/>
                 <Sharing/>
+                <Staff/>
                 <Partner/>
                 <Contact/>
-                <Staff/>
             </main>
         );
     }

@@ -15,7 +15,7 @@ class InforStaff extends Component {
             <div className="col-sm-4">
                 <div className="card" style={{marginTop: 15}} >
 
-                    <img src={this.props.image}  />
+                    <img src={'/images/'+this.props.image}  />
                     <div className="container">
                         <h4> {this.props.name}</h4>
                       

@@ -24,6 +24,7 @@ class PNvalue extends Component {
             open: false,
             title: null,
             name_value: null,
+            image:null,
             message: null,
             body_modal: null,
             title_modal: null,
@@ -39,7 +40,7 @@ class PNvalue extends Component {
         let body = '';
         switch (val) {
             case 'add': {
-                body = <FormAction submit={this.addValue} structure={this.createForm(this.state.data)} change={this.handleChange} />
+                body = <FormAction submit={this.addValue} structure={this.createForm(this.state.data)} change={this.handleChange} changeImage={this.handleChangeImage}/>
                 this.setState({
                     action_modal: false
                 })
@@ -57,7 +58,7 @@ class PNvalue extends Component {
                     action_modal: false,
                     id: data.id
                 })
-                body = <FormAction submit={this.updateValue} structure={this.createForm(data)} change={this.handleChange} />
+                body = <FormAction submit={this.updateValue} structure={this.createForm(data)} change={this.handleChange} changeImage={this.handleChangeImage}/>
             }
                 break;
             default:
@@ -119,7 +120,22 @@ class PNvalue extends Component {
     createFormData = () => {
         let form = new FormData;
         form.append('name', this.state.name_value);
+        form.append('image', this.state.image);
         return form;
+    }
+    handleChangeImage = event => {
+        var reader = new FileReader();
+        $('#blah').removeAttr('hidden');
+        $('#new').removeAttr('hidden');
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+        };
+        reader.readAsDataURL(event.target.files[0]);
+
+        this.setState({
+            image: event.target.files[0]
+        })
     }
     addValue = async (event) => {
         event.preventDefault();
@@ -144,7 +160,12 @@ class PNvalue extends Component {
             {
                 fill: 'name_value',
                 type: 'text',
-                value: data.name_value
+                value: data.name_value,
+            },
+            {
+                fill: 'image',
+                type: 'file',
+                value: data.image,
             }
         ];
         return structure;

@@ -70,10 +70,10 @@ class DashboardPage extends React.Component {
   call = new API;
   async componentDidMount() {
     let data = await this.call.callAPI('view', 'get', '').then((response) => {
+      console.log(response.data)
       this.setState({ data: response.data });
     });
     let data1 = await this.call.callAPI('statistical', 'get', '').then((response) => {
-      console.log(response.data)
       this.setState({ data_statistical: response.data });
     });
     window.scrollTo(0, 0);
@@ -265,7 +265,7 @@ class DashboardPage extends React.Component {
               <NumberWidget
                 title="Amount donate"
                 subtitle="This month"
-                number={this.state.data_statistical.count.count_amount}
+                number={'$'+this.state.data_statistical.count.count_amount}
                 isIncrease={true}
                 color="secondary"
                 progress={{
@@ -280,7 +280,7 @@ class DashboardPage extends React.Component {
           <NumberWidget
             title="Donator"
             subtitle="This month"
-            number={'$'+this.state.data_statistical.count.count_donator}
+            number={this.state.data_statistical.count.count_donator}
             isIncrease={true}
             color="secondary"
             progress={{

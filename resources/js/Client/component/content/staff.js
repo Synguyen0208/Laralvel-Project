@@ -89,7 +89,7 @@ class Staff extends Component {
                                         <div className="col-sm-4">
                                         <div className="card" style={{marginTop: 15}} >
                         
-                                            <img src={'../images/staffs/' + event.image} />
+                                            <img src={'../images/' + event.image} />
                                             <div className="container">
                                                 <h4> {event.name}</h4>
                                                 <p> {event.description}</p>

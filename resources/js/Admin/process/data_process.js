@@ -24,41 +24,18 @@ class Data_process extends Component {
         return statistics;
     }
     chartData = (data) => {
-        let chartData = {
-            pageView:[
-                parseInt(data[today.getMonth() - 5].month['ga:pageviews']),
-                parseInt(data[today.getMonth() - 4].month['ga:pageviews']),
-                parseInt(data[today.getMonth() - 3].month['ga:pageviews']),
-                parseInt(data[today.getMonth() - 2].month['ga:pageviews']),
-                parseInt(data[today.getMonth() - 1].month['ga:pageviews']),
-                parseInt(data[today.getMonth()].month['ga:pageviews'])
-            ],
-            session: [
-                parseInt(data[today.getMonth() - 5].month['ga:sessions']),
-                parseInt(data[today.getMonth() - 4].month['ga:sessions']),
-                parseInt(data[today.getMonth() - 3].month['ga:sessions']),
-                parseInt(data[today.getMonth() - 2].month['ga:sessions']),
-                parseInt(data[today.getMonth() - 1].month['ga:sessions']),
-                parseInt(data[today.getMonth()].month['ga:sessions'])
-            ],
-            bouncerate:[
-                parseInt(data[today.getMonth() - 5].month['ga:bouncerate']),
-                parseInt(data[today.getMonth() - 4].month['ga:bouncerate']),
-                parseInt(data[today.getMonth() - 3].month['ga:bouncerate']),
-                parseInt(data[today.getMonth() - 2].month['ga:bouncerate']),
-                parseInt(data[today.getMonth() - 1].month['ga:bouncerate']),
-                parseInt(data[today.getMonth()].month['ga:bouncerate'])
-            ],
-            visitor:[
-                parseInt(parseInt(data[today.getMonth()-5].month['ga:newusers']) + parseInt(data[today.getMonth()-5].month['ga:users'])),
-                parseInt(parseInt(data[today.getMonth()-4].month['ga:newusers']) + parseInt(data[today.getMonth()-4].month['ga:users'])),
-                parseInt(parseInt(data[today.getMonth()-3].month['ga:newusers']) + parseInt(data[today.getMonth()-3].month['ga:users'])),
-                parseInt(parseInt(data[today.getMonth()-2].month['ga:newusers']) + parseInt(data[today.getMonth()-2].month['ga:users'])),
-                parseInt(parseInt(data[today.getMonth()-1].month['ga:newusers']) + parseInt(data[today.getMonth()-1].month['ga:users'])),
-                parseInt(parseInt(data[today.getMonth()].month['ga:newusers']) + parseInt(data[today.getMonth()].month['ga:users']))
-            ]
-
-        };
+        let chartData={
+            pageView:[],
+            session: [],
+            bouncerate:[],
+            visitor:[]
+        }
+        for (let index = today.getMonth(); index >= 0; index--) {
+            chartData.pageView.push(parseInt(data[today.getMonth() - index].month['ga:pageviews']));
+            chartData.session.push(parseInt(data[today.getMonth() - index].month['ga:sessions']));
+            chartData.bouncerate.push(parseInt(data[today.getMonth() - index].month['ga:bouncerate']));
+            chartData.visitor.push(parseInt(parseInt(data[today.getMonth()-index].month['ga:newusers']) + parseInt(data[today.getMonth()-index].month['ga:users'])))
+        }
         return chartData;
     }
 }

@@ -463,7 +463,8 @@ var PNvalue = /*#__PURE__*/function (_Component) {
             body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Form__WEBPACK_IMPORTED_MODULE_5__.default, {
               submit: _this.addValue,
               structure: _this.createForm(_this.state.data),
-              change: _this.handleChange
+              change: _this.handleChange,
+              changeImage: _this.handleChangeImage
             });
 
             _this.setState({
@@ -498,7 +499,8 @@ var PNvalue = /*#__PURE__*/function (_Component) {
             body = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Form__WEBPACK_IMPORTED_MODULE_5__.default, {
               submit: _this.updateValue,
               structure: _this.createForm(data),
-              change: _this.handleChange
+              change: _this.handleChange,
+              changeImage: _this.handleChangeImage
             });
           }
           break;
@@ -592,7 +594,24 @@ var PNvalue = /*#__PURE__*/function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "createFormData", function () {
       var form = new FormData();
       form.append('name', _this.state.name_value);
+      form.append('image', _this.state.image);
       return form;
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleChangeImage", function (event) {
+      var reader = new FileReader();
+      $('#blah').removeAttr('hidden');
+      $('#new').removeAttr('hidden');
+
+      reader.onload = function (e) {
+        $('#blah').attr('src', e.target.result);
+      };
+
+      reader.readAsDataURL(event.target.files[0]);
+
+      _this.setState({
+        image: event.target.files[0]
+      });
     });
 
     _defineProperty(_assertThisInitialized(_this), "addValue", /*#__PURE__*/function () {
@@ -639,6 +658,10 @@ var PNvalue = /*#__PURE__*/function (_Component) {
         fill: 'name_value',
         type: 'text',
         value: data.name_value
+      }, {
+        fill: 'image',
+        type: 'file',
+        value: data.image
       }];
       return structure;
     });
@@ -657,6 +680,7 @@ var PNvalue = /*#__PURE__*/function (_Component) {
       open: false,
       title: null,
       name_value: null,
+      image: null,
       message: null,
       body_modal: null,
       title_modal: null,

@@ -92,7 +92,7 @@ class PageClient extends Controller
         //Mail Function
         Mail::send('emails.name', ['data1' => $data], function ($m) {
          
-            $m->to('trung.trinh22@student.passerellesnumeriques.org')->subject('Contact Form Mail!');
+            $m->to('sy.nguyen22@student.passerellesnumeriques.org')->subject('Contact Form Mail!');
     });
         return response()->json(["message" => "Email sent successfully."]);
     }

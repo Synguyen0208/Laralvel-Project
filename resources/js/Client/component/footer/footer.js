@@ -28,7 +28,7 @@ class Footer extends Component {
                                 </p>
                             </div>
 
-                            <div class="col-lg-3 col-md-6 footer-links">
+                            <div class="col-lg-2 col-md-6 footer-links">
                                 <h4>Useful Links</h4>
                                 <ul>
                                     <li>
@@ -51,9 +51,18 @@ class Footer extends Component {
                                         <i class="bi bi-chevron-right"></i>{" "}
                                         <a href="#selection">Selection</a>
                                     </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-2 col-md-6 footer-links">
+                                <h4 style={{color:'black'}}>.</h4>
+                                <ul>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
                                         <a href="#sharing">Sharing</a>
+                                    </li><li>
+                                        <i class="bi bi-chevron-right"></i>{" "}
+                                        <a href="#donate">Donate</a>
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
@@ -70,12 +79,12 @@ class Footer extends Component {
                                 </ul>
                             </div>
 
-                            <div class="col-lg-3 col-md-6 footer-contact">
+                            <div class="col-lg-2 col-md-6 footer-contact">
                                 <h4>Contact Us</h4>
                                 <p>
                                     <strong>Address:</strong>
                                     <br />
-                                    99 To Hien Thanh Street
+                                    99 To Hien Thanh
                                     <br />
                                     Da Nang City
                                     <br />
@@ -101,9 +110,6 @@ class Footer extends Component {
                                     </a>
                                     <a href="https://www.linkedin.com/company/passerellesnum-riques" class="linkedin">
                                         <i class="bi bi-linkedin"></i>
-                                    </a>
-                                    <a href="#" class="google-plus">
-                                        <i class="bi bi-google"></i>
                                     </a>
                                 </div>
                             </div>

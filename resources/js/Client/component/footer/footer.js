@@ -16,15 +16,15 @@ class Footer extends Component {
                                 <img
                                     src="assets4/img/pn-logo-footer.png"
                                     alt="Passerellesnumeriques"
-                                    //style={{height:"30%"}}
+                                //style={{height:"30%"}}
                                 />
                             </div>
 
                             <div class="col-lg-4 col-md-6 footer-info">
                                 <p>
-                                Passerelles numériques is a non-profit organization under French law, created in 2005, operating in three Asian countries: Cambodia, Philippines and Vietnam.
-                                Passerelles numériques means “digital bridge“, a metaphor for providing free IT training programs to underprivileged youth.
-                                Since 2010, Passerelles numériques Vietnam has built nearly 500 “bridges”, which means we provided 500 poor young people in 7 provinces of Central Vietnam with 500 free training programs.
+                                    Passerelles numériques is a non-profit organization under French law, created in 2005, operating in three Asian countries: Cambodia, Philippines and Vietnam.
+                                    Passerelles numériques means “digital bridge“, a metaphor for providing free IT training programs to underprivileged youth.
+                                    Since 2010, Passerelles numériques Vietnam has built nearly 500 “bridges”, which means we provided 500 poor young people in 7 provinces of Central Vietnam with 500 free training programs.
                                 </p>
                             </div>
 
@@ -33,23 +33,39 @@ class Footer extends Component {
                                 <ul>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
-                                        <a href="#">Home</a>
+                                        <a href="#hero">Home</a>
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
-                                        <a href="#">About us</a>
+                                        <a href="#about">About</a>
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
-                                        <a href="#">Key Dates</a>
+                                        <a href="#schedule">Key Dates</a>
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
-                                        <a href="#">Contact</a>
+                                        <a href="#training">Training</a>
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
-                                        <a href="#">Donate</a>
+                                        <a href="#selection">Selection</a>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>{" "}
+                                        <a href="#sharing">Sharing</a>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>{" "}
+                                        <a href="#staffss">Employee</a>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>{" "}
+                                        <a href="#clients">Partner</a>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-chevron-right"></i>{" "}
+                                        <a href="#contact">Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -58,14 +74,14 @@ class Footer extends Component {
                                 <h4>Contact Us</h4>
                                 <p>
                                     <strong>Address:</strong>
-                                    <br/>
-                                    99 To Hien Thanh Street
-                                    <br/>
-                                    Da Nang City
-                                    <br/>
-                                    Viet Nam 
                                     <br />
-                                    <strong>Phone:</strong> 
+                                    99 To Hien Thanh Street
+                                    <br />
+                                    Da Nang City
+                                    <br />
+                                    Viet Nam
+                                    <br />
+                                    <strong>Phone:</strong>
                                     <br />
                                     0236 3888 503
                                     <br />

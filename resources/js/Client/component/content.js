@@ -10,6 +10,7 @@ import Donate from './content/donate';
 import About from './content/about';
 import Selection from './content/selection';
 import Staff from './content/staff';
+import ITNUOIIT from './content/itnuoiit';
 class Content extends Component {
     constructor(props) {
         super(props);
@@ -25,6 +26,7 @@ class Content extends Component {
                 <Selection/>
                 <Help/>
                 <Donate/>
+                <ITNUOIIT/>
                 <Sharing/>
                 <Staff/>
                 <Partner/>

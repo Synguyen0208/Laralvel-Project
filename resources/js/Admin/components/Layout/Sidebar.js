@@ -53,25 +53,25 @@ const sidebarBackground = {
 };
 
 const navComponents = [
-  { to: '/admin/buttons', name: 'buttons', exact: false, Icon: MdRadioButtonChecked },
-  {
-    to: '/admin/button-groups',
-    name: 'button groups',
-    exact: false,
-    Icon: MdGroupWork,
-  },
-  { to: '/admin/forms', name: 'forms', exact: false, Icon: MdChromeReaderMode },
-  { to: '/admin/input-groups', name: 'input groups', exact: false, Icon: MdViewList },
-  {
-    to: '/admin/dropdowns',
-    name: 'dropdowns',
-    exact: false,
-    Icon: MdArrowDropDownCircle,
-  },
-  { to: '/admin/badges', name: 'badges', exact: false, Icon: MdStar },
-  { to: '/admin/alerts', name: 'alerts', exact: false, Icon: MdNotificationsActive },
-  { to: '/admin/progress', name: 'progress', exact: false, Icon: MdBrush },
-  { to: '/admin/modals', name: 'modals', exact: false, Icon: MdViewDay },
+  // { to: '/admin/buttons', name: 'buttons', exact: false, Icon: MdRadioButtonChecked },
+  // {
+  //   to: '/admin/button-groups',
+  //   name: 'button groups',
+  //   exact: false,
+  //   Icon: MdGroupWork,
+  // },
+  // { to: '/admin/forms', name: 'forms', exact: false, Icon: MdChromeReaderMode },
+  // { to: '/admin/input-groups', name: 'input groups', exact: false, Icon: MdViewList },
+  // {
+  //   to: '/admin/dropdowns',
+  //   name: 'dropdowns',
+  //   exact: false,
+  //   Icon: MdArrowDropDownCircle,
+  // },
+  // { to: '/admin/badges', name: 'badges', exact: false, Icon: MdStar },
+  // { to: '/admin/alerts', name: 'alerts', exact: false, Icon: MdNotificationsActive },
+  // { to: '/admin/progress', name: 'progress', exact: false, Icon: MdBrush },
+  // { to: '/admin/modals', name: 'modals', exact: false, Icon: MdViewDay },
 ];
 const navManage = [
   { to: '/admin/staff', name: 'staff', exact: false, Icon: MdAccountBox},
@@ -85,23 +85,23 @@ const navManage = [
 ];
 
 const navContents = [
-  { to: '/admin/typography', name: 'typography', exact: false, Icon: MdTextFields },
-  { to: '/admin/tables', name: 'tables', exact: false, Icon: MdBorderAll },
+  // { to: '/admin/typography', name: 'typography', exact: false, Icon: MdTextFields },
+  // { to: '/admin/tables', name: 'tables', exact: false, Icon: MdBorderAll },
 ];
 const pageContents = [
-  { to: '/admin/login', name: 'login / signup', exact: false, Icon: MdAccountCircle },
-  {
-    to: '/admin/login-modal',
-    name: 'login modal',
-    exact: false,
-    Icon: MdViewCarousel,
-  },
+  // { to: '/admin/login', name: 'login / signup', exact: false, Icon: MdAccountCircle },
+  // {
+  //   to: '/admin/login-modal',
+  //   name: 'login modal',
+  //   exact: false,
+  //   Icon: MdViewCarousel,
+  // },
 ];
 const navItems = [
   { to: '/admin', name: 'dashboard', exact: true, Icon: MdDashboard },
-  { to: '/admin/cards', name: 'cards', exact: false, Icon: MdWeb },
-  { to: '/admin/charts', name: 'charts', exact: false, Icon: MdInsertChart },
-  { to: '/admin/widgets', name: 'widgets', exact: false, Icon: MdWidgets },
+  // { to: '/admin/cards', name: 'cards', exact: false, Icon: MdWeb },
+  // { to: '/admin/charts', name: 'charts', exact: false, Icon: MdInsertChart },
+  // { to: '/admin/widgets', name: 'widgets', exact: false, Icon: MdWidgets },
   { to: '/admin/data', name: 'data', exact: false, Icon: MdViewModule },
 ];
 
@@ -198,7 +198,7 @@ class Sidebar extends React.Component {
               ))}
             </Collapse>
 
-            <NavItem
+            {/* <NavItem
               className={bem.e('nav-item')}
               onClick={this.handleClick('Components')}
             >
@@ -219,8 +219,8 @@ class Sidebar extends React.Component {
                   }}
                 />
               </BSNavLink>
-            </NavItem>
-            <Collapse isOpen={this.state.isOpenComponents}>
+            </NavItem> */}
+            {/* <Collapse isOpen={this.state.isOpenComponents}>
               {navComponents.map(({ to, name, exact, Icon }, index) => (
                 <NavItem key={index} className={bem.e('nav-item')}>
                   <BSNavLink
@@ -236,9 +236,9 @@ class Sidebar extends React.Component {
                   </BSNavLink>
                 </NavItem>
               ))}
-            </Collapse>
+            </Collapse> */}
 
-            <NavItem
+            {/* <NavItem
               className={bem.e('nav-item')}
               onClick={this.handleClick('Contents')}
             >
@@ -259,8 +259,8 @@ class Sidebar extends React.Component {
                   }}
                 />
               </BSNavLink>
-            </NavItem>
-            <Collapse isOpen={this.state.isOpenContents}>
+            </NavItem> */}
+            {/* <Collapse isOpen={this.state.isOpenContents}>
               {navContents.map(({ to, name, exact, Icon }, index) => (
                 <NavItem key={index} className={bem.e('nav-item')}>
                   <BSNavLink
@@ -276,9 +276,9 @@ class Sidebar extends React.Component {
                   </BSNavLink>
                 </NavItem>
               ))}
-            </Collapse>
+            </Collapse> */}
 
-            <NavItem
+            {/* <NavItem
               className={bem.e('nav-item')}
               onClick={this.handleClick('Pages')}
             >
@@ -299,8 +299,8 @@ class Sidebar extends React.Component {
                   }}
                 />
               </BSNavLink>
-            </NavItem>
-            <Collapse isOpen={this.state.isOpenPages}>
+            </NavItem> */}
+            {/* <Collapse isOpen={this.state.isOpenPages}>
               {pageContents.map(({ to, name, exact, Icon }, index) => (
                 <NavItem key={index} className={bem.e('nav-item')}>
                   <BSNavLink
@@ -316,7 +316,7 @@ class Sidebar extends React.Component {
                   </BSNavLink>
                 </NavItem>
               ))}
-            </Collapse>
+            </Collapse> */}
           </Nav>
         </div>
       </aside>

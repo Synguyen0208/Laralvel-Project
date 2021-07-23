@@ -14,7 +14,9 @@ use App\Models\Sharing;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Selection;
 use App\Jobs\SendEmail;
+use App\Mail\MailITnuoiIT;
 use App\Models\Become_Partner;
+use App\Models\ITnuoiIT;
 
 class PageClient extends Controller
 {
@@ -158,5 +160,23 @@ class PageClient extends Controller
         $become_partner->description= $request->reason;
         $become_partner->save();
         return response()->json(["Error"=>0]);
+    }
+    public function donateIT(Request $request){
+        $new =new ITnuoiIT();
+        $new->name=$request->name;
+        $new->email=$request->email;
+        $new->phone=$request->phone;
+        $new->type=$request->type;
+        $new->status='No transfer yet!';
+        $new->save();
+        $find=ITnuoiIT::find($new->id);
+        $code='ITNUOIIT'.$new->id;
+        $find->code=$code;
+        $find->save();
+        $details = [
+            'code' => $code
+        ];
+        Mail::to($request->email)->send(new MailITnuoiIT($details));
+        return response()->json(['Error'=>0]);
     }
 }

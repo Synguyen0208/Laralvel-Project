@@ -68,7 +68,7 @@ class About extends Component {
                           <div className="col-sm-4 col-xs-12">
                             <div className="value-single text-center">
                               <div className="value-img">
-                                <img src={'../images/'+e.image} alt="image of service" />
+                                <img src={'../images/' + e.image} alt="image of service" />
                               </div>
                               <div className="value-txt">
                                 <h2>
@@ -91,7 +91,7 @@ class About extends Component {
                           <div className="col-sm-4 col-xs-12">
                             <div className="value-single text-center">
                               <div className="value-img">
-                                <img src={'../images/'+e.image} alt="image of service" />
+                                <img src={'../images/' + e.image} alt="image of service" />
                               </div>
                               <div className="value-txt">
                                 <h2>

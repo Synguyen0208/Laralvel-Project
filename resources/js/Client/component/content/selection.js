@@ -119,7 +119,7 @@ class Selection extends Component {
                             <form onSubmit={this.handleSubmit} ref={(el) => this.myFormRef = el}>
                                 <div className="form-group">
                                     <label htmlFor="inputAddress">Name</label>
-                                    <input type="text" className="form-control" name="name" placeholder="Ho Thi Huou " onChange={this.handleInputChange} required />
+                                    <input type="text" className="form-control" name="name" placeholder="Your name" onChange={this.handleInputChange} required />
                                 </div>
                                 <div className="form-row">
                                     <div className="form-group col-md-6">
@@ -133,13 +133,13 @@ class Selection extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label >Email</label>
-                                    <input type="email" className="form-control" name="email" placeholder="Email" value={this.state.email} onChange={this.handleInputChange} required />
+                                    <input type="email" className="form-control" name="email" placeholder="Your email" value={this.state.email} onChange={this.handleInputChange} required />
                                 </div>
 
                                 <div className="form-row">
                                     <div className="form-group col-md-6">
                                         <label >Phone</label>
-                                        <input type="number" className="form-control" name="phone" placeholder="Phone" value={this.state.phone} onChange={this.handleInputChange} required />
+                                        <input type="number" className="form-control" name="phone" placeholder="Your phone" value={this.state.phone} onChange={this.handleInputChange} required />
                                     </div>
                                     <div className="form-group col-md-6">
                                         <label >Graduation years</label>
@@ -153,7 +153,7 @@ class Selection extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label >Link facebook </label>
-                                    <input type="text" className="form-control" name="link_fb" placeholder="" value={this.state.link_fb} onChange={this.handleInputChange} required />
+                                    <input type="text" className="form-control" name="link_fb" placeholder="Your link facebook" value={this.state.link_fb} onChange={this.handleInputChange} required />
                                 </div>
 
 
@@ -161,7 +161,7 @@ class Selection extends Component {
 
                                     <div className="form-group col-md-6">
                                         <label >Graduation Score </label>
-                                        <input type="number" className="form-control" name="graduation_score" placeholder="" value={this.state.graduation_score} onChange={this.handleInputChange} required />
+                                        <input type="number" className="form-control" name="graduation_score" placeholder="Your graduation score" value={this.state.graduation_score} onChange={this.handleInputChange} required />
                                     </div>
                                     <div className="form-group col-md-6">
                                         <label>Major</label>

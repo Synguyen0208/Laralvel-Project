@@ -55,3 +55,4 @@ Route::post('/addselections','App\Http\Controllers\PageClient@addSelection');
 Route::delete('/selection/{id}','App\Http\Controllers\PageController@deleteSelection');
 Route::get('/getstaff','App\Http\Controllers\PageClient@getStaff');
 Route::post('/addbecomepartner','App\Http\Controllers\PageClient@addBecomePartner');
+Route::post('/itnuoiit','App\Http\Controllers\PageClient@donateIT');

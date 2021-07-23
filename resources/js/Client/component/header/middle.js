@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import history from '../../../Admin/utils/history';
 class Middle extends Component {
     constructor(props) {
         super(props);
 
     }
-
+    handleRouter=(href)=>{
+        history.push(`/${href}`);
+    }
     render() {
         return (
             <header id="header" class="d-flex align-items-center ">
@@ -18,16 +20,15 @@ class Middle extends Component {
 
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
-                            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                            <li><a class="nav-link scrollto" href="#about">About</a></li>
-                            <li><a class="nav-link scrollto" href="#schedule">Key Dates</a></li>
-                            <li><a class="nav-link scrollto" href="#training">Training</a></li>
-                            <li><a class="nav-link scrollto" href="#selection">Selection</a></li>
-                            <li><a class="nav-link scrollto" href="#sharing">Sharing</a></li>
-                            <li><a class="nav-link scrollto" href="#staffss">Employee</a></li>
-                            <li><a class="nav-link scrollto" href="#clients">Partner</a></li>
-                            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-
+                            <li><a class="nav-link scrollto active" href="#hero" onClick={()=>this.handleRouter('#hero')}>Home</a></li>
+                            <li><a class="nav-link scrollto" href="#about" onClick={()=>this.handleRouter('#about')}>About</a></li>
+                            <li><a class="nav-link scrollto" href="#schedule" onClick={()=>this.handleRouter('#schedule')}>Key Dates</a></li>
+                            <li><a class="nav-link scrollto" href="#training" onClick={()=>this.handleRouter('#training')}>Training</a></li>
+                            <li><a class="nav-link scrollto" href="#selection" onClick={()=>this.handleRouter('#selection')}>Selection</a></li>
+                            <li><a class="nav-link scrollto" href="#sharing" onClick={()=>this.handleRouter('#sharing')}>Sharing</a></li>
+                            <li><a class="nav-link scrollto" href="#staffss" onClick={()=>this.handleRouter('#staffss')}>Employee</a></li>
+                            <li><a class="nav-link scrollto" href="#clients" onClick={()=>this.handleRouter('#clients')}>Partner</a></li>
+                            <li><a class="nav-link scrollto" href="#contact" onClick={()=>this.handleRouter('#contact')}>Contact</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav>

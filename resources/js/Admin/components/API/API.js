@@ -9,7 +9,7 @@ class API extends Component {
         return axios({
             method: method,
             data: data,
-            url: 'http://127.0.0.1:8000/api/'+endpoint,      
+            url: 'https://pnvwebsite.herokuapp.com/api/'+endpoint,      
         })
     }
 }

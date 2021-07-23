@@ -12,7 +12,11 @@
     <div id="app">
 
     </div>
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat">
+</div>
 </body>
+
 <script src="{{asset('./js/app.js')}}"></script>
 @yield('javascript')
 </html>

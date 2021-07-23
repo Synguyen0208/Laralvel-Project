@@ -18,6 +18,7 @@ class AuthPage extends React.Component {
   render() {
     return (
       <Row
+      className='p-0 m-0'
         style={{
           height: '100vh',
           justifyContent: 'center',

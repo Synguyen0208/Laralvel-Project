@@ -15,8 +15,8 @@ class AuthForm extends React.Component {
     errors: null,
     error_confirm: null,
     message: null,
-    action:false,
-    code:null
+    action: false,
+    code: null
   };
   get isLogin() {
     return this.props.authState === STATE_LOGIN;
@@ -44,15 +44,15 @@ class AuthForm extends React.Component {
     let data = await this.call.callAPI('login', 'post', form).then((response) => { return response.data });
     if (data.err == 0) {
       this.setState({
-        action:true
+        action: true
       })
     }
     this.setState({ errors: data })
   }
-  sendPassword = async() => {
+  sendPassword = async () => {
     let data = await this.call.callAPI('send', 'post', '').then((response) => { return response.data });
     this.setState({
-      message:"Your password was be send to your email!"
+      message: "Your password was be send to your email!"
     });
   }
   handleSubmit = event => {
@@ -61,9 +61,9 @@ class AuthForm extends React.Component {
     if (button == "Login")
       this.login();
   };
-  veryfy= async(event)=>{
+  veryfy = async (event) => {
     event.preventDefault();
-    let form=new FormData;
+    let form = new FormData;
     form.append('code', this.state.code);
     let data = await this.call.callAPI('verify', 'post', form).then((response) => { return response.data });
     if (data.err == 0) {
@@ -71,10 +71,10 @@ class AuthForm extends React.Component {
       history.push('/admin');
       window.location.reload();
     }
-    else{
-      this.setState({ error_confirm:data.message });
+    else {
+      this.setState({ error_confirm: data.message });
     }
-    
+
   }
   renderButtonText() {
     const { buttonText } = this.props;
@@ -91,9 +91,9 @@ class AuthForm extends React.Component {
   }
   close = () => {
     this.setState({
-        action: false,
+      action: false,
     });
-};
+  };
   render() {
     const {
       showLogo,
@@ -106,10 +106,10 @@ class AuthForm extends React.Component {
       children,
       onLogoClick,
     } = this.props;
-    let body_modal=<FormGroup>
+    let body_modal = <FormGroup>
       <Label>Code</Label>
       <Input name='code' placeholder="Enter the code" onChange={this.handleChange}></Input>
-      </FormGroup>
+    </FormGroup>
     return (
       <Form onSubmit={this.handleSubmit}>
         {showLogo && (
@@ -117,7 +117,7 @@ class AuthForm extends React.Component {
             <img
               src='https://www.passerellesnumeriques.org/misc/logo-fr.png'
               className="rounded"
-              style={{ width: 300, height: 100, cursor: 'pointer' }}
+              style={{ width: 300, height: 100, cursor: 'pointer', padding:0, margin:0 }}
               alt="logo"
             />
           </div>

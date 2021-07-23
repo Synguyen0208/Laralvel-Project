@@ -59,14 +59,14 @@ class Footer extends Component {
                                 <ul>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
-                                        <a href="#sharing">Sharing</a>
+                                        <a href="#sharing">#ITRAISESIT</a>
                                     </li><li>
                                         <i class="bi bi-chevron-right"></i>{" "}
                                         <a href="#donate">Donate</a>
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
-                                        <a href="#staffss">Staff</a>
+                                        <a href="#staffss">Board and Staff</a>
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}

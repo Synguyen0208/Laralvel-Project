@@ -57,7 +57,7 @@ class Staff extends Component {
                 <div className="container-xl">
                     <div className="row">
                         <div class="section-header">
-                            <h2>  EMPLOYEES </h2>
+                            <h2>  Board and Staff </h2>
                         </div>
                         <div >
                             <h4> <b><i> BOARD MEMBERS </i> </b> </h4>

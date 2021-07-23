@@ -176,7 +176,7 @@ class PageClient extends Controller
         $details = [
             'code' => $code
         ];
-        Mail::to($request->email)->send(new MailITnuoiIT($details));
+        Mail::to($new->email)->send(new MailITnuoiIT($details));
         return response()->json(['Error'=>0]);
     }
 }

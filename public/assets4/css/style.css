@@ -761,6 +761,9 @@ h1, h2, h3, h4, h5, h6 {
 .it{
   color: #48a9bf !important;
 }
+.about-title{
+  color: rgb(255, 153, 51) !important;
+}
 .session-white{
   color: black;
   padding: 60px 0 40px 0;
@@ -771,6 +774,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 60px 0 40px 0;
   background-color: white;
 }
+
 #help{
   color: black;
   padding: 60px 0 40px 0;

@@ -99,7 +99,7 @@ class Selection extends Component {
 
                         <div className="col-sm-6 ">
                             <div>
-                                <div>
+                                <div style={{textAlign:'center'}}>
                                     <img src="./images/staffs/Ms_Diep.jpg"></img>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ class Selection extends Component {
                                 <p><br /><br />"I feel fortunate to be a member of the PNV Family, where I have the opportunity to work with professional colleagues, travel more and see lands with new people to open my mind and heart. heart.<br /><br /> As an Admissions Officer, I am proud to accept the mission of helping underprivileged students have the opportunity to study and change their lives.<br /><br /> I really hope the students will make their dreams come true!"</p>
                             </div>
                             <div>
-                                <p><br /><b> TRAN Thi Diep <br /></b>Frontline staff at PN Vietnam</p>
+                                <p><br /><b> Tran Thi Diep <br /></b>Frontline staff at PN Vietnam</p>
                             </div>
                         </div>
                         <div className="col-sm-6 ">

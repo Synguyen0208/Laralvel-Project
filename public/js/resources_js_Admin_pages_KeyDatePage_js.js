@@ -1022,8 +1022,6 @@ var KeyDatePage = /*#__PURE__*/function (_React$Component) {
       });
 
       _this.call.callAPI('dataForm', 'get', '').then(function (response) {
-        console.log(response.data);
-
         _this.setState({
           data_form: response.data
         });

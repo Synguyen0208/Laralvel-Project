@@ -180,7 +180,6 @@ class KeyDatePage extends React.Component {
             this.setState({ data: response.data });
         });
         this.call.callAPI('dataForm', 'get', '').then((response) => {
-            console.log(response.data)
             this.setState({ data_form: response.data });
         });
     }

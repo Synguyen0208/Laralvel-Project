@@ -30,7 +30,7 @@ Route::delete('/blog/{id}','App\Http\Controllers\PageController@deleteBlog');
 
 Route::get('/partner_become','App\Http\Controllers\PageController@getPartnerBecome');
 Route::delete('/partner_become/{id}','App\Http\Controllers\PageController@deletePartnerBecome');
-
+Route::get('/keydate1','App\Http\Controllers\PageController@addKeyDate');
 Route::get('/keydate','App\Http\Controllers\PageController@getKeyDate');
 Route::post('/keydate','App\Http\Controllers\PageController@addKeyDate');
 Route::post('/updateKeyDate/{id}','App\Http\Controllers\PageController@updateKeyDate');

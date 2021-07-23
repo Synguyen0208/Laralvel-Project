@@ -25,7 +25,7 @@ class Middle extends Component {
                             <li><a class="nav-link scrollto" href="#schedule" onClick={()=>this.handleRouter('#schedule')}>Key Dates</a></li>
                             <li><a class="nav-link scrollto" href="#training" onClick={()=>this.handleRouter('#training')}>Training</a></li>
                             <li><a class="nav-link scrollto" href="#selection" onClick={()=>this.handleRouter('#selection')}>Selection</a></li>
-                            <li><a class="nav-link scrollto" href="#itnuoiit" onClick={()=>this.handleRouter('#itnuoiit')}>#itnuoiit</a></li>
+                            <li><a class="nav-link scrollto" href="#itnuoiit" onClick={()=>this.handleRouter('#itnuoiit')}>#ITRAISESIT</a></li>
                             <li><a class="nav-link scrollto" href="#sharing" onClick={()=>this.handleRouter('#sharing')}>Sharing</a></li>
                             <li><a class="nav-link scrollto" href="#staffss" onClick={()=>this.handleRouter('#staffss')}>Staff</a></li>
                             <li><a class="nav-link scrollto" href="#clients" onClick={()=>this.handleRouter('#clients')}>Partner</a></li>

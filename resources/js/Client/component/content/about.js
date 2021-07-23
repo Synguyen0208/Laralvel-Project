@@ -28,7 +28,7 @@ class About extends Component {
               <div class="col-lg-12">
                 <div class="row">
                   <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-                    <div className="thumbnail">
+                    <div className="thumbnail" style={{marginTop:"2.3rem"}}>
                       <img className="card-img-top " src="/images/content/camping.jpg" />
                     </div>
                     <br />

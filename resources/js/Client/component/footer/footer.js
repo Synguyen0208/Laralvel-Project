@@ -66,7 +66,7 @@ class Footer extends Component {
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}
-                                        <a href="#staffss">Employee</a>
+                                        <a href="#staffss">Staff</a>
                                     </li>
                                     <li>
                                         <i class="bi bi-chevron-right"></i>{" "}

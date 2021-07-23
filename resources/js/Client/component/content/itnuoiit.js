@@ -48,7 +48,7 @@ class ITNUOIIT extends Component {
             <section id="itnuoiit" class="selections">
                 <div class="container" data-aos="zoom-in">
                     <div class="section-header">
-                        <h2 class='it'> ITNUOIIT</h2>
+                        <h2 class='it'>#ITRAISESIT</h2>
                     </div>
                     <div class="it-content">
                         <div class="col-lg-4 col-md-8 col-sm-12">

@@ -278,11 +278,11 @@ class PageController extends Controller
     public function addKeyDate(Request $request)
     {
         $new=new KeyDate();
-        $new->timeline='2012';
-        $new->description='<p>fghfhd</p>';
-        $new->country_id='3';
+        $new->timeline=$request->timeline;
+        $new->description=$request->description;
+        $new->country_id=$request->country_id;
         $new->save();
-        return response()->json(['message'=>"Add key date success!", 'err'=>$new]);
+        return response()->json(['message'=>"Add key date success!", 'err'=>0]);
     }
     public function updateKeyDate(Request $request)
     {

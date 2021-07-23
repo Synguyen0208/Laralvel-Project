@@ -163,10 +163,10 @@ class PageClient extends Controller
     }
     public function donateIT(Request $request){
         $new =new ITnuoiIT();
-        $new->name=$request->name;
-        $new->email=$request->email;
-        $new->phone=$request->phone;
-        $new->type=$request->type;
+        $new->name='dfg';
+        $new->email='sy.nguyen22@student.passerellesnumeriques.org';
+        $new->phone='0858843965';
+        $new->type='one';
         $new->status='No transfer yet!';
         $new->save();
         $find=ITnuoiIT::find($new->id);

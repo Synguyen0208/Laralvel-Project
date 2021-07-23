@@ -163,10 +163,10 @@ class PageClient extends Controller
     }
     public function donateIT(Request $request){
         $new =new ITnuoiIT();
-        $new->name='dfg';
-        $new->email='sy.nguyen22@student.passerellesnumeriques.org';
-        $new->phone='0858843965';
-        $new->type='one';
+        $new->name=$request->name;
+        $new->email=$request->email;
+        $new->phone=$request->phone;
+        $new->type=$request->type;
         $new->status='No transfer yet!';
         $new->save();
         $find=ITnuoiIT::find($new->id);
@@ -176,7 +176,7 @@ class PageClient extends Controller
         $details = [
             'code' => $code
         ];
-        Mail::to($new->email)->send(new MailITnuoiIT($details));
+        Mail::to($request->email)->send(new MailITnuoiIT($details));
         return response()->json(['Error'=>0]);
     }
 }

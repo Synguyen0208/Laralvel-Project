@@ -218,7 +218,7 @@ class DonateForm extends Component {
                                             <div class="col-7 text-center">
                                                 <div id="paypal-button-container"></div>
                                                 <GooglePayButton
-                                                    environment="PRODUCTION"
+                                                    environment="TEST"
                                                     paymentRequest={{
                                                         apiVersion: 2,
                                                         apiVersionMinor: 0,
